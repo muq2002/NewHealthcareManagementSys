@@ -50,8 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\DatabaseProvider.cs" />
+    <Compile Include="Controller\TestController.cs" />
     <Compile Include="CurvedPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\TestModel.cs" />
+    <Compile Include="Screens\DoctorHomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DoctorHomeScreen.Designer.cs">
+      <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\HomeScreen.cs">
       <SubType>Form</SubType>
@@ -67,30 +76,57 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\HomeControl.cs">
+    <Compile Include="UserControls\Doctor\AddPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Doctor\AddPatientForm.Designer.cs">
+      <DependentUpon>AddPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Doctor\HomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\HomeControl.Designer.cs">
+    <Compile Include="UserControls\Doctor\HomeControl.Designer.cs">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PatientControl.cs">
+    <Compile Include="UserControls\Doctor\PatientListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\PatientControl.Designer.cs">
+    <Compile Include="UserControls\Doctor\PatientListControl.Designer.cs">
+      <DependentUpon>PatientListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Doctor\PatientProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Doctor\PatientProfileControl.Designer.cs">
+      <DependentUpon>PatientProfileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Lab\HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Lab\HomeControl.Designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Lab\PatientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Lab\PatientControl.Designer.cs">
       <DependentUpon>PatientControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PatientsListControl.cs">
+    <Compile Include="UserControls\Lab\PatientsListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\PatientsListControl.Designer.cs">
+    <Compile Include="UserControls\Lab\PatientsListControl.Designer.cs">
       <DependentUpon>PatientsListControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TestsListControl.cs">
+    <Compile Include="UserControls\Lab\TestsListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TestsListControl.Designer.cs">
+    <Compile Include="UserControls\Lab\TestsListControl.Designer.cs">
       <DependentUpon>TestsListControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screens\DoctorHomeScreen.resx">
+      <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,16 +142,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\HomeControl.resx">
+    <EmbeddedResource Include="UserControls\Doctor\AddPatientForm.resx">
+      <DependentUpon>AddPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Lab\HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\PatientControl.resx">
+    <EmbeddedResource Include="UserControls\Lab\PatientControl.resx">
       <DependentUpon>PatientControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\PatientsListControl.resx">
+    <EmbeddedResource Include="UserControls\Lab\PatientsListControl.resx">
       <DependentUpon>PatientsListControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TestsListControl.resx">
+    <EmbeddedResource Include="UserControls\Lab\TestsListControl.resx">
       <DependentUpon>TestsListControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -132,8 +171,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
+    <Folder Include="UserControls\Pharmacy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
