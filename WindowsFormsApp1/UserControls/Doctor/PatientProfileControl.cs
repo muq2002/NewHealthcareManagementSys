@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.UserControls.Doctor
         {
             InitializeComponent();
         }
+
+        private void addPatientBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

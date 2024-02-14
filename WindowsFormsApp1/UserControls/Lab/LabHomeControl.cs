@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Screens
 {
-    public partial class HomeControl : UserControl
+    public partial class LabHomeControl : UserControl
     {
-        public HomeControl()
+        public LabHomeControl()
         {
             InitializeComponent();
         }

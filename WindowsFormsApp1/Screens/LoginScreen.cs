@@ -32,10 +32,16 @@ namespace WindowsFormsApp1
 
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void loginBTN_Click(object sender, EventArgs e)
         {
-            HomeScreen homescreen = new HomeScreen();
-            homescreen.ShowDialog();
+            if (textUsername.Text == "1")
+            {
+                LabHomeScreen labHomeScreen = new LabHomeScreen();
+                labHomeScreen.ShowDialog();
+            }
+
+            DoctorHomeScreen doctorHomescreen = new DoctorHomeScreen();
+            doctorHomescreen.ShowDialog();
         }
     }
 }

@@ -13,9 +13,9 @@ using WindowsFormsApp1.UserControls;
 
 namespace WindowsFormsApp1
 {
-    public partial class HomeScreen : Form
+    public partial class LabHomeScreen : Form
     {
-        public HomeScreen()
+        public LabHomeScreen()
         {
             InitializeComponent();
         }

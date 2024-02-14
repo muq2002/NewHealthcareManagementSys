@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.UserControls.Doctor
 {
-    public partial class HomeControl : UserControl
+    public partial class DoctorHomeControl : UserControl
     {
-        public HomeControl()
+        public DoctorHomeControl()
         {
             InitializeComponent();
+        }
+
+        private void addPatientBTN_Click(object sender, EventArgs e)
+        {
+            AddPatientForm addPatientForm = new AddPatientForm();
+            addPatientForm.ShowDialog();
         }
     }
 }

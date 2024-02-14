@@ -13,12 +13,9 @@ C:\Users\mktad\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\NewHealt
 C:\Users\mktad\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csproj.CopyComplete
 C:\Users\mktad\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.exe
 C:\Users\mktad\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.pdb
-C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache
-C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.HomeScreen.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LoginScreen.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Doctor.AddPatientForm.resources
-C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Screens.HomeControl.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.PatientControl.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.PatientsListControl.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.TestsListControl.resources
@@ -31,3 +28,8 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debug\NewHealthcareManagementSys.pdb
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csproj.CopyComplete
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DoctorHomeScreen.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LabHomeScreen.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Doctor.DoctorHomeControl.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Screens.LabHomeControl.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Doctor.PatientProfileControl.resources

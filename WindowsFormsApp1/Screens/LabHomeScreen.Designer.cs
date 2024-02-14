@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class HomeScreen
+    partial class LabHomeScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabHomeScreen));
             this.sidebar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.helpBTN = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -53,7 +53,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.logoPicture = new System.Windows.Forms.PictureBox();
             this.container = new System.Windows.Forms.Panel();
-            this.homeControl1 = new WindowsFormsApp1.Screens.HomeControl();
+            this.homeControl1 = new WindowsFormsApp1.Screens.LabHomeControl();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -569,7 +569,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private System.Windows.Forms.PictureBox logoPicture;
         private System.Windows.Forms.Panel container;
-        private Screens.HomeControl homeControl1;
+        private Screens.LabHomeControl homeControl1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuThinButton2 helpBTN;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;

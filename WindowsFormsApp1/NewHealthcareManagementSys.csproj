@@ -62,11 +62,11 @@
     <Compile Include="Screens\DoctorHomeScreen.Designer.cs">
       <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\HomeScreen.cs">
+    <Compile Include="Screens\LabHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\HomeScreen.Designer.cs">
-      <DependentUpon>HomeScreen.cs</DependentUpon>
+    <Compile Include="Screens\LabHomeScreen.Designer.cs">
+      <DependentUpon>LabHomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\LoginScreen.cs">
       <SubType>Form</SubType>
@@ -82,11 +82,11 @@
     <Compile Include="UserControls\Doctor\AddPatientForm.Designer.cs">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Doctor\HomeControl.cs">
+    <Compile Include="UserControls\Doctor\DoctorHomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Doctor\HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="UserControls\Doctor\DoctorHomeControl.Designer.cs">
+      <DependentUpon>DoctorHomeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Doctor\PatientListControl.cs">
       <SubType>UserControl</SubType>
@@ -100,11 +100,11 @@
     <Compile Include="UserControls\Doctor\PatientProfileControl.Designer.cs">
       <DependentUpon>PatientProfileControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Lab\HomeControl.cs">
+    <Compile Include="UserControls\Lab\LabHomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Lab\HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="UserControls\Lab\LabHomeControl.Designer.cs">
+      <DependentUpon>LabHomeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Lab\PatientControl.cs">
       <SubType>UserControl</SubType>
@@ -127,8 +127,8 @@
     <EmbeddedResource Include="Screens\DoctorHomeScreen.resx">
       <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\HomeScreen.resx">
-      <DependentUpon>HomeScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\LabHomeScreen.resx">
+      <DependentUpon>LabHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
@@ -145,8 +145,14 @@
     <EmbeddedResource Include="UserControls\Doctor\AddPatientForm.resx">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Lab\HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Doctor\DoctorHomeControl.resx">
+      <DependentUpon>DoctorHomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Doctor\PatientProfileControl.resx">
+      <DependentUpon>PatientProfileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Lab\LabHomeControl.resx">
+      <DependentUpon>LabHomeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Lab\PatientControl.resx">
       <DependentUpon>PatientControl.cs</DependentUpon>
