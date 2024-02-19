@@ -38,18 +38,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.widgetsPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.leftPanel = new System.Windows.Forms.Panel();
-            this.rightPanel = new System.Windows.Forms.Panel();
-            this.BottomPanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.addPatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.widget3 = new WindowsFormsApp1.CurvedPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -57,6 +45,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.widget2 = new WindowsFormsApp1.CurvedPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -71,11 +60,20 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.rightPanel = new System.Windows.Forms.Panel();
+            this.BottomPanel = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel3.SuspendLayout();
             this.widgetsPanel.SuspendLayout();
-            this.topPanel.SuspendLayout();
             this.widget3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -88,6 +86,7 @@
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // paddingPanel
@@ -150,9 +149,9 @@
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.Location = new System.Drawing.Point(48, 23);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(182, 38);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(149, 38);
             this.bunifuCustomLabel10.TabIndex = 4;
-            this.bunifuCustomLabel10.Text = "Regsitrations";
+            this.bunifuCustomLabel10.Text = "Hi, Doctor!";
             // 
             // panel3
             // 
@@ -190,120 +189,6 @@
             this.widgetsPanel.Name = "widgetsPanel";
             this.widgetsPanel.Size = new System.Drawing.Size(983, 177);
             this.widgetsPanel.TabIndex = 10;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(640, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(40, 177);
-            this.panel1.TabIndex = 6;
-            // 
-            // leftPanel
-            // 
-            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 85);
-            this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(30, 620);
-            this.leftPanel.TabIndex = 9;
-            // 
-            // rightPanel
-            // 
-            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1013, 85);
-            this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(30, 620);
-            this.rightPanel.TabIndex = 8;
-            // 
-            // BottomPanel
-            // 
-            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 705);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(1043, 27);
-            this.BottomPanel.TabIndex = 7;
-            // 
-            // topPanel
-            // 
-            this.topPanel.Controls.Add(this.addPatientBTN);
-            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
-            this.topPanel.Controls.Add(this.panel3);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1043, 85);
-            this.topPanel.TabIndex = 6;
-            // 
-            // addPatientBTN
-            // 
-            this.addPatientBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addPatientBTN.BorderRadius = 0;
-            this.addPatientBTN.ButtonText = "Add";
-            this.addPatientBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addPatientBTN.DisabledColor = System.Drawing.Color.Gray;
-            this.addPatientBTN.Iconcolor = System.Drawing.Color.Transparent;
-            this.addPatientBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("addPatientBTN.Iconimage")));
-            this.addPatientBTN.Iconimage_right = null;
-            this.addPatientBTN.Iconimage_right_Selected = null;
-            this.addPatientBTN.Iconimage_Selected = null;
-            this.addPatientBTN.IconMarginLeft = 0;
-            this.addPatientBTN.IconMarginRight = 0;
-            this.addPatientBTN.IconRightVisible = true;
-            this.addPatientBTN.IconRightZoom = 0D;
-            this.addPatientBTN.IconVisible = true;
-            this.addPatientBTN.IconZoom = 90D;
-            this.addPatientBTN.IsTab = false;
-            this.addPatientBTN.Location = new System.Drawing.Point(237, 23);
-            this.addPatientBTN.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.addPatientBTN.Name = "addPatientBTN";
-            this.addPatientBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.OnHoverTextColor = System.Drawing.Color.White;
-            this.addPatientBTN.selected = false;
-            this.addPatientBTN.Size = new System.Drawing.Size(133, 44);
-            this.addPatientBTN.TabIndex = 8;
-            this.addPatientBTN.Text = "Add";
-            this.addPatientBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addPatientBTN.Textcolor = System.Drawing.Color.White;
-            this.addPatientBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPatientBTN.Click += new System.EventHandler(this.addPatientBTN_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 300;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Age";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Gender";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Order Date";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 300;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Status";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 120;
             // 
             // widget3
             // 
@@ -379,6 +264,15 @@
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(175, 33);
             this.bunifuCustomLabel3.TabIndex = 0;
             this.bunifuCustomLabel3.Text = "Total Revenue";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(640, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(40, 177);
+            this.panel1.TabIndex = 6;
             // 
             // widget2
             // 
@@ -528,6 +422,74 @@
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Remaining Patients";
             // 
+            // leftPanel
+            // 
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 85);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(30, 620);
+            this.leftPanel.TabIndex = 9;
+            // 
+            // rightPanel
+            // 
+            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightPanel.Location = new System.Drawing.Point(1013, 85);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(30, 620);
+            this.rightPanel.TabIndex = 8;
+            // 
+            // BottomPanel
+            // 
+            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomPanel.Location = new System.Drawing.Point(0, 705);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(1043, 27);
+            this.BottomPanel.TabIndex = 7;
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
+            this.topPanel.Controls.Add(this.panel3);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1043, 85);
+            this.topPanel.TabIndex = 6;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Date";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 300;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Status";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 120;
+            // 
             // DoctorHomeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -546,8 +508,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.widgetsPanel.ResumeLayout(false);
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
             this.widget3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -566,6 +526,8 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -604,7 +566,6 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Panel topPanel;
-        private Bunifu.Framework.UI.BunifuFlatButton addPatientBTN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

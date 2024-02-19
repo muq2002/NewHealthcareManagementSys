@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Screens;
 
 namespace WindowsFormsApp1
 {
@@ -17,31 +18,31 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #region Controls
         private void loginBTN_Click(object sender, EventArgs e)
         {
-            if (textUsername.Text == "1")
+            if (textUsername.Text == "Lab")
             {
                 LabHomeScreen labHomeScreen = new LabHomeScreen();
                 labHomeScreen.ShowDialog();
             }
+            if (textUsername.Text == "Doctor")
+            {
+                DoctorHomeScreen doctorHomescreen = new DoctorHomeScreen();
+                doctorHomescreen.ShowDialog();
+            }
+            if (textUsername.Text == "Registration")
+            {
+                RegistrationHomeScreen regertrationHomeScreen = new RegistrationHomeScreen();
+                regertrationHomeScreen.ShowDialog();
+            }
+        }
 
-            DoctorHomeScreen doctorHomescreen = new DoctorHomeScreen();
-            doctorHomescreen.ShowDialog();
+        #endregion
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

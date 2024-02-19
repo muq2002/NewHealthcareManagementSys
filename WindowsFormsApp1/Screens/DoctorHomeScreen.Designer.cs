@@ -183,7 +183,7 @@
             this.notificationsBTN.Size = new System.Drawing.Size(300, 70);
             this.notificationsBTN.TabIndex = 2;
             this.notificationsBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.notificationsBTN.Click += new System.EventHandler(this.bunifuThinButton29_Click);
+            this.notificationsBTN.Click += new System.EventHandler(this.logoutBTN_Click);
             // 
             // bunifuThinButton210
             // 

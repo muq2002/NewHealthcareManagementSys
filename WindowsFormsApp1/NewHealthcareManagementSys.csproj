@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\DatabaseProvider.cs" />
+    <Compile Include="Config\Utils.cs" />
     <Compile Include="Controller\TestController.cs" />
     <Compile Include="CurvedPanel.cs">
       <SubType>Component</SubType>
@@ -76,10 +77,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\Doctor\AddPatientForm.cs">
+    <Compile Include="Screens\RegistrationHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\Doctor\AddPatientForm.Designer.cs">
+    <Compile Include="Screens\RegistrationHomeScreen.Designer.cs">
+      <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Registration\AddPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Registration\AddPatientForm.Designer.cs">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Doctor\DoctorHomeControl.cs">
@@ -124,6 +131,18 @@
     <Compile Include="UserControls\Lab\TestsListControl.Designer.cs">
       <DependentUpon>TestsListControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Registration\RegistrationHomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Registration\RegistrationHomeControl.Designer.cs">
+      <DependentUpon>RegistrationHomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Registration\RegistrationPatientListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Registration\RegistrationPatientListControl.Designer.cs">
+      <DependentUpon>RegistrationPatientListControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Screens\DoctorHomeScreen.resx">
       <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,7 +161,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\Doctor\AddPatientForm.resx">
+    <EmbeddedResource Include="Screens\RegistrationHomeScreen.resx">
+      <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Registration\AddPatientForm.resx">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Doctor\DoctorHomeControl.resx">
@@ -162,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Lab\TestsListControl.resx">
       <DependentUpon>TestsListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Registration\RegistrationHomeControl.resx">
+      <DependentUpon>RegistrationHomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Registration\RegistrationPatientListControl.resx">
+      <DependentUpon>RegistrationPatientListControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

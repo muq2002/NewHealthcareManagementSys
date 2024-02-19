@@ -48,7 +48,6 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(87, 20);
             this.bunifuCustomLabel1.TabIndex = 5;
             this.bunifuCustomLabel1.Text = "Username:";
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -65,7 +64,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.SaddleBrown;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
             this.bunifuCards1.Controls.Add(this.textPassword);
             this.bunifuCards1.Controls.Add(this.textUsername);
             this.bunifuCards1.Controls.Add(this.pictureBox1);
@@ -78,7 +77,7 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(518, 430);
+            this.bunifuCards1.Size = new System.Drawing.Size(518, 419);
             this.bunifuCards1.TabIndex = 7;
             // 
             // textPassword
@@ -147,12 +146,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 430);
+            this.ClientSize = new System.Drawing.Size(518, 419);
             this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

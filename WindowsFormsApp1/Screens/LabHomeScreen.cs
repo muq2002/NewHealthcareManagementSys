@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Config;
 using WindowsFormsApp1.Screens;
 using WindowsFormsApp1.UserControls;
 
@@ -76,21 +77,9 @@ namespace WindowsFormsApp1
 
             for (int index = 0; index < 8; index++)
             {
-                changeColor(index);
+                Utils.changeColor(index, sidebar);
             }
 
-        }
-        private void changeColor(int index)
-        {
-            foreach (var item in sidebar.Controls[index].Controls)
-            {
-
-                if (item is BunifuThinButton2 button)
-                {
-                    button.IdleFillColor = Color.FromArgb(56, 182, 255);
-                    button.IdleForecolor = Color.White;
-                }
-            }
         }
 
     }
