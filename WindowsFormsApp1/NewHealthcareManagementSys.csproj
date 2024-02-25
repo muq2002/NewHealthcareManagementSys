@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,10 +68,12 @@
   <ItemGroup>
     <Compile Include="Config\DatabaseProvider.cs" />
     <Compile Include="Config\Utils.cs" />
+    <Compile Include="Controller\PatientController.cs" />
     <Compile Include="Controller\TestController.cs" />
     <Compile Include="CurvedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\PatientModel.cs" />
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Screens\DoctorHomeScreen.cs">
       <SubType>Form</SubType>
@@ -77,11 +95,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\PharmacyHomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PharmacyHomeScreen.Designer.cs">
+      <DependentUpon>PharmacyHomeScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\RegistrationHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\RegistrationHomeScreen.Designer.cs">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyHomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyHomeControl.Designer.cs">
+      <DependentUpon>PharmacyHomeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Registration\AddPatientForm.cs">
       <SubType>Form</SubType>
@@ -143,6 +173,12 @@
     <Compile Include="UserControls\Registration\RegistrationPatientListControl.Designer.cs">
       <DependentUpon>RegistrationPatientListControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Registration\RegistrationSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Registration\RegistrationSettingsControl.Designer.cs">
+      <DependentUpon>RegistrationSettingsControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Screens\DoctorHomeScreen.resx">
       <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +227,9 @@
     <EmbeddedResource Include="UserControls\Registration\RegistrationPatientListControl.resx">
       <DependentUpon>RegistrationPatientListControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Registration\RegistrationSettingsControl.resx">
+      <DependentUpon>RegistrationSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,8 +243,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="UserControls\Pharmacy\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

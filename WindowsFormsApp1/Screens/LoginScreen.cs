@@ -21,20 +21,25 @@ namespace WindowsFormsApp1
         #region Controls
         private void loginBTN_Click(object sender, EventArgs e)
         {
-            if (textUsername.Text == "Lab")
+            if (textUsername.Text == "lab")
             {
                 LabHomeScreen labHomeScreen = new LabHomeScreen();
                 labHomeScreen.ShowDialog();
             }
-            if (textUsername.Text == "Doctor")
+            if (textUsername.Text == "doc")
             {
                 DoctorHomeScreen doctorHomescreen = new DoctorHomeScreen();
                 doctorHomescreen.ShowDialog();
             }
-            if (textUsername.Text == "Registration")
+            if (textUsername.Text == "reg")
             {
-                RegistrationHomeScreen regertrationHomeScreen = new RegistrationHomeScreen();
-                regertrationHomeScreen.ShowDialog();
+                RegistrationHomeScreen registrationHomeScreen = new RegistrationHomeScreen();
+                registrationHomeScreen.ShowDialog();
+            }
+            if (textUsername.Text == "pha")
+            {
+                PharmacyHomeScreen pharmacyHomeScreen = new PharmacyHomeScreen();
+                pharmacyHomeScreen.ShowDialog();
             }
         }
 
@@ -43,6 +48,11 @@ namespace WindowsFormsApp1
         private void LoginScreen_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

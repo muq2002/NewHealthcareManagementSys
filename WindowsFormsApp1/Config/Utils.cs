@@ -46,5 +46,12 @@ namespace WindowsFormsApp1.Config
                 control.Location = new System.Drawing.Point(centerX, control.Location.Y);
             }
         }
+
+        public static string getGenderStr(string gender)
+        {
+            if (gender == "1") return "Male";
+            return "Female";
+        }
+
     }
 }

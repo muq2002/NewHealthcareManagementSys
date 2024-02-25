@@ -20,11 +20,16 @@ namespace WindowsFormsApp1.Screens
         }
         RegistrationPatientListControl registrationPatientListControl
             = new RegistrationPatientListControl();
+        RegistrationSettingsControl registrationSettingsControl 
+            = new RegistrationSettingsControl();
 
         private void RegistrationHomeScreen_Load(object sender, EventArgs e)
         {
             registrationPatientListControl.Dock = DockStyle.Fill;
             container.Controls.Add(registrationPatientListControl);
+
+            registrationSettingsControl.Dock = DockStyle.Fill;
+            container.Controls.Add(registrationSettingsControl);
         }
         private void patientBTN_Click(object sender, EventArgs e)
         {
@@ -43,8 +48,9 @@ namespace WindowsFormsApp1.Screens
 
         void hiddenForms()
         {
-            registrationHomeControl1.Visible = false;
+            registrationHomeControl2.Visible = false;
             registrationPatientListControl.Visible = false;
+            registrationSettingsControl.Visible = false;
         }
         void convertColor()
         {
@@ -59,7 +65,16 @@ namespace WindowsFormsApp1.Screens
         private void RegistrationBTN_Click(object sender, EventArgs e)
         {
             convertColor(); hiddenForms();
-            registrationHomeControl1.Visible = true;
+            registrationHomeControl2.Visible = true;
+
+            patientBTN.IdleFillColor = Color.White;
+            patientBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+        }
+
+        private void SettingsBTN_Click(object sender, EventArgs e)
+        {
+            convertColor(); hiddenForms();
+            registrationSettingsControl.Visible = true;
 
             patientBTN.IdleFillColor = Color.White;
             patientBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);

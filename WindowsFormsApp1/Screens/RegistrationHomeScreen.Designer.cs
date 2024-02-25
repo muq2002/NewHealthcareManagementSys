@@ -30,42 +30,52 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationHomeScreen));
             this.container = new System.Windows.Forms.Panel();
+            this.registrationHomeControl2 = new WindowsFormsApp1.UserControls.Registration.RegistrationHomeControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.logoPicture = new System.Windows.Forms.PictureBox();
-            this.RegistrationBTN = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.item1 = new System.Windows.Forms.Panel();
-            this.patientBTN = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.SettingsBTN = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton28 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.logoutBTN = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton210 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.helpBTN = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.Panel();
-            this.registrationHomeControl1 = new WindowsFormsApp1.UserControls.Registration.RegistrationHomeControl();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.logoutBTN = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton210 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.SettingsBTN = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton28 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.patientBTN = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.item1 = new System.Windows.Forms.Panel();
+            this.RegistrationBTN = new Bunifu.Framework.UI.BunifuThinButton2();
             this.container.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();
-            this.item1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.sidebar.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.item1.SuspendLayout();
             this.SuspendLayout();
             // 
             // container
             // 
-            this.container.Controls.Add(this.registrationHomeControl1);
+            this.container.Controls.Add(this.registrationHomeControl2);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(300, 0);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(876, 648);
             this.container.TabIndex = 3;
+            // 
+            // registrationHomeControl2
+            // 
+            this.registrationHomeControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.registrationHomeControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registrationHomeControl2.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrationHomeControl2.Location = new System.Drawing.Point(0, 0);
+            this.registrationHomeControl2.Name = "registrationHomeControl2";
+            this.registrationHomeControl2.Size = new System.Drawing.Size(876, 648);
+            this.registrationHomeControl2.TabIndex = 0;
             // 
             // panel4
             // 
@@ -86,204 +96,6 @@
             this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPicture.TabIndex = 0;
             this.logoPicture.TabStop = false;
-            // 
-            // RegistrationBTN
-            // 
-            this.RegistrationBTN.ActiveBorderThickness = 1;
-            this.RegistrationBTN.ActiveCornerRadius = 20;
-            this.RegistrationBTN.ActiveFillColor = System.Drawing.Color.White;
-            this.RegistrationBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.RegistrationBTN.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.RegistrationBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.RegistrationBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrationBTN.BackgroundImage")));
-            this.RegistrationBTN.ButtonText = "Registrations";
-            this.RegistrationBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrationBTN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RegistrationBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistrationBTN.ForeColor = System.Drawing.Color.White;
-            this.RegistrationBTN.IdleBorderThickness = 1;
-            this.RegistrationBTN.IdleCornerRadius = 20;
-            this.RegistrationBTN.IdleFillColor = System.Drawing.Color.White;
-            this.RegistrationBTN.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.RegistrationBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.RegistrationBTN.Location = new System.Drawing.Point(0, 0);
-            this.RegistrationBTN.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.RegistrationBTN.Name = "RegistrationBTN";
-            this.RegistrationBTN.Size = new System.Drawing.Size(300, 70);
-            this.RegistrationBTN.TabIndex = 1;
-            this.RegistrationBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RegistrationBTN.Click += new System.EventHandler(this.RegistrationBTN_Click);
-            // 
-            // item1
-            // 
-            this.item1.Controls.Add(this.RegistrationBTN);
-            this.item1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.item1.Location = new System.Drawing.Point(0, 188);
-            this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(300, 70);
-            this.item1.TabIndex = 1;
-            // 
-            // patientBTN
-            // 
-            this.patientBTN.ActiveBorderThickness = 1;
-            this.patientBTN.ActiveCornerRadius = 20;
-            this.patientBTN.ActiveFillColor = System.Drawing.Color.White;
-            this.patientBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.patientBTN.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.patientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.patientBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patientBTN.BackgroundImage")));
-            this.patientBTN.ButtonText = "Patients";
-            this.patientBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.patientBTN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.patientBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientBTN.ForeColor = System.Drawing.Color.White;
-            this.patientBTN.IdleBorderThickness = 1;
-            this.patientBTN.IdleCornerRadius = 20;
-            this.patientBTN.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.patientBTN.IdleForecolor = System.Drawing.Color.White;
-            this.patientBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.patientBTN.Location = new System.Drawing.Point(0, 0);
-            this.patientBTN.Margin = new System.Windows.Forms.Padding(5);
-            this.patientBTN.Name = "patientBTN";
-            this.patientBTN.Size = new System.Drawing.Size(300, 70);
-            this.patientBTN.TabIndex = 1;
-            this.patientBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.patientBTN.Click += new System.EventHandler(this.patientBTN_Click);
-
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.patientBTN);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 258);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 70);
-            this.panel5.TabIndex = 2;
-            // 
-            // SettingsBTN
-            // 
-            this.SettingsBTN.ActiveBorderThickness = 1;
-            this.SettingsBTN.ActiveCornerRadius = 20;
-            this.SettingsBTN.ActiveFillColor = System.Drawing.Color.White;
-            this.SettingsBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.SettingsBTN.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.SettingsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.SettingsBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBTN.BackgroundImage")));
-            this.SettingsBTN.ButtonText = "Settings";
-            this.SettingsBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SettingsBTN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SettingsBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsBTN.ForeColor = System.Drawing.Color.White;
-            this.SettingsBTN.IdleBorderThickness = 1;
-            this.SettingsBTN.IdleCornerRadius = 20;
-            this.SettingsBTN.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.SettingsBTN.IdleForecolor = System.Drawing.Color.White;
-            this.SettingsBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.SettingsBTN.Location = new System.Drawing.Point(0, 0);
-            this.SettingsBTN.Margin = new System.Windows.Forms.Padding(5);
-            this.SettingsBTN.Name = "SettingsBTN";
-            this.SettingsBTN.Size = new System.Drawing.Size(300, 70);
-            this.SettingsBTN.TabIndex = 2;
-            this.SettingsBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.SettingsBTN);
-            this.panel8.Controls.Add(this.bunifuThinButton28);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 328);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(300, 70);
-            this.panel8.TabIndex = 5;
-            // 
-            // bunifuThinButton28
-            // 
-            this.bunifuThinButton28.ActiveBorderThickness = 1;
-            this.bunifuThinButton28.ActiveCornerRadius = 20;
-            this.bunifuThinButton28.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton28.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton28.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton28.BackgroundImage")));
-            this.bunifuThinButton28.ButtonText = "Statistics";
-            this.bunifuThinButton28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton28.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton28.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton28.IdleBorderThickness = 1;
-            this.bunifuThinButton28.IdleCornerRadius = 20;
-            this.bunifuThinButton28.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton28.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton28.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton28.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton28.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton28.Name = "bunifuThinButton28";
-            this.bunifuThinButton28.Size = new System.Drawing.Size(300, 70);
-            this.bunifuThinButton28.TabIndex = 1;
-            this.bunifuThinButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // logoutBTN
-            // 
-            this.logoutBTN.ActiveBorderThickness = 1;
-            this.logoutBTN.ActiveCornerRadius = 20;
-            this.logoutBTN.ActiveFillColor = System.Drawing.Color.White;
-            this.logoutBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.logoutBTN.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.logoutBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.logoutBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoutBTN.BackgroundImage")));
-            this.logoutBTN.ButtonText = "Logout";
-            this.logoutBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBTN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoutBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBTN.ForeColor = System.Drawing.Color.White;
-            this.logoutBTN.IdleBorderThickness = 1;
-            this.logoutBTN.IdleCornerRadius = 20;
-            this.logoutBTN.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.logoutBTN.IdleForecolor = System.Drawing.Color.White;
-            this.logoutBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.logoutBTN.Location = new System.Drawing.Point(0, 0);
-            this.logoutBTN.Margin = new System.Windows.Forms.Padding(5);
-            this.logoutBTN.Name = "logoutBTN";
-            this.logoutBTN.Size = new System.Drawing.Size(300, 70);
-            this.logoutBTN.TabIndex = 2;
-            this.logoutBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.logoutBTN.Click += new System.EventHandler(this.logoutBTN_Click);
-            // 
-            // bunifuThinButton210
-            // 
-            this.bunifuThinButton210.ActiveBorderThickness = 1;
-            this.bunifuThinButton210.ActiveCornerRadius = 20;
-            this.bunifuThinButton210.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton210.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton210.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton210.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton210.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton210.BackgroundImage")));
-            this.bunifuThinButton210.ButtonText = "Statistics";
-            this.bunifuThinButton210.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton210.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton210.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton210.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton210.IdleBorderThickness = 1;
-            this.bunifuThinButton210.IdleCornerRadius = 20;
-            this.bunifuThinButton210.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton210.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton210.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton210.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton210.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton210.Name = "bunifuThinButton210";
-            this.bunifuThinButton210.Size = new System.Drawing.Size(300, 70);
-            this.bunifuThinButton210.TabIndex = 1;
-            this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.logoutBTN);
-            this.panel9.Controls.Add(this.bunifuThinButton210);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 398);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(300, 70);
-            this.panel9.TabIndex = 6;
             // 
             // helpBTN
             // 
@@ -362,15 +174,203 @@
             this.sidebar.Size = new System.Drawing.Size(300, 648);
             this.sidebar.TabIndex = 2;
             // 
-            // registrationHomeControl1
+            // panel9
             // 
-            this.registrationHomeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.registrationHomeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.registrationHomeControl1.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrationHomeControl1.Location = new System.Drawing.Point(0, 0);
-            this.registrationHomeControl1.Name = "registrationHomeControl1";
-            this.registrationHomeControl1.Size = new System.Drawing.Size(876, 648);
-            this.registrationHomeControl1.TabIndex = 0;
+            this.panel9.Controls.Add(this.logoutBTN);
+            this.panel9.Controls.Add(this.bunifuThinButton210);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 398);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(300, 70);
+            this.panel9.TabIndex = 6;
+            // 
+            // logoutBTN
+            // 
+            this.logoutBTN.ActiveBorderThickness = 1;
+            this.logoutBTN.ActiveCornerRadius = 20;
+            this.logoutBTN.ActiveFillColor = System.Drawing.Color.White;
+            this.logoutBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.logoutBTN.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.logoutBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.logoutBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoutBTN.BackgroundImage")));
+            this.logoutBTN.ButtonText = "Logout";
+            this.logoutBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBTN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoutBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBTN.ForeColor = System.Drawing.Color.White;
+            this.logoutBTN.IdleBorderThickness = 1;
+            this.logoutBTN.IdleCornerRadius = 20;
+            this.logoutBTN.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.logoutBTN.IdleForecolor = System.Drawing.Color.White;
+            this.logoutBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.logoutBTN.Location = new System.Drawing.Point(0, 0);
+            this.logoutBTN.Margin = new System.Windows.Forms.Padding(5);
+            this.logoutBTN.Name = "logoutBTN";
+            this.logoutBTN.Size = new System.Drawing.Size(300, 70);
+            this.logoutBTN.TabIndex = 2;
+            this.logoutBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoutBTN.Click += new System.EventHandler(this.logoutBTN_Click);
+            // 
+            // bunifuThinButton210
+            // 
+            this.bunifuThinButton210.ActiveBorderThickness = 1;
+            this.bunifuThinButton210.ActiveCornerRadius = 20;
+            this.bunifuThinButton210.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton210.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton210.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton210.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton210.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton210.BackgroundImage")));
+            this.bunifuThinButton210.ButtonText = "Statistics";
+            this.bunifuThinButton210.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton210.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton210.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton210.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton210.IdleBorderThickness = 1;
+            this.bunifuThinButton210.IdleCornerRadius = 20;
+            this.bunifuThinButton210.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton210.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton210.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton210.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton210.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton210.Name = "bunifuThinButton210";
+            this.bunifuThinButton210.Size = new System.Drawing.Size(300, 70);
+            this.bunifuThinButton210.TabIndex = 1;
+            this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.SettingsBTN);
+            this.panel8.Controls.Add(this.bunifuThinButton28);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 328);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(300, 70);
+            this.panel8.TabIndex = 5;
+            // 
+            // SettingsBTN
+            // 
+            this.SettingsBTN.ActiveBorderThickness = 1;
+            this.SettingsBTN.ActiveCornerRadius = 20;
+            this.SettingsBTN.ActiveFillColor = System.Drawing.Color.White;
+            this.SettingsBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.SettingsBTN.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.SettingsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.SettingsBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBTN.BackgroundImage")));
+            this.SettingsBTN.ButtonText = "Settings";
+            this.SettingsBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SettingsBTN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SettingsBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsBTN.ForeColor = System.Drawing.Color.White;
+            this.SettingsBTN.IdleBorderThickness = 1;
+            this.SettingsBTN.IdleCornerRadius = 20;
+            this.SettingsBTN.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.SettingsBTN.IdleForecolor = System.Drawing.Color.White;
+            this.SettingsBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.SettingsBTN.Location = new System.Drawing.Point(0, 0);
+            this.SettingsBTN.Margin = new System.Windows.Forms.Padding(5);
+            this.SettingsBTN.Name = "SettingsBTN";
+            this.SettingsBTN.Size = new System.Drawing.Size(300, 70);
+            this.SettingsBTN.TabIndex = 2;
+            this.SettingsBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SettingsBTN.Click += new System.EventHandler(this.SettingsBTN_Click);
+            // 
+            // bunifuThinButton28
+            // 
+            this.bunifuThinButton28.ActiveBorderThickness = 1;
+            this.bunifuThinButton28.ActiveCornerRadius = 20;
+            this.bunifuThinButton28.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton28.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton28.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton28.BackgroundImage")));
+            this.bunifuThinButton28.ButtonText = "Statistics";
+            this.bunifuThinButton28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton28.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton28.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton28.IdleBorderThickness = 1;
+            this.bunifuThinButton28.IdleCornerRadius = 20;
+            this.bunifuThinButton28.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton28.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton28.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton28.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton28.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton28.Name = "bunifuThinButton28";
+            this.bunifuThinButton28.Size = new System.Drawing.Size(300, 70);
+            this.bunifuThinButton28.TabIndex = 1;
+            this.bunifuThinButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.patientBTN);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 258);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(300, 70);
+            this.panel5.TabIndex = 2;
+            // 
+            // patientBTN
+            // 
+            this.patientBTN.ActiveBorderThickness = 1;
+            this.patientBTN.ActiveCornerRadius = 20;
+            this.patientBTN.ActiveFillColor = System.Drawing.Color.White;
+            this.patientBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.patientBTN.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.patientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.patientBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patientBTN.BackgroundImage")));
+            this.patientBTN.ButtonText = "Patients";
+            this.patientBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.patientBTN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.patientBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientBTN.ForeColor = System.Drawing.Color.White;
+            this.patientBTN.IdleBorderThickness = 1;
+            this.patientBTN.IdleCornerRadius = 20;
+            this.patientBTN.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.patientBTN.IdleForecolor = System.Drawing.Color.White;
+            this.patientBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.patientBTN.Location = new System.Drawing.Point(0, 0);
+            this.patientBTN.Margin = new System.Windows.Forms.Padding(5);
+            this.patientBTN.Name = "patientBTN";
+            this.patientBTN.Size = new System.Drawing.Size(300, 70);
+            this.patientBTN.TabIndex = 1;
+            this.patientBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientBTN.Click += new System.EventHandler(this.patientBTN_Click);
+            // 
+            // item1
+            // 
+            this.item1.Controls.Add(this.RegistrationBTN);
+            this.item1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.item1.Location = new System.Drawing.Point(0, 188);
+            this.item1.Name = "item1";
+            this.item1.Size = new System.Drawing.Size(300, 70);
+            this.item1.TabIndex = 1;
+            // 
+            // RegistrationBTN
+            // 
+            this.RegistrationBTN.ActiveBorderThickness = 1;
+            this.RegistrationBTN.ActiveCornerRadius = 20;
+            this.RegistrationBTN.ActiveFillColor = System.Drawing.Color.White;
+            this.RegistrationBTN.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.RegistrationBTN.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.RegistrationBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.RegistrationBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrationBTN.BackgroundImage")));
+            this.RegistrationBTN.ButtonText = "Registrations";
+            this.RegistrationBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrationBTN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RegistrationBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrationBTN.ForeColor = System.Drawing.Color.White;
+            this.RegistrationBTN.IdleBorderThickness = 1;
+            this.RegistrationBTN.IdleCornerRadius = 20;
+            this.RegistrationBTN.IdleFillColor = System.Drawing.Color.White;
+            this.RegistrationBTN.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.RegistrationBTN.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.RegistrationBTN.Location = new System.Drawing.Point(0, 0);
+            this.RegistrationBTN.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.RegistrationBTN.Name = "RegistrationBTN";
+            this.RegistrationBTN.Size = new System.Drawing.Size(300, 70);
+            this.RegistrationBTN.TabIndex = 1;
+            this.RegistrationBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RegistrationBTN.Click += new System.EventHandler(this.RegistrationBTN_Click);
             // 
             // RegistrationHomeScreen
             // 
@@ -388,12 +388,12 @@
             this.container.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
-            this.item1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.sidebar.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.item1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -403,20 +403,21 @@
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox logoPicture;
-        private Bunifu.Framework.UI.BunifuThinButton2 RegistrationBTN;
-        private System.Windows.Forms.Panel item1;
-        private Bunifu.Framework.UI.BunifuThinButton2 patientBTN;
-        private System.Windows.Forms.Panel panel5;
-        private Bunifu.Framework.UI.BunifuThinButton2 SettingsBTN;
-        private System.Windows.Forms.Panel panel8;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
-        private Bunifu.Framework.UI.BunifuThinButton2 logoutBTN;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
-        private System.Windows.Forms.Panel panel9;
         private Bunifu.Framework.UI.BunifuThinButton2 helpBTN;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel sidebar;
         private UserControls.Registration.RegistrationHomeControl registrationHomeControl1;
+        private UserControls.Registration.RegistrationHomeControl registrationHomeControl2;
+        private System.Windows.Forms.Panel panel9;
+        private Bunifu.Framework.UI.BunifuThinButton2 logoutBTN;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
+        private System.Windows.Forms.Panel panel8;
+        private Bunifu.Framework.UI.BunifuThinButton2 SettingsBTN;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuThinButton2 patientBTN;
+        private System.Windows.Forms.Panel item1;
+        private Bunifu.Framework.UI.BunifuThinButton2 RegistrationBTN;
     }
 }
