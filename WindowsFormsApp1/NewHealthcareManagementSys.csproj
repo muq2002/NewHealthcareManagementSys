@@ -107,11 +107,35 @@
     <Compile Include="Screens\RegistrationHomeScreen.Designer.cs">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyDrugList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyDrugList.Designer.cs">
+      <DependentUpon>PharmacyDrugList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Pharmacy\PharmacyHomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Pharmacy\PharmacyHomeControl.Designer.cs">
       <DependentUpon>PharmacyHomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyPatientProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyPatientProfile.Designer.cs">
+      <DependentUpon>PharmacyPatientProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyPatientsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacyPatientsList.Designer.cs">
+      <DependentUpon>PharmacyPatientsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacySettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\PharmacySettingsControl.Designer.cs">
+      <DependentUpon>PharmacySettingsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Registration\AddPatientForm.cs">
       <SubType>Form</SubType>
@@ -197,8 +221,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screens\PharmacyHomeScreen.resx">
+      <DependentUpon>PharmacyHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\RegistrationHomeScreen.resx">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Pharmacy\PharmacyDrugList.resx">
+      <DependentUpon>PharmacyDrugList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Pharmacy\PharmacyHomeControl.resx">
+      <DependentUpon>PharmacyHomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Pharmacy\PharmacyPatientProfile.resx">
+      <DependentUpon>PharmacyPatientProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Pharmacy\PharmacyPatientsList.resx">
+      <DependentUpon>PharmacyPatientsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Pharmacy\PharmacySettingsControl.resx">
+      <DependentUpon>PharmacySettingsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Registration\AddPatientForm.resx">
       <DependentUpon>AddPatientForm.cs</DependentUpon>

@@ -104,9 +104,9 @@
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.Location = new System.Drawing.Point(48, 23);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(102, 38);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(83, 38);
             this.bunifuCustomLabel10.TabIndex = 4;
-            this.bunifuCustomLabel10.Text = "Orders";
+            this.bunifuCustomLabel10.Text = "Tests";
             // 
             // panel3
             // 
@@ -483,7 +483,7 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 300;
             // 
-            // HomeControl
+            // LabHomeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -495,7 +495,7 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.topPanel);
             this.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "HomeControl";
+            this.Name = "LabHomeControl";
             this.Size = new System.Drawing.Size(1043, 732);
             this.Load += new System.EventHandler(this.HomeControl_Load);
             this.topPanel.ResumeLayout(false);

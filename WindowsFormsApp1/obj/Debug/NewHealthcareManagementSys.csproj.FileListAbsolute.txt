@@ -35,5 +35,11 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csproj.CopyComplete
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.exe
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.pdb
-C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Registration.RegistrationSettingsControl.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Screens.PharmacyHomeScreen.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Pharmacy.PharmacyHomeControl.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Pharmacy.PharmacyDrugList.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Pharmacy.PharmacyPatientProfile.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Pharmacy.PharmacyPatientsList.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.Pharmacy.PharmacySettingsControl.resources
