@@ -8,11 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Config;
-using WindowsFormsApp1.Screens;
-using WindowsFormsApp1.UserControls;
+using HealthcareManagementSystem.Config;
+using HealthcareManagementSystem.Screens;
+using HealthcareManagementSystem.UserControls;
+using HealthcareManagement.UserControls.Lab;
 
-namespace WindowsFormsApp1
+namespace HealthcareManagementSystem
 {
     public partial class LabHomeScreen : Form
     {
@@ -21,13 +22,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void bunifuThinButton29_Click(object sender, EventArgs e)
+        private void logoutBTN_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         TestsListControl testsListControl = new TestsListControl();
-        PatientsListControl patientsListControl = new PatientsListControl();
-
+        LabPatientsListControl patientsListControl = new LabPatientsListControl();
+        LabSettingsControl labSettingsControl = new LabSettingsControl();
         private void HomeScreen_Load(object sender, EventArgs e)
         {
             testsListControl.Dock = DockStyle.Fill;
@@ -35,6 +36,9 @@ namespace WindowsFormsApp1
 
             patientsListControl.Dock = DockStyle.Fill;
             container.Controls.Add(patientsListControl);
+
+            labSettingsControl.Dock = DockStyle.Fill;
+            container.Controls.Add(labSettingsControl);
         }
 
         private void testsListBTN_Click(object sender, EventArgs e)
@@ -71,6 +75,7 @@ namespace WindowsFormsApp1
             homeControl1.Visible = false;
             testsListControl.Visible = false;
             patientsListControl.Visible = false;
+            labSettingsControl.Visible = false;
         }
         void convertColor()
         {
@@ -82,5 +87,13 @@ namespace WindowsFormsApp1
 
         }
 
+        private void settingsBTN_Click(object sender, EventArgs e)
+        {
+            convertColor(); hiddenForms();
+            labSettingsControl.Visible = true;
+
+            settingsBTN.IdleFillColor = Color.White;
+            settingsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+        }
     }
 }

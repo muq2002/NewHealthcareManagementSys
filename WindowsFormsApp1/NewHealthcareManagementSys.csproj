@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{481813B6-D695-4977-AF86-BA62959FF3BB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <RootNamespace>HealthcareManagement</RootNamespace>
     <AssemblyName>NewHealthcareManagementSys</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -68,13 +68,21 @@
   <ItemGroup>
     <Compile Include="Config\DatabaseProvider.cs" />
     <Compile Include="Config\Utils.cs" />
+    <Compile Include="Controller\DrugsController.cs" />
     <Compile Include="Controller\PatientController.cs" />
+    <Compile Include="Controller\SessionController.cs" />
     <Compile Include="Controller\TestController.cs" />
+    <Compile Include="Controller\TestGroupController.cs" />
+    <Compile Include="Controller\TestsBankController.cs" />
     <Compile Include="CurvedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\DrugModel.cs" />
     <Compile Include="Model\PatientModel.cs" />
+    <Compile Include="Model\SessionModel.cs" />
+    <Compile Include="Model\TestGroupModel.cs" />
     <Compile Include="Model\TestModel.cs" />
+    <Compile Include="Model\TestsBankModel.cs" />
     <Compile Include="Screens\DoctorHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +114,30 @@
     </Compile>
     <Compile Include="Screens\RegistrationHomeScreen.Designer.cs">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Doctor\DoctorSelectMedicalTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Doctor\DoctorSelectMedicalTests.Designer.cs">
+      <DependentUpon>DoctorSelectMedicalTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Doctor\DoctorSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Doctor\DoctorSettingsControl.Designer.cs">
+      <DependentUpon>DoctorSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Lab\LabSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Lab\LabSettingsControl.Designer.cs">
+      <DependentUpon>LabSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\DrugInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pharmacy\DrugInfoForm.Designer.cs">
+      <DependentUpon>DrugInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Pharmacy\PharmacyDrugList.cs">
       <SubType>UserControl</SubType>
@@ -173,11 +205,11 @@
     <Compile Include="UserControls\Lab\PatientControl.Designer.cs">
       <DependentUpon>PatientControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Lab\PatientsListControl.cs">
+    <Compile Include="UserControls\Lab\LabPatientsListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Lab\PatientsListControl.Designer.cs">
-      <DependentUpon>PatientsListControl.cs</DependentUpon>
+    <Compile Include="UserControls\Lab\LabPatientsListControl.Designer.cs">
+      <DependentUpon>LabPatientsListControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Lab\TestsListControl.cs">
       <SubType>UserControl</SubType>
@@ -220,12 +252,28 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Screens\PharmacyHomeScreen.resx">
       <DependentUpon>PharmacyHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\RegistrationHomeScreen.resx">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Doctor\DoctorSelectMedicalTests.resx">
+      <DependentUpon>DoctorSelectMedicalTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Doctor\DoctorSettingsControl.resx">
+      <DependentUpon>DoctorSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Doctor\PatientListControl.resx">
+      <DependentUpon>PatientListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Lab\LabSettingsControl.resx">
+      <DependentUpon>LabSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Pharmacy\DrugInfoForm.resx">
+      <DependentUpon>DrugInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Pharmacy\PharmacyDrugList.resx">
       <DependentUpon>PharmacyDrugList.cs</DependentUpon>
@@ -257,8 +305,8 @@
     <EmbeddedResource Include="UserControls\Lab\PatientControl.resx">
       <DependentUpon>PatientControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Lab\PatientsListControl.resx">
-      <DependentUpon>PatientsListControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Lab\LabPatientsListControl.resx">
+      <DependentUpon>LabPatientsListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Lab\TestsListControl.resx">
       <DependentUpon>TestsListControl.cs</DependentUpon>

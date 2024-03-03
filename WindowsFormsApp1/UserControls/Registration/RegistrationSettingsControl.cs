@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Controller;
-using WindowsFormsApp1.Config;
+using HealthcareManagementSystem.Controller;
+using HealthcareManagementSystem.Config;
 
-namespace WindowsFormsApp1.UserControls.Registration
+namespace HealthcareManagementSystem.UserControls.Registration
 {
     public partial class RegistrationSettingsControl : UserControl
     {

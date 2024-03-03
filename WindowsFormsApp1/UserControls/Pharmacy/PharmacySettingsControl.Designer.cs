@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.UserControls.Pharmacy
+﻿namespace HealthcareManagementSystem.UserControls.Pharmacy
 {
     partial class PharmacySettingsControl
     {

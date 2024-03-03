@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.UserControls.Doctor;
-using WindowsFormsApp1.Controller;
+using HealthcareManagementSystem.UserControls.Doctor;
+using HealthcareManagementSystem.Controller;
+using HealthcareManagementSystem.Config;
 
-namespace WindowsFormsApp1.UserControls.Registration
+namespace HealthcareManagementSystem.UserControls.Registration
 {
     public partial class RegistrationHomeControl : UserControl
     {
@@ -38,7 +39,7 @@ namespace WindowsFormsApp1.UserControls.Registration
                     patientData.Rows[index][1].ToString(),
                     patientData.Rows[index][2].ToString(),
                     patientData.Rows[index][3].ToString(),
-                    getGenderStr(patientData.Rows[index][4].ToString()),
+                    Utils.getGenderStr(patientData.Rows[index][4].ToString()),
                     patientData.Rows[index][5].ToString(),
                     patientData.Rows[index][6].ToString(),
                 };
@@ -46,10 +47,6 @@ namespace WindowsFormsApp1.UserControls.Registration
             }
         }
 
-        string getGenderStr(string gender) {
-            if (gender == "1") return "Male";
-            return "Female";
-        }
 
         private void textSearch_OnTextChange(object sender, EventArgs e)
         {

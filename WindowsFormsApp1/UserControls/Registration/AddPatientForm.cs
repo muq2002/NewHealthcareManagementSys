@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Config;
-using WindowsFormsApp1.Controller;
-using WindowsFormsApp1.Model;
-using WindowsFormsApp1.UserControls.Registration;
+using HealthcareManagementSystem.Config;
+using HealthcareManagementSystem.Controller;
+using HealthcareManagementSystem.Model;
+using HealthcareManagementSystem.UserControls.Registration;
 
-namespace WindowsFormsApp1.UserControls.Doctor
+namespace HealthcareManagementSystem.UserControls.Doctor
 {
     public partial class AddPatientForm : Form
     {

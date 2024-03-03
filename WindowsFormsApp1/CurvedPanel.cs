@@ -2,7 +2,7 @@
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace HealthcareManagementSystem
 {
     class CurvedPanel : Panel
     {

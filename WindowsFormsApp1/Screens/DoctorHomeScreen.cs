@@ -2,10 +2,11 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using WindowsFormsApp1.UserControls;
-using WindowsFormsApp1.UserControls.Doctor;
+using HealthcareManagementSystem.UserControls;
+using HealthcareManagementSystem.UserControls.Doctor;
+using HealthcareManagement.UserControls.Doctor;
 
-namespace WindowsFormsApp1
+namespace HealthcareManagementSystem
 {
     public partial class DoctorHomeScreen : Form
     {
@@ -13,28 +14,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        TestsListControl testsListControl = new TestsListControl();
-        PatientsListControl patientsListControl = new PatientsListControl();
+        PatientListControl patientsListControl = new PatientListControl();
         PatientProfileControl patientProfileControl = new PatientProfileControl();
-
-
-
-
-
+        DoctorSettingsControl doctorSettingsControl = new DoctorSettingsControl();
         private void HomeScreen_Load(object sender, EventArgs e)
         {
 
-        }
 
-        private void testsListBTN_Click(object sender, EventArgs e)
-        {
-            convertColor(); hiddenForms();
-            testsListControl.Visible = true;
+            patientsListControl.Dock = DockStyle.Fill;
+            container.Controls.Add(patientsListControl);
 
-            testsListBTN.IdleFillColor = Color.White;
-            testsListBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
-
+            doctorSettingsControl.Dock = DockStyle.Fill;
+            container.Controls.Add(doctorSettingsControl);
         }
 
         #region Buttons
@@ -74,14 +65,14 @@ namespace WindowsFormsApp1
 
         void hiddenForms() {
             doctorHomeControl1.Visible = false;
-            testsListControl.Visible = false;
             patientsListControl.Visible = false;
             patientProfileControl.Visible = false;
+            doctorSettingsControl.Visible = false;
         }
         void convertColor()
         {
 
-            for (int index = 0; index < 8; index++)
+            for (int index = 0; index < 6; index++)
             {
                 changeColor(index);
             }
@@ -100,7 +91,13 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void settingsBTN_Click(object sender, EventArgs e)
+        {
+            convertColor(); hiddenForms();
+            doctorSettingsControl.Visible = true;
 
-
+            settingsBTN.IdleFillColor = Color.White;
+            settingsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+        }
     }
 }

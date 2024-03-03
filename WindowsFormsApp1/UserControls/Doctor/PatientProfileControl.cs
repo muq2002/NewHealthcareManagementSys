@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HealthcareManagement.UserControls.Doctor;
 
-namespace WindowsFormsApp1.UserControls.Doctor
+namespace HealthcareManagementSystem.UserControls.Doctor
 {
     public partial class PatientProfileControl : UserControl
     {
@@ -16,10 +17,16 @@ namespace WindowsFormsApp1.UserControls.Doctor
         {
             InitializeComponent();
         }
-
-        private void addPatientBTN_Click(object sender, EventArgs e)
+        public int patientId = 0;
+        private void PatientProfileControl_Load(object sender, EventArgs e)
         {
+            tabControl1.SelectedTab = tabPage2;
+        }
 
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            DoctorSelectMedicalTests doctorSelectMedicalTests = new DoctorSelectMedicalTests();
+            doctorSelectMedicalTests.ShowDialog();
         }
     }
 }

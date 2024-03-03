@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.UserControls
+﻿namespace HealthcareManagementSystem.UserControls
 {
     partial class TestsListControl
     {

@@ -4,10 +4,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Config;
-using WindowsFormsApp1.Model;
+using HealthcareManagementSystem.Config;
+using HealthcareManagementSystem.Model;
 
-namespace WindowsFormsApp1.Controller
+namespace HealthcareManagementSystem.Controller
 {
     class TestController
     {

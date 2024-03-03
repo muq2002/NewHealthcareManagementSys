@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.UserControls.Pharmacy
+﻿namespace HealthcareManagementSystem.UserControls.Pharmacy
 {
     partial class PharmacyPatientProfile
     {
@@ -33,19 +33,19 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
-            this.containerPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +77,23 @@
             this.topPanel.Size = new System.Drawing.Size(1013, 85);
             this.topPanel.TabIndex = 12;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(737, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(276, 85);
+            this.panel1.TabIndex = 6;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(24, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(222, 30);
+            this.comboBox1.TabIndex = 5;
+            // 
             // leftPanel
             // 
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -103,25 +120,10 @@
             this.containerPanel.Size = new System.Drawing.Size(983, 620);
             this.containerPanel.TabIndex = 18;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 30);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(737, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 85);
-            this.panel1.TabIndex = 6;
-            // 
             // bunifuCustomDataGrid1
             // 
+            this.bunifuCustomDataGrid1.AllowUserToAddRows = false;
+            this.bunifuCustomDataGrid1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -151,6 +153,7 @@
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowHeadersWidth = 40;
             this.bunifuCustomDataGrid1.RowTemplate.Height = 28;
+            this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(983, 620);
             this.bunifuCustomDataGrid1.TabIndex = 4;
             // 
@@ -192,8 +195,8 @@
             this.Size = new System.Drawing.Size(1043, 732);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            this.containerPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.containerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.ResumeLayout(false);
 

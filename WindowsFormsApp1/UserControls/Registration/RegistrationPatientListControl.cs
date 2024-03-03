@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Config;
-using WindowsFormsApp1.Controller;
-using WindowsFormsApp1.UserControls.Doctor;
+using HealthcareManagementSystem.Config;
+using HealthcareManagementSystem.Controller;
+using HealthcareManagementSystem.UserControls.Doctor;
 
-namespace WindowsFormsApp1.UserControls.Registration
+namespace HealthcareManagementSystem.UserControls.Registration
 {
     public partial class RegistrationPatientListControl : UserControl
     {
@@ -58,6 +58,7 @@ namespace WindowsFormsApp1.UserControls.Registration
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             if (!isUserSelectedRow()) return;
             AddPatientForm addPatientForm = new AddPatientForm();
             addPatientForm.patientId = int.Parse(dataPatients.SelectedRows[0].Cells["_id"].Value.ToString());
@@ -78,6 +79,12 @@ namespace WindowsFormsApp1.UserControls.Registration
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fillPatientData(patientController.readPatients());
+        }
+
+        private void searchPatientText_OnTextChange(object sender, EventArgs e)
+        {
+            if (searchPatientText.text == "") fillPatientData(patientController.readPatients());
+            fillPatientData(patientController.searchPatients(searchPatientText.text));
         }
     }
 }

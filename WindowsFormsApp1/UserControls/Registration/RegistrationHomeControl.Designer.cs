@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.UserControls.Registration
+﻿namespace HealthcareManagementSystem.UserControls.Registration
 {
     partial class RegistrationHomeControl
     {
@@ -37,6 +37,16 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.addPatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.containerPanel = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textSearch = new Bunifu.Framework.UI.BunifuTextbox();
+            this.picRefresh = new System.Windows.Forms.PictureBox();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,16 +55,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textSearch = new Bunifu.Framework.UI.BunifuTextbox();
-            this.picRefresh = new System.Windows.Forms.PictureBox();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.containerPanel.SuspendLayout();
@@ -125,6 +125,8 @@
             // 
             // dataPatients
             // 
+            this.dataPatients.AllowUserToAddRows = false;
+            this.dataPatients.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -163,52 +165,6 @@
             this.dataPatients.Size = new System.Drawing.Size(1043, 720);
             this.dataPatients.TabIndex = 3;
             // 
-            // _id
-            // 
-            this._id.HeaderText = "Column8";
-            this._id.Name = "_id";
-            this._id.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Age";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Gender";
-            this.Column4.Name = "Column4";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Phone Number";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 180;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Date";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 220;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Status";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 80;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -217,13 +173,13 @@
             this.editToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 127);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 94);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("refreshToolStripMenuItem.Image")));
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(248, 30);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
@@ -231,9 +187,17 @@
             // 
             this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(248, 30);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
+            this.updateToolStripMenuItem.Text = "Delete";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // containerPanel
             // 
@@ -303,13 +267,53 @@
             this.bunifuCustomLabel10.TabIndex = 4;
             this.bunifuCustomLabel10.Text = "Regsitrations";
             // 
-            // updateToolStripMenuItem
+            // _id
             // 
-            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(248, 30);
-            this.updateToolStripMenuItem.Text = "Delete";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this._id.HeaderText = "Column8";
+            this._id.Name = "_id";
+            this._id.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 60;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Phone Number";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 180;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Date";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 220;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Status";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 80;
             // 
             // RegistrationHomeControl
             // 
@@ -351,6 +355,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn _id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -359,6 +364,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

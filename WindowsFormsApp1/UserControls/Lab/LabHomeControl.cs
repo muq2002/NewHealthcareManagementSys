@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HealthcareManagementSystem.Config;
+using HealthcareManagementSystem.Controller;
 
-namespace WindowsFormsApp1.Screens
+namespace HealthcareManagementSystem.Screens
 {
     public partial class LabHomeControl : UserControl
     {
@@ -17,21 +19,32 @@ namespace WindowsFormsApp1.Screens
             InitializeComponent();
         }
 
-        private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel9_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        PatientController patientController = new PatientController();
+       
         private void HomeControl_Load(object sender, EventArgs e)
         {
             CenterItemsInPanel(panel2);
             CenterItemsInPanel(panel4);
             CenterItemsInPanel(panel5);
+
+            fillPatientData(patientController.readPatients());
+        }
+
+        void fillPatientData(DataTable patientData)
+        {
+            dataPatients.Rows.Clear();
+            for (int index = 0; index < patientData.Rows.Count; index++)
+            {
+                string[] data = new string[] {
+                    patientData.Rows[index][0].ToString(),
+                    patientData.Rows[index][1].ToString(),
+                    patientData.Rows[index][2].ToString(),
+                    patientData.Rows[index][3].ToString(),
+                    Utils.getGenderStr(patientData.Rows[index][4].ToString()),
+                    patientData.Rows[index][6].ToString(),
+                };
+                dataPatients.Rows.Add(data);
+            }
         }
         private void CenterItemsInPanel(Panel panel)
         {

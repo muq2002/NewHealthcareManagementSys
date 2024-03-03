@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.UserControls
+namespace HealthcareManagement.UserControls.Lab
 {
-    public partial class PatientsListControl : UserControl
+    public partial class LabSettingsControl : UserControl
     {
-        public PatientsListControl()
+        public LabSettingsControl()
         {
             InitializeComponent();
         }

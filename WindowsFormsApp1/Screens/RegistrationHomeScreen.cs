@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Config;
-using WindowsFormsApp1.UserControls.Registration;
+using HealthcareManagementSystem.Config;
+using HealthcareManagementSystem.UserControls.Registration;
 
-namespace WindowsFormsApp1.Screens
+namespace HealthcareManagementSystem.Screens
 {
     public partial class RegistrationHomeScreen : Form
     {
@@ -67,8 +67,8 @@ namespace WindowsFormsApp1.Screens
             convertColor(); hiddenForms();
             registrationHomeControl2.Visible = true;
 
-            patientBTN.IdleFillColor = Color.White;
-            patientBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+            RegistrationBTN.IdleFillColor = Color.White;
+            RegistrationBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
         }
 
         private void SettingsBTN_Click(object sender, EventArgs e)
@@ -76,8 +76,8 @@ namespace WindowsFormsApp1.Screens
             convertColor(); hiddenForms();
             registrationSettingsControl.Visible = true;
 
-            patientBTN.IdleFillColor = Color.White;
-            patientBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+            settingsBTN.IdleFillColor = Color.White;
+            settingsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
         }
     }
 

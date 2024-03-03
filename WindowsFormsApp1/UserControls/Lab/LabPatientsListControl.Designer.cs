@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp1.UserControls
+﻿namespace HealthcareManagementSystem.UserControls
 {
-    partial class PatientsListControl
+    partial class LabPatientsListControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,15 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientsListControl));
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabPatientsListControl));
             this.paddingPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
@@ -48,18 +43,25 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.widget2 = new WindowsFormsApp1.CurvedPanel();
+            this.widget2 = new HealthcareManagementSystem.CurvedPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.widget1 = new WindowsFormsApp1.CurvedPanel();
+            this.widget1 = new HealthcareManagementSystem.CurvedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.containerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.panel3.SuspendLayout();
             this.widgetsPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -71,11 +73,6 @@
             this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Gender";
-            this.Column4.Name = "Column4";
-            // 
             // paddingPanel
             // 
             this.paddingPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -86,7 +83,7 @@
             // 
             // containerPanel
             // 
-            this.containerPanel.Controls.Add(this.bunifuCustomDataGrid1);
+            this.containerPanel.Controls.Add(this.dataPatients);
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerPanel.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containerPanel.Location = new System.Drawing.Point(30, 94);
@@ -94,13 +91,15 @@
             this.containerPanel.Size = new System.Drawing.Size(983, 550);
             this.containerPanel.TabIndex = 11;
             // 
-            // bunifuCustomDataGrid1
+            // dataPatients
             // 
+            this.dataPatients.AllowUserToAddRows = false;
+            this.dataPatients.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dataPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,49 +107,29 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this._id,
             this.Column2,
             this.Column3,
             this.Column4,
+            this.Column6,
             this.Column5});
-            this.bunifuCustomDataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.RowHeadersWidth = 40;
-            this.bunifuCustomDataGrid1.RowTemplate.Height = 28;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(983, 550);
-            this.bunifuCustomDataGrid1.TabIndex = 3;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 300;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Age";
-            this.Column3.Name = "Column3";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Order Date";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 300;
+            this.dataPatients.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataPatients.DoubleBuffered = true;
+            this.dataPatients.EnableHeadersVisualStyles = false;
+            this.dataPatients.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.dataPatients.HeaderForeColor = System.Drawing.Color.White;
+            this.dataPatients.Location = new System.Drawing.Point(0, 0);
+            this.dataPatients.Name = "dataPatients";
+            this.dataPatients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataPatients.RowHeadersWidth = 40;
+            this.dataPatients.RowTemplate.Height = 28;
+            this.dataPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataPatients.Size = new System.Drawing.Size(983, 550);
+            this.dataPatients.TabIndex = 3;
             // 
             // bunifuCustomLabel10
             // 
@@ -341,7 +320,47 @@
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Patients Number";
             // 
-            // PatientsListControl
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 60;
+            // 
+            // _id
+            // 
+            this._id.HeaderText = "_id";
+            this._id.Name = "_id";
+            this._id.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Phone Number";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Order Date";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 260;
+            // 
+            // LabPatientsListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -353,10 +372,11 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.topPanel);
             this.Font = new System.Drawing.Font("Nunito", 8F);
-            this.Name = "PatientsListControl";
+            this.Name = "LabPatientsListControl";
             this.Size = new System.Drawing.Size(1043, 805);
+            this.Load += new System.EventHandler(this.LabPatientsListControl_Load);
             this.containerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).EndInit();
             this.panel3.ResumeLayout(false);
             this.widgetsPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
@@ -376,8 +396,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel paddingPanel;
         private CurvedPanel widget1;
@@ -386,11 +404,7 @@
         private System.Windows.Forms.Panel panel11;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Panel containerPanel;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
@@ -404,5 +418,12 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

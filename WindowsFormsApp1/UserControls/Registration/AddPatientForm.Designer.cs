@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.UserControls.Doctor
+﻿namespace HealthcareManagementSystem.UserControls.Doctor
 {
     partial class AddPatientForm
     {

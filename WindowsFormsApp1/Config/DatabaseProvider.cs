@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Config
+namespace HealthcareManagementSystem.Config
 {
     class DatabaseProvider
     {
