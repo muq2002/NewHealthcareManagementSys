@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientListControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientListControl));
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchPatientText = new Bunifu.Framework.UI.BunifuTextbox();
             this.containerPanel = new System.Windows.Forms.Panel();
@@ -54,16 +54,19 @@
             this.picData = new System.Windows.Forms.PictureBox();
             this.comboSessions = new System.Windows.Forms.ComboBox();
             this.titleOfPageText = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pictCreatenNewSesssion = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictCreatenNewSesssion)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictCreatenNewSesssion);
             this.panel3.Controls.Add(this.searchPatientText);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(649, 0);
@@ -285,6 +288,18 @@
             this.titleOfPageText.TabIndex = 4;
             this.titleOfPageText.Text = "Patients List";
             // 
+            // pictCreatenNewSesssion
+            // 
+            this.pictCreatenNewSesssion.Image = ((System.Drawing.Image)(resources.GetObject("pictCreatenNewSesssion.Image")));
+            this.pictCreatenNewSesssion.Location = new System.Drawing.Point(328, 23);
+            this.pictCreatenNewSesssion.Name = "pictCreatenNewSesssion";
+            this.pictCreatenNewSesssion.Size = new System.Drawing.Size(49, 44);
+            this.pictCreatenNewSesssion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictCreatenNewSesssion.TabIndex = 7;
+            this.pictCreatenNewSesssion.TabStop = false;
+            this.pictCreatenNewSesssion.Visible = false;
+            this.pictCreatenNewSesssion.Click += new System.EventHandler(this.pictCreatenNewSesssion_Click);
+            // 
             // PatientListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -304,6 +319,7 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictCreatenNewSesssion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.PictureBox pictCreatenNewSesssion;
     }
 }

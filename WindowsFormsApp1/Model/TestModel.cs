@@ -18,11 +18,12 @@ namespace HealthcareManagementSystem.Model
         public string RegisterDate;
 
         public TestModel() { }
-        public TestModel(int ID, int PatientID, int TestID,
+        public TestModel(int ID, int PatientID, int SessionID, int TestID,
             string TestValue, string Comment, string RegisterDate)
         {
             this.ID = ID;
             this.PatientID = PatientID;
+            this.SessionID = SessionID;
             this.TestID = TestID;
             this.TestValue = TestValue;
             this.Comment = Comment;

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using HealthcareManagementSystem.Controller;
 using HealthcareManagementSystem.Config;
 using HealthcareManagement.Controller;
+using HealthcareManagement.UserControls.Doctor;
 
 namespace HealthcareManagementSystem.UserControls.Doctor
 {
@@ -21,6 +22,8 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         }
         PatientController patientController = new PatientController();
         SessionController sessionController = new SessionController();
+        TestController testController = new TestController();
+
         private void PatientListControl_Load(object sender, EventArgs e)
         {
             fillPatientData(patientController.readPatients());
@@ -59,7 +62,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             comboSessions.DataSource = sessionController.getSingleSession(
                 int.Parse(dataPatients.CurrentRow.Cells[0].Value.ToString()));
             comboSessions.DisplayMember = "SessionName";
-            comboSessions.ValueMember = "PatientID";
+            comboSessions.ValueMember = "ID";
         }
 
         private void loadPatientProfileControl()
@@ -72,6 +75,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             searchPatientText.Visible = false;
             comboSessions.Visible = true;
             picData.Visible = true;
+            pictCreatenNewSesssion.Visible = true;
         }
 
         private void picData_Click(object sender, EventArgs e)
@@ -84,6 +88,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             patientProfileControl1.Visible = false;
             comboSessions.Visible = false;
             picData.Visible = false;
+            pictCreatenNewSesssion.Visible = false;
 
             patientProfileControl1.BringToFront();
         }
@@ -121,7 +126,39 @@ namespace HealthcareManagementSystem.UserControls.Doctor
 
         private void comboSessions_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboSessions.SelectedValue.GetType().ToString() != "System.Int32") return;
+            if (String.IsNullOrEmpty(comboSessions.SelectedValue.ToString())) return;
 
+
+            fillSessionData(testController.readTestsBySesssionID(int.Parse(
+            comboSessions.SelectedValue.ToString())));
+
+        }
+
+        void fillSessionData(DataTable sessionData)
+        {
+            patientProfileControl1.dataTests.Rows.Clear();
+            for (int index = 0; index < sessionData.Rows.Count; index++)
+            {
+                string[] data = new string[] {
+                    sessionData.Rows[index][0].ToString(),
+                    sessionData.Rows[index][3].ToString(),
+                    sessionData.Rows[index][4].ToString(),
+                    "",
+                    sessionData.Rows[index][5].ToString(),
+                    sessionData.Rows[index][6].ToString(),
+                    "Pending"
+                };
+                patientProfileControl1.dataTests.Rows.Add(data);
+            }
+        }
+
+        private void pictCreatenNewSesssion_Click(object sender, EventArgs e)
+        {
+            DoctorInputNewSession doctorInputNewSession = new DoctorInputNewSession();
+
+            doctorInputNewSession.patientID = 0;
+            doctorInputNewSession.ShowDialog();
         }
     }
 }

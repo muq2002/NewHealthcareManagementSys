@@ -115,6 +115,12 @@
     <Compile Include="Screens\RegistrationHomeScreen.Designer.cs">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Doctor\DoctorInputNewSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Doctor\DoctorInputNewSession.Designer.cs">
+      <DependentUpon>DoctorInputNewSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Doctor\DoctorSelectMedicalTests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\RegistrationHomeScreen.resx">
       <DependentUpon>RegistrationHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Doctor\DoctorInputNewSession.resx">
+      <DependentUpon>DoctorInputNewSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Doctor\DoctorSelectMedicalTests.resx">
       <DependentUpon>DoctorSelectMedicalTests.cs</DependentUpon>

@@ -48,3 +48,4 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Lab.LabSettingsControl.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Pharmacy.DrugInfoForm.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Doctor.DoctorSelectMedicalTests.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Doctor.DoctorInputNewSession.resources

@@ -23,7 +23,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             tabControl1.SelectedTab = tabPage2;
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void openMedicalTests_Click(object sender, EventArgs e)
         {
             DoctorSelectMedicalTests doctorSelectMedicalTests = new DoctorSelectMedicalTests();
             doctorSelectMedicalTests.ShowDialog();

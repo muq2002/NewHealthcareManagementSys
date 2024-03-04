@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HealthcareManagementSystem.Config;
 using HealthcareManagementSystem.Model;
 
@@ -15,21 +11,31 @@ namespace HealthcareManagementSystem.Controller
         public string DeleteStatus = "No";
         public DataTable readTests()
         {
-            return databaseProvider.getTable("SELECT * FROM Tests" +
+            return databaseProvider.getTable("SELECT * FROM Lab" +
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY PatientID ASC");
         }
         public DataTable readTests(int limit = 100)
         {
-            return databaseProvider.getTable("SELECT TOP " + limit + " * FROM Tests" +
+            return databaseProvider.getTable("SELECT TOP " + limit + " * FROM Lab" +
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY PatientID ASC");
         }
 
         public DataTable readTestsByPatientID(int patientId)
         {
-            return databaseProvider.getTable("SELECT t.ID, t.PatientID, t.TestID, myt.TestName ,t.TestValue, t.Comment, t.RegisterDate" +
-            " FROM Tests AS t, MyTests AS myt" +
+            return databaseProvider.getTable("SELECT t.ID, t.PatientID," +
+            " t.TestID, myt.TestName ,t.TestValue, t.Comments, t.RegisterDate" +
+            " FROM Lab AS t, MyTests AS myt" +
             " WHERE(t.TestID = myt.TestID AND t.PatientID = " + patientId +
-            " AND [DeleteStatus]='" + DeleteStatus + "')");
+            " AND [t.DeleteStatus]='" + DeleteStatus + "')");
+        }
+
+        public DataTable readTestsBySesssionID(int sessionId)
+        {
+            return databaseProvider.getTable("SELECT t.ID, t.PatientID," +
+            " t.TestID, myt.TestName ,t.TestValue, t.Comments, t.RegisterDate" +
+            " FROM Lab AS t, TestsBank AS myt" +
+            " WHERE(t.TestID = myt.ID AND t.SessionID = " + sessionId +
+            " AND [t.DeleteStatus]='" + DeleteStatus + "')");
         }
 
 
