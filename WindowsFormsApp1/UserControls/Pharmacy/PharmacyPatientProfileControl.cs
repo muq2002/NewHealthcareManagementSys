@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HealthcareManagementSystem.UserControls.Pharmacy
+namespace HealthcareManagement.UserControls.Pharmacy
 {
-    public partial class PharmacyPatientProfile : UserControl
+    public partial class PharmacyPatientProfileControl : UserControl
     {
-        public PharmacyPatientProfile()
+        public int patientId { get; set; }
+        public PharmacyPatientProfileControl()
         {
             InitializeComponent();
         }

@@ -32,13 +32,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.titleOfPageText = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.searchPatientText = new Bunifu.Framework.UI.BunifuTextbox();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.picData = new System.Windows.Forms.PictureBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
+            this.pharmacyPatientProfileControl1 = new HealthcareManagement.UserControls.Pharmacy.PharmacyPatientProfileControl();
             this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +51,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picData)).BeginInit();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.SuspendLayout();
@@ -61,48 +64,62 @@
             this.rightPanel.Size = new System.Drawing.Size(30, 620);
             this.rightPanel.TabIndex = 14;
             // 
-            // bunifuCustomLabel10
+            // titleOfPageText
             // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(48, 23);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(170, 38);
-            this.bunifuCustomLabel10.TabIndex = 4;
-            this.bunifuCustomLabel10.Text = "Patients List";
+            this.titleOfPageText.AutoSize = true;
+            this.titleOfPageText.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleOfPageText.Location = new System.Drawing.Point(71, 29);
+            this.titleOfPageText.Name = "titleOfPageText";
+            this.titleOfPageText.Size = new System.Drawing.Size(170, 38);
+            this.titleOfPageText.TabIndex = 4;
+            this.titleOfPageText.Text = "Patients List";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.bunifuTextbox1);
+            this.panel3.Controls.Add(this.searchPatientText);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(619, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(394, 85);
             this.panel3.TabIndex = 3;
             // 
-            // bunifuTextbox1
+            // searchPatientText
             // 
-            this.bunifuTextbox1.BackColor = System.Drawing.Color.White;
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(23, 23);
-            this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(345, 44);
-            this.bunifuTextbox1.TabIndex = 0;
-            this.bunifuTextbox1.text = "Search";
+            this.searchPatientText.BackColor = System.Drawing.Color.White;
+            this.searchPatientText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchPatientText.BackgroundImage")));
+            this.searchPatientText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchPatientText.ForeColor = System.Drawing.Color.Gainsboro;
+            this.searchPatientText.Icon = ((System.Drawing.Image)(resources.GetObject("searchPatientText.Icon")));
+            this.searchPatientText.Location = new System.Drawing.Point(23, 23);
+            this.searchPatientText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchPatientText.Name = "searchPatientText";
+            this.searchPatientText.Size = new System.Drawing.Size(345, 44);
+            this.searchPatientText.TabIndex = 0;
+            this.searchPatientText.text = "Search";
+            this.searchPatientText.OnTextChange += new System.EventHandler(this.searchPatientText_OnTextChange);
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
+            this.topPanel.Controls.Add(this.picData);
+            this.topPanel.Controls.Add(this.titleOfPageText);
             this.topPanel.Controls.Add(this.panel3);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(30, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1013, 85);
             this.topPanel.TabIndex = 12;
+            // 
+            // picData
+            // 
+            this.picData.Image = ((System.Drawing.Image)(resources.GetObject("picData.Image")));
+            this.picData.Location = new System.Drawing.Point(16, 23);
+            this.picData.Name = "picData";
+            this.picData.Size = new System.Drawing.Size(49, 44);
+            this.picData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picData.TabIndex = 7;
+            this.picData.TabStop = false;
+            this.picData.Visible = false;
+            this.picData.Click += new System.EventHandler(this.picData_Click);
             // 
             // leftPanel
             // 
@@ -122,6 +139,7 @@
             // 
             // containerPanel
             // 
+            this.containerPanel.Controls.Add(this.pharmacyPatientProfileControl1);
             this.containerPanel.Controls.Add(this.dataPatients);
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerPanel.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,6 +147,18 @@
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Size = new System.Drawing.Size(983, 620);
             this.containerPanel.TabIndex = 18;
+            // 
+            // pharmacyPatientProfileControl1
+            // 
+            this.pharmacyPatientProfileControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.pharmacyPatientProfileControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pharmacyPatientProfileControl1.Font = new System.Drawing.Font("Nunito", 8F);
+            this.pharmacyPatientProfileControl1.Location = new System.Drawing.Point(0, 0);
+            this.pharmacyPatientProfileControl1.Name = "pharmacyPatientProfileControl1";
+            this.pharmacyPatientProfileControl1.patientId = 0;
+            this.pharmacyPatientProfileControl1.Size = new System.Drawing.Size(983, 620);
+            this.pharmacyPatientProfileControl1.TabIndex = 4;
+            this.pharmacyPatientProfileControl1.Visible = false;
             // 
             // dataPatients
             // 
@@ -169,6 +199,7 @@
             this.dataPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataPatients.Size = new System.Drawing.Size(983, 620);
             this.dataPatients.TabIndex = 3;
+            this.dataPatients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPatients_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -228,6 +259,7 @@
             this.panel3.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picData)).EndInit();
             this.containerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).EndInit();
             this.ResumeLayout(false);
@@ -237,9 +269,9 @@
         #endregion
 
         private System.Windows.Forms.Panel rightPanel;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
+        private Bunifu.Framework.UI.BunifuCustomLabel titleOfPageText;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
+        private Bunifu.Framework.UI.BunifuTextbox searchPatientText;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel BottomPanel;
@@ -252,5 +284,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.PictureBox picData;
+        private HealthcareManagement.UserControls.Pharmacy.PharmacyPatientProfileControl pharmacyPatientProfileControl1;
     }
 }

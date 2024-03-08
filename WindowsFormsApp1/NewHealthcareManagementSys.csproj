@@ -167,11 +167,11 @@
     <Compile Include="UserControls\Pharmacy\PharmacyHomeControl.Designer.cs">
       <DependentUpon>PharmacyHomeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Pharmacy\PharmacyPatientProfile.cs">
+    <Compile Include="UserControls\Pharmacy\PharmacyPatientProfileControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Pharmacy\PharmacyPatientProfile.Designer.cs">
-      <DependentUpon>PharmacyPatientProfile.cs</DependentUpon>
+    <Compile Include="UserControls\Pharmacy\PharmacyPatientProfileControl.Designer.cs">
+      <DependentUpon>PharmacyPatientProfileControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Pharmacy\PharmacyPatientsList.cs">
       <SubType>UserControl</SubType>
@@ -297,8 +297,8 @@
     <EmbeddedResource Include="UserControls\Pharmacy\PharmacyHomeControl.resx">
       <DependentUpon>PharmacyHomeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Pharmacy\PharmacyPatientProfile.resx">
-      <DependentUpon>PharmacyPatientProfile.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Pharmacy\PharmacyPatientProfileControl.resx">
+      <DependentUpon>PharmacyPatientProfileControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Pharmacy\PharmacyPatientsList.resx">
       <DependentUpon>PharmacyPatientsList.cs</DependentUpon>

@@ -28,7 +28,6 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.Screens.RegistrationHomeScreen.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.UserControls.Pharmacy.PharmacyDrugList.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.UserControls.Pharmacy.PharmacyHomeControl.resources
-C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.UserControls.Pharmacy.PharmacyPatientProfile.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.UserControls.Pharmacy.PharmacyPatientsList.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.UserControls.Pharmacy.PharmacySettingsControl.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagementSystem.UserControls.Doctor.AddPatientForm.resources
@@ -47,5 +46,6 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Pharmacy.DrugInfoForm.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Doctor.DoctorSelectMedicalTests.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Doctor.DoctorInputNewSession.resources
-C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Lab.LabPatientProfileControl.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Pharmacy.PharmacyPatientProfileControl.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache

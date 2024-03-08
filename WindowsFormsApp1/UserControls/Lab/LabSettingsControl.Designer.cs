@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabSettingsControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,31 +49,52 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataTests = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listAnalysisGroup = new System.Windows.Forms.ListBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.picAddNewGruop = new System.Windows.Forms.PictureBox();
             this.containerPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.textLabIP = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textYourDeviceIP = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addPatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTests)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddNewGruop)).BeginInit();
             this.containerPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // Column5
@@ -206,12 +228,142 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1013, 620);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataTests);
+            this.tabPage3.Controls.Add(this.panel1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 47);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1005, 569);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Analysis Group";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataTests
+            // 
+            this.dataTests.AllowUserToAddRows = false;
+            this.dataTests.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataTests.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataTests.BackgroundColor = System.Drawing.Color.White;
+            this.dataTests.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataTests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Column6,
+            this.dataGridViewTextBoxColumn2});
+            this.dataTests.ContextMenuStrip = this.contextMenuStrip2;
+            this.dataTests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataTests.DoubleBuffered = true;
+            this.dataTests.EnableHeadersVisualStyles = false;
+            this.dataTests.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.dataTests.HeaderForeColor = System.Drawing.Color.White;
+            this.dataTests.Location = new System.Drawing.Point(281, 3);
+            this.dataTests.Margin = new System.Windows.Forms.Padding(5);
+            this.dataTests.Name = "dataTests";
+            this.dataTests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataTests.RowHeadersWidth = 40;
+            this.dataTests.RowTemplate.Height = 28;
+            this.dataTests.Size = new System.Drawing.Size(721, 563);
+            this.dataTests.TabIndex = 17;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Select";
+            this.Column6.Name = "Column6";
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tests Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.Width = 500;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip1";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(151, 34);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 30);
+            this.toolStripMenuItem1.Text = "Refresh";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listAnalysisGroup);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(278, 563);
+            this.panel1.TabIndex = 0;
+            // 
+            // listAnalysisGroup
+            // 
+            this.listAnalysisGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listAnalysisGroup.FormattingEnabled = true;
+            this.listAnalysisGroup.ItemHeight = 38;
+            this.listAnalysisGroup.Location = new System.Drawing.Point(0, 48);
+            this.listAnalysisGroup.Name = "listAnalysisGroup";
+            this.listAnalysisGroup.Size = new System.Drawing.Size(278, 515);
+            this.listAnalysisGroup.TabIndex = 3;
+            this.listAnalysisGroup.SelectedIndexChanged += new System.EventHandler(this.listAnalysisGroup_SelectedIndexChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.picAddNewGruop);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(278, 48);
+            this.panel3.TabIndex = 2;
+            // 
+            // picAddNewGruop
+            // 
+            this.picAddNewGruop.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picAddNewGruop.Image = ((System.Drawing.Image)(resources.GetObject("picAddNewGruop.Image")));
+            this.picAddNewGruop.Location = new System.Drawing.Point(0, 0);
+            this.picAddNewGruop.Name = "picAddNewGruop";
+            this.picAddNewGruop.Size = new System.Drawing.Size(48, 48);
+            this.picAddNewGruop.TabIndex = 0;
+            this.picAddNewGruop.TabStop = false;
+            this.picAddNewGruop.Click += new System.EventHandler(this.picAddNewGruop_Click);
             // 
             // containerPanel
             // 
@@ -265,134 +417,140 @@
             this.topPanel.Size = new System.Drawing.Size(1043, 85);
             this.topPanel.TabIndex = 29;
             // 
+            // textLabIP
+            // 
+            this.textLabIP.AutoSize = true;
+            this.textLabIP.Location = new System.Drawing.Point(28, 105);
+            this.textLabIP.Name = "textLabIP";
+            this.textLabIP.Size = new System.Drawing.Size(206, 38);
+            this.textLabIP.TabIndex = 0;
+            this.textLabIP.Text = "Send Doctor IP";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 38);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Your device";
+            // 
+            // textYourDeviceIP
+            // 
+            this.textYourDeviceIP.Location = new System.Drawing.Point(317, 45);
+            this.textYourDeviceIP.Name = "textYourDeviceIP";
+            this.textYourDeviceIP.Size = new System.Drawing.Size(421, 46);
+            this.textYourDeviceIP.TabIndex = 3;
+            this.textYourDeviceIP.Text = "60.90.00.02";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(317, 97);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(421, 46);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "60.90.00.01";
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textYourDeviceIP);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textLabIP);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(999, 309);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(999, 212);
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Info. and Users";
+            this.groupBox1.Text = "Connections and Network";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 38);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 38);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Username";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(317, 148);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(421, 46);
+            this.textBox7.TabIndex = 7;
+            this.textBox7.Text = "lab";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(317, 200);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(421, 46);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(214, 38);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Software Name";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(323, 45);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(421, 46);
+            this.textBox5.TabIndex = 10;
+            this.textBox5.Text = "HMS For Labs";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(323, 97);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(421, 46);
+            this.textBox6.TabIndex = 11;
+            this.textBox6.Text = "1.0.2";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 38);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Version";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bunifuCustomDataGrid1);
-            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 312);
+            this.groupBox2.Location = new System.Drawing.Point(3, 215);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(999, 254);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.Size = new System.Drawing.Size(999, 351);
+            this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Networking and Devices";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.addPatientBTN);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 51);
-            this.panel1.TabIndex = 0;
-            // 
-            // bunifuCustomDataGrid1
-            // 
-            this.bunifuCustomDataGrid1.AllowUserToAddRows = false;
-            this.bunifuCustomDataGrid1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn7});
-            this.bunifuCustomDataGrid1.ContextMenuStrip = this.contextMenuStrip1;
-            this.bunifuCustomDataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(3, 93);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.RowHeadersWidth = 40;
-            this.bunifuCustomDataGrid1.RowTemplate.Height = 28;
-            this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(993, 158);
-            this.bunifuCustomDataGrid1.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 300;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Port";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 250;
-            // 
-            // addPatientBTN
-            // 
-            this.addPatientBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addPatientBTN.BorderRadius = 0;
-            this.addPatientBTN.ButtonText = "Add Device";
-            this.addPatientBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addPatientBTN.DisabledColor = System.Drawing.Color.Gray;
-            this.addPatientBTN.Dock = System.Windows.Forms.DockStyle.Right;
-            this.addPatientBTN.Font = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPatientBTN.Iconcolor = System.Drawing.Color.Transparent;
-            this.addPatientBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("addPatientBTN.Iconimage")));
-            this.addPatientBTN.Iconimage_right = null;
-            this.addPatientBTN.Iconimage_right_Selected = null;
-            this.addPatientBTN.Iconimage_Selected = null;
-            this.addPatientBTN.IconMarginLeft = 0;
-            this.addPatientBTN.IconMarginRight = 0;
-            this.addPatientBTN.IconRightVisible = true;
-            this.addPatientBTN.IconRightZoom = 0D;
-            this.addPatientBTN.IconVisible = true;
-            this.addPatientBTN.IconZoom = 90D;
-            this.addPatientBTN.IsTab = false;
-            this.addPatientBTN.Location = new System.Drawing.Point(758, 0);
-            this.addPatientBTN.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.addPatientBTN.Name = "addPatientBTN";
-            this.addPatientBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.addPatientBTN.OnHoverTextColor = System.Drawing.Color.White;
-            this.addPatientBTN.selected = false;
-            this.addPatientBTN.Size = new System.Drawing.Size(235, 51);
-            this.addPatientBTN.TabIndex = 9;
-            this.addPatientBTN.Text = "Add Device";
-            this.addPatientBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addPatientBTN.Textcolor = System.Drawing.Color.White;
-            this.addPatientBTN.TextFont = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Text = "Change Accounts Info";
             // 
             // LabSettingsControl
             // 
@@ -407,17 +565,25 @@
             this.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LabSettingsControl";
             this.Size = new System.Drawing.Size(1043, 732);
+            this.Load += new System.EventHandler(this.LabSettingsControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTests)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAddNewGruop)).EndInit();
             this.containerPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -444,14 +610,30 @@
         private System.Windows.Forms.Panel BottomPanel;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox listAnalysisGroup;
+        private System.Windows.Forms.Panel panel3;
+        internal Bunifu.Framework.UI.BunifuCustomDataGrid dataTests;
+        private System.Windows.Forms.PictureBox picAddNewGruop;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Bunifu.Framework.UI.BunifuFlatButton addPatientBTN;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textYourDeviceIP;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label textLabIP;
     }
 }

@@ -28,8 +28,17 @@ namespace HealthcareManagementSystem.Screens
             CenterItemsInPanel(panel5);
 
             fillPatientData(patientController.readPatients());
+            updateTheDate();
         }
+        private void updateTheDate()
+        {
+            DateTime currentDate = DateTime.Now;
+            string formattedDate = currentDate.ToString("dddd, MMMM d, yyyy");
 
+            dateLabel1.Text = formattedDate;
+            dateLabel2.Text = formattedDate;
+            dateLabel3.Text = formattedDate;
+        }
         void fillPatientData(DataTable patientData)
         {
             dataPatients.Rows.Clear();
@@ -45,6 +54,11 @@ namespace HealthcareManagementSystem.Screens
                 };
                 dataPatients.Rows.Add(data);
             }
+            calculateStatictis();
+        }
+        void calculateStatictis()
+        {
+            totalNumberPatientsLabel.Text = dataPatients.Rows.Count.ToString();
         }
         private void CenterItemsInPanel(Panel panel)
         {

@@ -67,7 +67,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         }
         void calculateStatictis()
         {
-            totalNumberPatientsLabel.Text = (dataPatients.Rows.Count - 1).ToString();
+            totalNumberPatientsLabel.Text = dataPatients.Rows.Count.ToString();
         }
         private void searchPatientText_OnTextChange(object sender, EventArgs e)
         {

@@ -21,9 +21,12 @@ namespace HealthcareManagement.Controller
 
         public DataTable getPrescriptionByPatientId(int patientId)
         {
-            return databaseProvider.getTable("SELECT * FROM Prescriptions" +
-                " WHERE ([PatientID] = " + patientId + " AND [DeleteStatus]='" + DeleteStatus + "') " +
-                "ORDER BY ID ASC");
+            return databaseProvider.getTable("SELECT pre.ID, pre.SessionID, pre.DrugID," +
+                " sess.SessionName,drg.DrugName, pre.Instruction, sess.RegisterDate" +
+                " FROM (Prescriptions AS pre" +
+                " INNER JOIN Drugs AS drg ON pre.DrugID = drg.ID)" +
+                " INNER JOIN Sessions AS sess ON pre.SessionID = sess.ID" +
+                " WHERE (pre.PatientID = " + patientId + " AND pre.DeleteStatus = '" + DeleteStatus + "')");
         }
 
         public DataTable getPrescriptionBySessionId(int sessionId)
