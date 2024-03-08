@@ -22,5 +22,41 @@ namespace HealthcareManagement.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string YourDeviceIP {
+            get {
+                return ((string)(this["YourDeviceIP"]));
+            }
+            set {
+                this["YourDeviceIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LabIP {
+            get {
+                return ((string)(this["LabIP"]));
+            }
+            set {
+                this["LabIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PharmcyIP {
+            get {
+                return ((string)(this["PharmcyIP"]));
+            }
+            set {
+                this["PharmcyIP"] = value;
+            }
+        }
     }
 }

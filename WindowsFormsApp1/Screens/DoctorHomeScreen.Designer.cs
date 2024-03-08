@@ -231,7 +231,7 @@
             this.ordersBTN.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
             this.ordersBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
             this.ordersBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ordersBTN.BackgroundImage")));
-            this.ordersBTN.ButtonText = "Registration";
+            this.ordersBTN.ButtonText = "Home";
             this.ordersBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ordersBTN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ordersBTN.Font = new System.Drawing.Font("Nunito ExtraLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

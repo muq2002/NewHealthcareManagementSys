@@ -33,7 +33,7 @@ namespace HealthcareManagement.Controller
 
         public void createSession(SessionModel session)
         {
-            string command = "INSERT INTO Patients(" +
+            string command = "INSERT INTO Sessions(" +
                 "PatientID," +
                 "SessionName," +
                 "RegisterDate," +

@@ -1,4 +1,6 @@
 ﻿using HealthcareManagement.Controller;
+using HealthcareManagementSystem.Controller;
+using HealthcareManagementSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,10 +16,15 @@ namespace HealthcareManagement.UserControls.Doctor
         }
         TestGroupController testGroupController = new TestGroupController();
         TestsBankController testsBankController = new TestsBankController();
+        TestController testController = new TestController();
         List<int> selectedTests = new List<int>();
+
+        public int patientID { get; set; }
+        public int sessionID { get; set; }
         private void DoctorSelectMedicalTests_Load(object sender, EventArgs e)
         {
             PopulateTreeView();
+            MessageBox.Show(sessionID.ToString());
         }
 
 
@@ -80,12 +87,28 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void sendTestsBTN_Click(object sender, EventArgs e)
         {
-            restSelectRow();
             foreach (var item in selectedTests)
             {
-                MessageBox.Show(item.ToString());
+                createTestModel(item);
             }
+
+            this.Close();
         }
+
+        private void createTestModel(int item)
+        {
+            TestModel testModel = new TestModel();
+
+            testModel.PatientID = patientID;
+            testModel.SessionID = sessionID;
+            testModel.TestID = item;
+
+            testModel.TestValue = "";
+            testModel.Comment = "";
+
+            testController.createTest(testModel);
+        }
+
         private void dataTests_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (!isUserSelectStatus(e)) return;

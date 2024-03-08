@@ -22,8 +22,14 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         }
         PatientController patientController = new PatientController();
         SessionController sessionController = new SessionController();
-        TestController testController = new TestController();
 
+
+        TestController testController = new TestController();
+        PrescriptionController prescriptionController = new PrescriptionController();
+        DiagnosisController diagnosisController = new DiagnosisController();
+
+        public int patientID { get; set; }
+        
         private void PatientListControl_Load(object sender, EventArgs e)
         {
             fillPatientData(patientController.readPatients());
@@ -51,7 +57,9 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         {
             loadPatientProfileControl();
             titleOfPageText.Text = dataPatients.CurrentRow.Cells[2].Value.ToString();
-            patientProfileControl1.patientId = e.RowIndex;
+
+            patientProfileControl1.patientId = int.Parse(dataPatients
+                .CurrentRow.Cells[0].Value.ToString());
 
             loadPatientSessions();
         }
@@ -108,7 +116,9 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         {
             if (!isUserSelectedRow()) return;
             AddPatientForm addPatientForm = new AddPatientForm();
-            addPatientForm.patientId = int.Parse(dataPatients.SelectedRows[0].Cells["_id"].Value.ToString());
+
+            patientID = int.Parse(dataPatients.SelectedRows[0].Cells["_id"].Value.ToString());
+            addPatientForm.patientId = patientID;
             addPatientForm.ShowDialog();
         }
 
@@ -129,9 +139,14 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             if (comboSessions.SelectedValue.GetType().ToString() != "System.Int32") return;
             if (String.IsNullOrEmpty(comboSessions.SelectedValue.ToString())) return;
 
+            int sessionId = int.Parse(
+            comboSessions.SelectedValue.ToString());
 
-            fillSessionData(testController.readTestsBySesssionID(int.Parse(
-            comboSessions.SelectedValue.ToString())));
+            fillSessionData(testController.readTestsBySesssionID(sessionId));
+            fillPrescriptionData(prescriptionController.getPrescriptionBySessionId(sessionId));
+            fillDiagnosisData(diagnosisController.getDiagnosisBySessionId(sessionId));
+
+            patientProfileControl1.sessionId = sessionId;
 
         }
 
@@ -153,12 +168,46 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             }
         }
 
+        void fillPrescriptionData(DataTable prescriptionData)
+        {
+            patientProfileControl1.dataPrescriptions.Rows.Clear();
+            for (int index = 0; index < prescriptionData.Rows.Count; index++)
+            {
+                string[] data = new string[] {
+                    prescriptionData.Rows[index][0].ToString(),
+                    prescriptionData.Rows[index][3].ToString(),
+                    prescriptionData.Rows[index][4].ToString(),
+                };
+                
+                patientProfileControl1.dataPrescriptions.Rows.Add(data);
+                patientProfileControl1.dataPrescriptions
+                    .Rows[index].Cells[1].Value = int.Parse(prescriptionData.Rows[index][3].ToString());
+            }
+        }
+
+        void fillDiagnosisData(DataTable diagnosisData)
+        {
+            // Reset values
+            patientProfileControl1.textAutomatedDiagnosis.Text = "";
+            patientProfileControl1.richTextComments.Text = "";
+
+            if (diagnosisData.Rows.Count == 0) return;
+            patientProfileControl1.
+                textAutomatedDiagnosis.Text = diagnosisData.Rows[0][4].ToString();
+            patientProfileControl1.
+                richTextComments.Text = diagnosisData.Rows[0][3].ToString();
+        }
+
+
         private void pictCreatenNewSesssion_Click(object sender, EventArgs e)
         {
             DoctorInputNewSession doctorInputNewSession = new DoctorInputNewSession();
 
-            doctorInputNewSession.patientID = 0;
+            doctorInputNewSession.patientID = int.Parse(dataPatients
+                .SelectedRows[0].Cells["_id"].Value.ToString());
             doctorInputNewSession.ShowDialog();
+
+            loadPatientSessions();
         }
     }
 }

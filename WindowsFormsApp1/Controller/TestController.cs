@@ -14,18 +14,24 @@ namespace HealthcareManagementSystem.Controller
             return databaseProvider.getTable("SELECT * FROM Lab" +
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY PatientID ASC");
         }
-        public DataTable readTests(int limit = 100)
+        public DataTable readTests(int limit)
         {
-            return databaseProvider.getTable("SELECT TOP " + limit + " * FROM Lab" +
-                " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY PatientID ASC");
+            return databaseProvider.getTable("SELECT t.ID, t.PatientID, p.PatientName," +
+                " t.TestID, myt.TestName, t.TestValue, t.Comments, t.RegisterDate" +
+                " FROM (Lab AS t" +
+                " INNER JOIN Patients AS p ON t.PatientID = p.ID)" +
+                " INNER JOIN TestsBank AS myt ON t.TestID = myt.ID" +
+                " WHERE t.DeleteStatus = '" + DeleteStatus + "'");
         }
+
+
 
         public DataTable readTestsByPatientID(int patientId)
         {
             return databaseProvider.getTable("SELECT t.ID, t.PatientID," +
             " t.TestID, myt.TestName ,t.TestValue, t.Comments, t.RegisterDate" +
-            " FROM Lab AS t, MyTests AS myt" +
-            " WHERE(t.TestID = myt.TestID AND t.PatientID = " + patientId +
+            " FROM Lab AS t, TestsBank AS myt" +
+            " WHERE(t.TestID = myt.ID AND t.PatientID = " + patientId +
             " AND [t.DeleteStatus]='" + DeleteStatus + "')");
         }
 
@@ -52,16 +58,18 @@ namespace HealthcareManagementSystem.Controller
         }
         public void createTest(TestModel test)
         {
-            string command = "INSERT INTO Tests(" +
+            string command = "INSERT INTO Lab(" +
                 "PatientID," +
+                "SessionID," +
                 "TestID," +
                 "TestValue," +
-                "Comment," +
+                "Comments," +
                 "RegisterDate," +
                 "DeleteStatus" +
                 ") " +
                 "VALUES(" +
                  test.PatientID + ", " +
+                 test.SessionID + ", " +
                  test.TestID + ", '" +
                  test.TestValue + "', '" +
                  test.Comment + "', '" +
