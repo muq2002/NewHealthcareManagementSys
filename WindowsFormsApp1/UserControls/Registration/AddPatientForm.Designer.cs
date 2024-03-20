@@ -32,6 +32,7 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.pictureBoxQRCode = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.textPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,6 +47,7 @@
             this.textUuid = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCards1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -77,6 +79,7 @@
             this.bunifuCards1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.SaddleBrown;
+            this.bunifuCards1.Controls.Add(this.pictureBoxQRCode);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel5);
             this.bunifuCards1.Controls.Add(this.textPhoneNumber);
             this.bunifuCards1.Controls.Add(this.panel2);
@@ -96,8 +99,17 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(362, 603);
+            this.bunifuCards1.Size = new System.Drawing.Size(587, 603);
             this.bunifuCards1.TabIndex = 8;
+            // 
+            // pictureBoxQRCode
+            // 
+            this.pictureBoxQRCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(380, 117);
+            this.pictureBoxQRCode.Name = "pictureBoxQRCode";
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(177, 190);
+            this.pictureBoxQRCode.TabIndex = 26;
+            this.pictureBoxQRCode.TabStop = false;
             // 
             // bunifuCustomLabel5
             // 
@@ -122,7 +134,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 21);
+            this.panel2.Size = new System.Drawing.Size(585, 21);
             this.panel2.TabIndex = 23;
             // 
             // picClose
@@ -130,7 +142,7 @@
             this.picClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
             this.picClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("picClose.InitialImage")));
-            this.picClose.Location = new System.Drawing.Point(325, 0);
+            this.picClose.Location = new System.Drawing.Point(550, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(35, 21);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +157,7 @@
             this.panel1.Font = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 522);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 79);
+            this.panel1.Size = new System.Drawing.Size(585, 79);
             this.panel1.TabIndex = 22;
             // 
             // addPatientBTN
@@ -170,7 +182,7 @@
             this.addPatientBTN.IconVisible = true;
             this.addPatientBTN.IconZoom = 90D;
             this.addPatientBTN.IsTab = false;
-            this.addPatientBTN.Location = new System.Drawing.Point(39, 13);
+            this.addPatientBTN.Location = new System.Drawing.Point(145, 13);
             this.addPatientBTN.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addPatientBTN.Name = "addPatientBTN";
             this.addPatientBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
@@ -237,6 +249,7 @@
             this.textUuid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.textUuid.Location = new System.Drawing.Point(39, 170);
             this.textUuid.Name = "textUuid";
+            this.textUuid.ReadOnly = true;
             this.textUuid.Size = new System.Drawing.Size(303, 29);
             this.textUuid.TabIndex = 13;
             // 
@@ -255,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 603);
+            this.ClientSize = new System.Drawing.Size(587, 603);
             this.Controls.Add(this.bunifuCards1);
             this.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -266,6 +279,7 @@
             this.Load += new System.EventHandler(this.AddPatientForm_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -292,5 +306,6 @@
         private System.Windows.Forms.PictureBox picClose;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private System.Windows.Forms.TextBox textPhoneNumber;
+        private System.Windows.Forms.PictureBox pictureBoxQRCode;
     }
 }

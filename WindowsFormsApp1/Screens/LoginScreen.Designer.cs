@@ -32,16 +32,16 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginBTN = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -85,6 +85,28 @@
             this.bunifuCards1.Size = new System.Drawing.Size(518, 419);
             this.bunifuCards1.TabIndex = 7;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(516, 31);
+            this.panel1.TabIndex = 16;
+            // 
+            // picClose
+            // 
+            this.picClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
+            this.picClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("picClose.InitialImage")));
+            this.picClose.Location = new System.Drawing.Point(481, 0);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(35, 31);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picClose.TabIndex = 16;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // textPassword
             // 
             this.textPassword.Location = new System.Drawing.Point(78, 298);
@@ -99,6 +121,8 @@
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(370, 26);
             this.textUsername.TabIndex = 13;
+            this.textUsername.TextChanged += new System.EventHandler(this.textUsername_TextChanged);
+            this.textUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUsername_KeyPress);
             // 
             // pictureBox1
             // 
@@ -147,28 +171,6 @@
             this.loginBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBTN.Click += new System.EventHandler(this.loginBTN_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.picClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 31);
-            this.panel1.TabIndex = 16;
-            // 
-            // picClose
-            // 
-            this.picClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
-            this.picClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("picClose.InitialImage")));
-            this.picClose.Location = new System.Drawing.Point(479, 0);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(35, 31);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picClose.TabIndex = 16;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -182,9 +184,9 @@
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

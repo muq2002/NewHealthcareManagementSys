@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PharmacyHomeControl));
             this.paddingPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
@@ -43,30 +43,30 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.widget3 = new HealthcareManagementSystem.CurvedPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.totalRevenueLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dateLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.widget2 = new HealthcareManagementSystem.CurvedPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.totalNumberCompletePatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dateLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.widget1 = new HealthcareManagementSystem.CurvedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.totalNumberPatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dateLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -111,23 +111,23 @@
             // 
             this.dataPatients.AllowUserToAddRows = false;
             this.dataPatients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.dataPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this._id,
+            this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -145,6 +145,7 @@
             this.dataPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataPatients.Size = new System.Drawing.Size(983, 443);
             this.dataPatients.TabIndex = 3;
+            this.dataPatients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPatients_CellContentDoubleClick);
             // 
             // topPanel
             // 
@@ -236,38 +237,43 @@
             this.BottomPanel.Size = new System.Drawing.Size(1043, 27);
             this.BottomPanel.TabIndex = 7;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
             // _id
             // 
             this._id.HeaderText = "_id";
             this._id.Name = "_id";
+            this._id.ReadOnly = true;
             this._id.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Name";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 300;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Age";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Gender";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Status";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -284,35 +290,35 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.bunifuCustomLabel9);
-            this.panel5.Controls.Add(this.bunifuCustomLabel6);
+            this.panel5.Controls.Add(this.totalRevenueLabel);
+            this.panel5.Controls.Add(this.dateLabel3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 73);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(300, 104);
             this.panel5.TabIndex = 10;
             // 
-            // bunifuCustomLabel9
+            // totalRevenueLabel
             // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Nunito", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(97, 3);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(142, 44);
-            this.bunifuCustomLabel9.TabIndex = 13;
-            this.bunifuCustomLabel9.Text = "500,000";
+            this.totalRevenueLabel.AutoSize = true;
+            this.totalRevenueLabel.Font = new System.Drawing.Font("Nunito", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalRevenueLabel.ForeColor = System.Drawing.Color.White;
+            this.totalRevenueLabel.Location = new System.Drawing.Point(97, 3);
+            this.totalRevenueLabel.Name = "totalRevenueLabel";
+            this.totalRevenueLabel.Size = new System.Drawing.Size(142, 44);
+            this.totalRevenueLabel.TabIndex = 13;
+            this.totalRevenueLabel.Text = "000,000";
             // 
-            // bunifuCustomLabel6
+            // dateLabel3
             // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(43, 60);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(233, 28);
-            this.bunifuCustomLabel6.TabIndex = 12;
-            this.bunifuCustomLabel6.Text = "Friday, February 9, 2024";
+            this.dateLabel3.AutoSize = true;
+            this.dateLabel3.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel3.ForeColor = System.Drawing.Color.White;
+            this.dateLabel3.Location = new System.Drawing.Point(43, 60);
+            this.dateLabel3.Name = "dateLabel3";
+            this.dateLabel3.Size = new System.Drawing.Size(233, 28);
+            this.dateLabel3.TabIndex = 12;
+            this.dateLabel3.Text = "Friday, February 9, 2024";
             // 
             // panel13
             // 
@@ -359,35 +365,35 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.bunifuCustomLabel8);
-            this.panel4.Controls.Add(this.bunifuCustomLabel4);
+            this.panel4.Controls.Add(this.totalNumberCompletePatientsLabel);
+            this.panel4.Controls.Add(this.dateLabel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 73);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(300, 104);
             this.panel4.TabIndex = 10;
             // 
-            // bunifuCustomLabel8
+            // totalNumberCompletePatientsLabel
             // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Nunito", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(145, 3);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(39, 44);
-            this.bunifuCustomLabel8.TabIndex = 12;
-            this.bunifuCustomLabel8.Text = "5";
+            this.totalNumberCompletePatientsLabel.AutoSize = true;
+            this.totalNumberCompletePatientsLabel.Font = new System.Drawing.Font("Nunito", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalNumberCompletePatientsLabel.ForeColor = System.Drawing.Color.Black;
+            this.totalNumberCompletePatientsLabel.Location = new System.Drawing.Point(145, 3);
+            this.totalNumberCompletePatientsLabel.Name = "totalNumberCompletePatientsLabel";
+            this.totalNumberCompletePatientsLabel.Size = new System.Drawing.Size(39, 44);
+            this.totalNumberCompletePatientsLabel.TabIndex = 12;
+            this.totalNumberCompletePatientsLabel.Text = "0";
             // 
-            // bunifuCustomLabel4
+            // dateLabel2
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(46, 63);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(233, 28);
-            this.bunifuCustomLabel4.TabIndex = 11;
-            this.bunifuCustomLabel4.Text = "Friday, February 9, 2024";
+            this.dateLabel2.AutoSize = true;
+            this.dateLabel2.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel2.ForeColor = System.Drawing.Color.Black;
+            this.dateLabel2.Location = new System.Drawing.Point(46, 63);
+            this.dateLabel2.Name = "dateLabel2";
+            this.dateLabel2.Size = new System.Drawing.Size(233, 28);
+            this.dateLabel2.TabIndex = 11;
+            this.dateLabel2.Text = "Friday, February 9, 2024";
             // 
             // panel12
             // 
@@ -433,35 +439,35 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bunifuCustomLabel7);
-            this.panel2.Controls.Add(this.bunifuCustomLabel5);
+            this.panel2.Controls.Add(this.totalNumberPatientsLabel);
+            this.panel2.Controls.Add(this.dateLabel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 73);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 104);
             this.panel2.TabIndex = 9;
             // 
-            // bunifuCustomLabel7
+            // totalNumberPatientsLabel
             // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Nunito", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(133, 3);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(39, 44);
-            this.bunifuCustomLabel7.TabIndex = 13;
-            this.bunifuCustomLabel7.Text = "3";
+            this.totalNumberPatientsLabel.AutoSize = true;
+            this.totalNumberPatientsLabel.Font = new System.Drawing.Font("Nunito", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalNumberPatientsLabel.ForeColor = System.Drawing.Color.Black;
+            this.totalNumberPatientsLabel.Location = new System.Drawing.Point(133, 3);
+            this.totalNumberPatientsLabel.Name = "totalNumberPatientsLabel";
+            this.totalNumberPatientsLabel.Size = new System.Drawing.Size(39, 44);
+            this.totalNumberPatientsLabel.TabIndex = 13;
+            this.totalNumberPatientsLabel.Text = "0";
             // 
-            // bunifuCustomLabel5
+            // dateLabel1
             // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(34, 60);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(233, 28);
-            this.bunifuCustomLabel5.TabIndex = 12;
-            this.bunifuCustomLabel5.Text = "Friday, February 9, 2024";
+            this.dateLabel1.AutoSize = true;
+            this.dateLabel1.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel1.ForeColor = System.Drawing.Color.Black;
+            this.dateLabel1.Location = new System.Drawing.Point(34, 60);
+            this.dateLabel1.Name = "dateLabel1";
+            this.dateLabel1.Size = new System.Drawing.Size(233, 28);
+            this.dateLabel1.TabIndex = 12;
+            this.dateLabel1.Text = "Friday, February 9, 2024";
             // 
             // panel11
             // 
@@ -543,15 +549,15 @@
         private System.Windows.Forms.Panel paddingPanel;
         private CurvedPanel widget1;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
+        private Bunifu.Framework.UI.BunifuCustomLabel totalNumberPatientsLabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel dateLabel1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Panel containerPanel;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
         private System.Windows.Forms.Panel panel12;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        private Bunifu.Framework.UI.BunifuCustomLabel totalNumberCompletePatientsLabel;
         private System.Windows.Forms.Panel topPanel;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private System.Windows.Forms.Panel panel3;
@@ -559,20 +565,20 @@
         private System.Windows.Forms.Panel widgetsPanel;
         private CurvedPanel widget3;
         private System.Windows.Forms.Panel panel5;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private Bunifu.Framework.UI.BunifuCustomLabel totalRevenueLabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel dateLabel3;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private System.Windows.Forms.Panel panel1;
         private CurvedPanel widget2;
         private System.Windows.Forms.Panel panel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.Framework.UI.BunifuCustomLabel dateLabel2;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel BottomPanel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn _id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

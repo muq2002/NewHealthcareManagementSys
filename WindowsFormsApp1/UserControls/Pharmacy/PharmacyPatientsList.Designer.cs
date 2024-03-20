@@ -42,8 +42,8 @@
             this.containerPanel = new System.Windows.Forms.Panel();
             this.pharmacyPatientProfileControl1 = new HealthcareManagement.UserControls.Pharmacy.PharmacyPatientProfileControl();
             this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,8 +179,8 @@
             this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this._id,
+            this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -201,17 +201,16 @@
             this.dataPatients.TabIndex = 3;
             this.dataPatients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPatients_CellContentDoubleClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
             // _id
             // 
             this._id.HeaderText = "_id";
             this._id.Name = "_id";
             this._id.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
             // 
             // Column2
             // 
@@ -277,14 +276,14 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Panel containerPanel;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.PictureBox picData;
+        private HealthcareManagement.UserControls.Pharmacy.PharmacyPatientProfileControl pharmacyPatientProfileControl1;
         private System.Windows.Forms.DataGridViewTextBoxColumn _id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.PictureBox picData;
-        private HealthcareManagement.UserControls.Pharmacy.PharmacyPatientProfileControl pharmacyPatientProfileControl1;
     }
 }

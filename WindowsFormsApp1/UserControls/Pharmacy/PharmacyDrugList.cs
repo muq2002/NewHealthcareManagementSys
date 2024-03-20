@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using HealthcareManagement.UserControls.Pharmacy;
 using HealthcareManagementSystem.Controller;
 
 
@@ -16,6 +17,7 @@ namespace HealthcareManagementSystem.UserControls.Pharmacy
         private void PharmacyDrugList_Load(object sender, EventArgs e)
         {
             fillDrugsData(drugsController.readDrugs());
+            
         }
 
         void fillDrugsData(DataTable drugDrug)
@@ -33,6 +35,15 @@ namespace HealthcareManagementSystem.UserControls.Pharmacy
                 };
                 dataDrugs.Rows.Add(data);
             }
+        }
+
+        private void dataDrugs_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int drugId = int.Parse(dataDrugs.CurrentRow.Cells[0].Value.ToString());
+
+            DrugInfoForm drugInfoForm = new DrugInfoForm();
+            drugInfoForm.drugID = drugId;
+            drugInfoForm.ShowDialog();
         }
     }
 }

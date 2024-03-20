@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DrugInfoForm));
-            this.textUuid = new System.Windows.Forms.TextBox();
+            this.textCompany = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.textTherapeuticArea = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
-            this.textName = new System.Windows.Forms.TextBox();
+            this.textTreatmentArea = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textUuid
+            // textCompany
             // 
-            this.textUuid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.textUuid.Location = new System.Drawing.Point(27, 207);
-            this.textUuid.Name = "textUuid";
-            this.textUuid.Size = new System.Drawing.Size(303, 29);
-            this.textUuid.TabIndex = 13;
+            this.textCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.textCompany.Font = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCompany.Location = new System.Drawing.Point(27, 207);
+            this.textCompany.Name = "textCompany";
+            this.textCompany.Size = new System.Drawing.Size(303, 38);
+            this.textCompany.TabIndex = 13;
             // 
             // bunifuCustomLabel2
             // 
@@ -78,11 +79,11 @@
             this.bunifuCards1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.SaddleBrown;
-            this.bunifuCards1.Controls.Add(this.textBox1);
+            this.bunifuCards1.Controls.Add(this.textTherapeuticArea);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel3);
             this.bunifuCards1.Controls.Add(this.panel2);
-            this.bunifuCards1.Controls.Add(this.textName);
-            this.bunifuCards1.Controls.Add(this.textUuid);
+            this.bunifuCards1.Controls.Add(this.textTreatmentArea);
+            this.bunifuCards1.Controls.Add(this.textCompany);
             this.bunifuCards1.Controls.Add(this.pictureBox1);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel2);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel1);
@@ -94,6 +95,25 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(362, 552);
             this.bunifuCards1.TabIndex = 9;
+            // 
+            // textTherapeuticArea
+            // 
+            this.textTherapeuticArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.textTherapeuticArea.Font = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTherapeuticArea.Location = new System.Drawing.Point(27, 417);
+            this.textTherapeuticArea.Multiline = true;
+            this.textTherapeuticArea.Name = "textTherapeuticArea";
+            this.textTherapeuticArea.Size = new System.Drawing.Size(303, 96);
+            this.textTherapeuticArea.TabIndex = 25;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(106, 392);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(145, 22);
+            this.bunifuCustomLabel3.TabIndex = 24;
+            this.bunifuCustomLabel3.Text = "Therapeutic areas";
             // 
             // panel2
             // 
@@ -117,14 +137,15 @@
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // textName
+            // textTreatmentArea
             // 
-            this.textName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.textName.Location = new System.Drawing.Point(27, 278);
-            this.textName.Multiline = true;
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(303, 96);
-            this.textName.TabIndex = 14;
+            this.textTreatmentArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.textTreatmentArea.Font = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTreatmentArea.Location = new System.Drawing.Point(27, 278);
+            this.textTreatmentArea.Multiline = true;
+            this.textTreatmentArea.Name = "textTreatmentArea";
+            this.textTreatmentArea.Size = new System.Drawing.Size(303, 96);
+            this.textTreatmentArea.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -136,24 +157,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.textBox1.Location = new System.Drawing.Point(27, 417);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 96);
-            this.textBox1.TabIndex = 25;
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(106, 392);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(145, 22);
-            this.bunifuCustomLabel3.TabIndex = 24;
-            this.bunifuCustomLabel3.Text = "Therapeutic areas";
             // 
             // DrugInfoForm
             // 
@@ -180,15 +183,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textUuid;
+        private System.Windows.Forms.TextBox textCompany;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picClose;
-        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.TextBox textTreatmentArea;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textTherapeuticArea;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
     }
 }

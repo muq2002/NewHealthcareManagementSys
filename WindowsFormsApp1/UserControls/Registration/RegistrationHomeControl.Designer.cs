@@ -37,16 +37,6 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.addPatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textSearch = new Bunifu.Framework.UI.BunifuTextbox();
-            this.picRefresh = new System.Windows.Forms.PictureBox();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +45,20 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.containerPanel = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textSearch = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.containerPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -165,108 +163,6 @@
             this.dataPatients.Size = new System.Drawing.Size(1043, 720);
             this.dataPatients.TabIndex = 3;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.updateToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 94);
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("refreshToolStripMenuItem.Image")));
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
-            this.updateToolStripMenuItem.Text = "Delete";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // containerPanel
-            // 
-            this.containerPanel.Controls.Add(this.dataPatients);
-            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerPanel.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containerPanel.Location = new System.Drawing.Point(0, 85);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(1043, 720);
-            this.containerPanel.TabIndex = 17;
-            // 
-            // topPanel
-            // 
-            this.topPanel.Controls.Add(this.panel3);
-            this.topPanel.Controls.Add(this.picRefresh);
-            this.topPanel.Controls.Add(this.addPatientBTN);
-            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1043, 85);
-            this.topPanel.TabIndex = 12;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textSearch);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(613, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(394, 85);
-            this.panel3.TabIndex = 11;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BackColor = System.Drawing.Color.White;
-            this.textSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("textSearch.BackgroundImage")));
-            this.textSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.textSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textSearch.Icon = ((System.Drawing.Image)(resources.GetObject("textSearch.Icon")));
-            this.textSearch.Location = new System.Drawing.Point(23, 23);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(345, 44);
-            this.textSearch.TabIndex = 0;
-            this.textSearch.text = "Search";
-            this.textSearch.OnTextChange += new System.EventHandler(this.textSearch_OnTextChange);
-            // 
-            // picRefresh
-            // 
-            this.picRefresh.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picRefresh.Image = ((System.Drawing.Image)(resources.GetObject("picRefresh.Image")));
-            this.picRefresh.Location = new System.Drawing.Point(1007, 0);
-            this.picRefresh.Name = "picRefresh";
-            this.picRefresh.Size = new System.Drawing.Size(36, 85);
-            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picRefresh.TabIndex = 10;
-            this.picRefresh.TabStop = false;
-            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(36, 29);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(182, 38);
-            this.bunifuCustomLabel10.TabIndex = 4;
-            this.bunifuCustomLabel10.Text = "Regsitrations";
-            // 
             // _id
             // 
             this._id.HeaderText = "Column8";
@@ -315,6 +211,95 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 80;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.updateToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 94);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("refreshToolStripMenuItem.Image")));
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
+            this.updateToolStripMenuItem.Text = "Delete";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // containerPanel
+            // 
+            this.containerPanel.Controls.Add(this.dataPatients);
+            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.containerPanel.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containerPanel.Location = new System.Drawing.Point(0, 85);
+            this.containerPanel.Name = "containerPanel";
+            this.containerPanel.Size = new System.Drawing.Size(1043, 720);
+            this.containerPanel.TabIndex = 17;
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.panel3);
+            this.topPanel.Controls.Add(this.addPatientBTN);
+            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1043, 85);
+            this.topPanel.TabIndex = 12;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textSearch);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(649, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(394, 85);
+            this.panel3.TabIndex = 11;
+            // 
+            // textSearch
+            // 
+            this.textSearch.BackColor = System.Drawing.Color.White;
+            this.textSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("textSearch.BackgroundImage")));
+            this.textSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.textSearch.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textSearch.Icon = ((System.Drawing.Image)(resources.GetObject("textSearch.Icon")));
+            this.textSearch.Location = new System.Drawing.Point(23, 23);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(345, 44);
+            this.textSearch.TabIndex = 0;
+            this.textSearch.text = "Search";
+            this.textSearch.OnTextChange += new System.EventHandler(this.textSearch_OnTextChange);
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(36, 29);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(182, 38);
+            this.bunifuCustomLabel10.TabIndex = 4;
+            this.bunifuCustomLabel10.Text = "Regsitrations";
+            // 
             // RegistrationHomeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -335,7 +320,6 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,7 +335,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuTextbox textSearch;
-        private System.Windows.Forms.PictureBox picRefresh;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;

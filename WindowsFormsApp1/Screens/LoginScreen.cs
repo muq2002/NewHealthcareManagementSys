@@ -18,8 +18,14 @@ namespace HealthcareManagementSystem
             InitializeComponent();
         }
 
+
         #region Controls
         private void loginBTN_Click(object sender, EventArgs e)
+        {
+            loginEvent();
+        }
+
+        private void loginEvent()
         {
             if (textUsername.Text == "lab")
             {
@@ -53,6 +59,19 @@ namespace HealthcareManagementSystem
         private void picClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                loginEvent();
+            }
+        }
+
+        private void textUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

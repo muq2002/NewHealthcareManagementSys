@@ -32,6 +32,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             updateTheDate();
         }
 
+
         private void updateTheDate()
         {
             DateTime currentDate = DateTime.Now;
@@ -41,7 +42,6 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             dateLabel2.Text = formattedDate;
             dateLabel3.Text = formattedDate;
         }
-
         void fillPatientData(DataTable patientData)
         {
             dataPatients.Rows.Clear();

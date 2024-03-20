@@ -35,9 +35,12 @@ namespace HealthcareManagementSystem.Screens
         {
             convertColor(); hiddenForms();
             registrationPatientListControl.Visible = true;
+            registrationPatientListControl.fillPatientData();
 
             patientBTN.IdleFillColor = Color.White;
             patientBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+
+           
         }
 
         private void logoutBTN_Click(object sender, EventArgs e)

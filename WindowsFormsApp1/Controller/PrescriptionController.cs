@@ -29,6 +29,16 @@ namespace HealthcareManagement.Controller
                 " WHERE (pre.PatientID = " + patientId + " AND pre.DeleteStatus = '" + DeleteStatus + "')");
         }
 
+        public DataTable getPrescriptionWithPriceByPatientId(int patientId)
+        {
+            return databaseProvider.getTable("SELECT pre.ID, pre.SessionID, pre.DrugID," +
+                " sess.SessionName,drg.DrugName, drg.SellingPrice, pre.Instruction, sess.RegisterDate" +
+                " FROM (Prescriptions AS pre" +
+                " INNER JOIN Drugs AS drg ON pre.DrugID = drg.ID)" +
+                " INNER JOIN Sessions AS sess ON pre.SessionID = sess.ID" +
+                " WHERE (pre.PatientID = " + patientId + " AND pre.DeleteStatus = '" + DeleteStatus + "')");
+        }
+
         public DataTable getPrescriptionBySessionId(int sessionId)
         {
             return databaseProvider.getTable("SELECT * FROM Prescriptions" +

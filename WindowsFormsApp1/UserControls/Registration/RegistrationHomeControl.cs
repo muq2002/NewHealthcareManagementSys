@@ -24,6 +24,7 @@ namespace HealthcareManagementSystem.UserControls.Registration
         {
             AddPatientForm addPatientForm = new AddPatientForm();
             addPatientForm.ShowDialog();
+            fillPatientData(patientController.readPatients());
         }
 
         private void RegistrationHomeControl_Load(object sender, EventArgs e)

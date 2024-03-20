@@ -53,8 +53,8 @@ namespace HealthcareManagementSystem.Controller
                 "RegisterDate," +
                 "DeleteStatus" +
                 ") " +
-                "VALUES(" +
-                 patient.PatientUUID + ", '" + 
+                "VALUES('" +
+                 patient.PatientUUID + "', '" + 
                  patient.PatientName + "', " +
                  patient.PatientAge + ", " +
                  patient.PatientGender + ",'" +
@@ -66,7 +66,7 @@ namespace HealthcareManagementSystem.Controller
         public void updatePatient(PatientModel patient)
         {
             string command = "UPDATE Patients SET " +
-            "[Uuid] = " + patient.PatientUUID + ", " +
+            "[Uuid] = '" + patient.PatientUUID + "', " +
             "[PatientName] = '" + patient.PatientName + "', " +
             "[PatientAge] = " + patient.PatientAge + ", " +
             "[PatientGender] = " + patient.PatientGender + ", " +

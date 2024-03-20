@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ using HealthcareManagementSystem.Config;
 using HealthcareManagementSystem.Controller;
 using HealthcareManagementSystem.Model;
 using HealthcareManagementSystem.UserControls.Registration;
+using ZXing;
 
 namespace HealthcareManagementSystem.UserControls.Doctor
 {
@@ -26,14 +28,22 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         #region Controls
         private void addPatientBTN_Click(object sender, EventArgs e)
         {
-            if (patientId == 0)
+            try
             {
-                insertNewPatient();
+                if (patientId == 0)
+                {
+                    insertNewPatient();
+                }
+                else
+                {
+                    updataPatient();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                updataPatient();
+                MessageBox.Show("There mistake, please solve it and try again.");
             }
+
         }
 
         private void updataPatient()
@@ -41,7 +51,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             PatientModel patientModel = new PatientModel();
 
             patientModel.PatientID = patientId;
-            patientModel.PatientUUID = int.Parse(textUuid.Text);
+            patientModel.PatientUUID = textUuid.Text;
             patientModel.PatientName = textName.Text;
             patientModel.PatientPhoneNumber = textPhoneNumber.Text;
             patientModel.PatientAge = int.Parse(textAge.Text);
@@ -56,7 +66,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         {
             PatientModel patientModel = new PatientModel();
 
-            patientModel.PatientUUID = int.Parse(textUuid.Text);
+            patientModel.PatientUUID = textUuid.Text;
             patientModel.PatientName = textName.Text;
             patientModel.PatientPhoneNumber = textPhoneNumber.Text;
             patientModel.PatientAge = int.Parse(textAge.Text);
@@ -86,10 +96,26 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             {
                 loadSelectedPatientData();
                 addPatientBTN.Text = "Update";
+                return;
             }
-            
+
+            textUuid.Text = Utils.crateUUID();
+            createQRCode(textUuid.Text);
         }
 
+        void createQRCode(string text) {
+            BarcodeWriter writer = new BarcodeWriter();
+            writer.Format = BarcodeFormat.QR_CODE;
+            writer.Options = new ZXing.Common.EncodingOptions
+            {
+                Width = pictureBoxQRCode.Width, 
+                Height = pictureBoxQRCode.Height,
+                Margin = 0
+            };
+            Bitmap qrCodeImage = writer.Write(text);
+
+            pictureBoxQRCode.Image = qrCodeImage;
+        }
         private void loadSelectedPatientData()
         {
             DataTable selectedPatient = patientController.getSinglePatient(patientId);

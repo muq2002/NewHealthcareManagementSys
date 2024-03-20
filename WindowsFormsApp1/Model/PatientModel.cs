@@ -9,7 +9,7 @@ namespace HealthcareManagementSystem.Model
     class PatientModel
     {
         public int PatientID;
-        public int PatientUUID;
+        public string PatientUUID;
         public string PatientName;
         public int PatientAge;
         public int PatientGender;
@@ -18,7 +18,7 @@ namespace HealthcareManagementSystem.Model
 
         public PatientModel() { }
 
-        public PatientModel(int PatientID, int PatientUUID, string PatientName, int PatientAge,
+        public PatientModel(int PatientID, string PatientUUID, string PatientName, int PatientAge,
             int PatientGender, string PatientPhoneNumber, string RegisterDate)
         {
             this.PatientID = PatientID;
@@ -30,7 +30,7 @@ namespace HealthcareManagementSystem.Model
             this.RegisterDate = RegisterDate;
 
         }
-        public PatientModel(int PatientUUID, string PatientName, int PatientAge,
+        public PatientModel(string PatientUUID, string PatientName, int PatientAge,
             int PatientGender, string PatientPhoneNumber, string RegisterDate)
         {
             this.PatientUUID = PatientUUID;

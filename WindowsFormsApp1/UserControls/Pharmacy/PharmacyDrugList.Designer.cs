@@ -170,6 +170,7 @@
             this.dataDrugs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataDrugs.Size = new System.Drawing.Size(983, 620);
             this.dataDrugs.TabIndex = 3;
+            this.dataDrugs.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataDrugs_CellContentDoubleClick);
             // 
             // Column1
             // 

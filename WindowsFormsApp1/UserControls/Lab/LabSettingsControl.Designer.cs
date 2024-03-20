@@ -35,6 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +51,20 @@
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textYourDeviceIP = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textLabIP = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataTests = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -60,30 +77,27 @@
             this.listAnalysisGroup = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.picAddNewGruop = new System.Windows.Forms.PictureBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataDevices = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.containerPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.textLabIP = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textYourDeviceIP = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTests)).BeginInit();
@@ -91,10 +105,11 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAddNewGruop)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDevices)).BeginInit();
+            this.contextMenuStrip3.SuspendLayout();
             this.containerPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Column5
@@ -224,11 +239,147 @@
             this.tabPage1.Text = "Accounts And Network";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 215);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(999, 351);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Change Accounts Info";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 38);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Version";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(323, 97);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(421, 46);
+            this.textBox6.TabIndex = 11;
+            this.textBox6.Text = "1.0.2";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(323, 45);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(421, 46);
+            this.textBox5.TabIndex = 10;
+            this.textBox5.Text = "HMS For Labs";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(214, 38);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Software Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(317, 200);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(421, 46);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(317, 148);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(421, 46);
+            this.textBox7.TabIndex = 7;
+            this.textBox7.Text = "lab";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 38);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 38);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Password";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textYourDeviceIP);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textLabIP);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(999, 212);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Connections and Network";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(317, 97);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(421, 46);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "60.90.00.01";
+            // 
+            // textYourDeviceIP
+            // 
+            this.textYourDeviceIP.Location = new System.Drawing.Point(317, 45);
+            this.textYourDeviceIP.Name = "textYourDeviceIP";
+            this.textYourDeviceIP.Size = new System.Drawing.Size(421, 46);
+            this.textYourDeviceIP.TabIndex = 3;
+            this.textYourDeviceIP.Text = "60.90.00.02";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 38);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Your device";
+            // 
+            // textLabIP
+            // 
+            this.textLabIP.AutoSize = true;
+            this.textLabIP.Location = new System.Drawing.Point(28, 105);
+            this.textLabIP.Name = "textLabIP";
+            this.textLabIP.Size = new System.Drawing.Size(206, 38);
+            this.textLabIP.TabIndex = 0;
+            this.textLabIP.Text = "Send Doctor IP";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -365,6 +516,111 @@
             this.picAddNewGruop.TabStop = false;
             this.picAddNewGruop.Click += new System.EventHandler(this.picAddNewGruop_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dataDevices);
+            this.tabPage4.Location = new System.Drawing.Point(4, 47);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1005, 569);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Devices";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataDevices
+            // 
+            this.dataDevices.AllowUserToAddRows = false;
+            this.dataDevices.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataDevices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataDevices.BackgroundColor = System.Drawing.Color.White;
+            this.dataDevices.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataDevices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataDevices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataDevices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.Column8});
+            this.dataDevices.ContextMenuStrip = this.contextMenuStrip3;
+            this.dataDevices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataDevices.DoubleBuffered = true;
+            this.dataDevices.EnableHeadersVisualStyles = false;
+            this.dataDevices.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.dataDevices.HeaderForeColor = System.Drawing.Color.White;
+            this.dataDevices.Location = new System.Drawing.Point(3, 3);
+            this.dataDevices.Margin = new System.Windows.Forms.Padding(5);
+            this.dataDevices.Name = "dataDevices";
+            this.dataDevices.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataDevices.RowHeadersWidth = 40;
+            this.dataDevices.RowTemplate.Height = 28;
+            this.dataDevices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataDevices.Size = new System.Drawing.Size(999, 563);
+            this.dataDevices.TabIndex = 18;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.dataGridViewTextBoxColumn3.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Device Name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.Width = 500;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "IP";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 200;
+            // 
+            // contextMenuStrip3
+            // 
+            this.contextMenuStrip3.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.addToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip3.Name = "contextMenuStrip1";
+            this.contextMenuStrip3.Size = new System.Drawing.Size(151, 94);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(150, 30);
+            this.toolStripMenuItem2.Text = "Refresh";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.refreshDataDevicesStripMenuItem_Click);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addToolStripMenuItem.Image")));
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(150, 30);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // containerPanel
             // 
             this.containerPanel.Controls.Add(this.tabControl1);
@@ -417,141 +673,6 @@
             this.topPanel.Size = new System.Drawing.Size(1043, 85);
             this.topPanel.TabIndex = 29;
             // 
-            // textLabIP
-            // 
-            this.textLabIP.AutoSize = true;
-            this.textLabIP.Location = new System.Drawing.Point(28, 105);
-            this.textLabIP.Name = "textLabIP";
-            this.textLabIP.Size = new System.Drawing.Size(206, 38);
-            this.textLabIP.TabIndex = 0;
-            this.textLabIP.Text = "Send Doctor IP";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 38);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Your device";
-            // 
-            // textYourDeviceIP
-            // 
-            this.textYourDeviceIP.Location = new System.Drawing.Point(317, 45);
-            this.textYourDeviceIP.Name = "textYourDeviceIP";
-            this.textYourDeviceIP.Size = new System.Drawing.Size(421, 46);
-            this.textYourDeviceIP.TabIndex = 3;
-            this.textYourDeviceIP.Text = "60.90.00.02";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(317, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(421, 46);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "60.90.00.01";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textYourDeviceIP);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textLabIP);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(999, 212);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Connections and Network";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 38);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Password";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 38);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Username";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(317, 148);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(421, 46);
-            this.textBox7.TabIndex = 7;
-            this.textBox7.Text = "lab";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(317, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(421, 46);
-            this.textBox1.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 38);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Software Name";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(323, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(421, 46);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "HMS For Labs";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(323, 97);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(421, 46);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.Text = "1.0.2";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 38);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Version";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 215);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(999, 351);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Change Accounts Info";
-            // 
             // LabSettingsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -570,6 +691,10 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataTests)).EndInit();
@@ -577,13 +702,12 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAddNewGruop)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataDevices)).EndInit();
+            this.contextMenuStrip3.ResumeLayout(false);
             this.containerPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -635,5 +759,14 @@
         private System.Windows.Forms.TextBox textYourDeviceIP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label textLabIP;
+        private System.Windows.Forms.TabPage tabPage4;
+        internal Bunifu.Framework.UI.BunifuCustomDataGrid dataDevices;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

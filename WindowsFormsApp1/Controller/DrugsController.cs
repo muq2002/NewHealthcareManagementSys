@@ -24,6 +24,11 @@ namespace HealthcareManagementSystem.Controller
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY ID ASC");
         }
 
+        public DataTable getSingleDrug(int drugID)
+        {
+            return databaseProvider.getTable("SELECT * FROM Drugs" +
+            " WHERE ([ID]= "+ drugID + " AND [DeleteStatus]='" + DeleteStatus + "') ORDER BY ID ASC");
+        }
         public DataTable getSinglePatient(int patientId)
         {
             return databaseProvider.getTable("SELECT * FROM Patients" +
