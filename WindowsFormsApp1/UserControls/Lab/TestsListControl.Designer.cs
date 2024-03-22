@@ -33,17 +33,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestsListControl));
             this.containerPanel = new System.Windows.Forms.Panel();
             this.dataTests = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addPatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.topPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.textSearch = new Bunifu.Framework.UI.BunifuTextbox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
@@ -83,12 +78,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataTests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dataTests.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataTests.DoubleBuffered = true;
             this.dataTests.EnableHeadersVisualStyles = false;
@@ -101,39 +90,6 @@
             this.dataTests.RowTemplate.Height = 28;
             this.dataTests.Size = new System.Drawing.Size(983, 636);
             this.dataTests.TabIndex = 4;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 40;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Patient Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Test Name";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 300;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Device Name";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Time";
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.Width = 200;
             // 
             // panel1
             // 
@@ -204,26 +160,27 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.bunifuTextbox1);
+            this.panel3.Controls.Add(this.textSearch);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(607, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(376, 94);
             this.panel3.TabIndex = 3;
             // 
-            // bunifuTextbox1
+            // textSearch
             // 
-            this.bunifuTextbox1.BackColor = System.Drawing.Color.White;
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(24, 25);
-            this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(345, 48);
-            this.bunifuTextbox1.TabIndex = 0;
-            this.bunifuTextbox1.text = "Search";
+            this.textSearch.BackColor = System.Drawing.Color.White;
+            this.textSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("textSearch.BackgroundImage")));
+            this.textSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.textSearch.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textSearch.Icon = ((System.Drawing.Image)(resources.GetObject("textSearch.Icon")));
+            this.textSearch.Location = new System.Drawing.Point(24, 25);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(345, 48);
+            this.textSearch.TabIndex = 0;
+            this.textSearch.text = "Search";
+            this.textSearch.OnTextChange += new System.EventHandler(this.textSearch_OnTextChange);
             // 
             // leftPanel
             // 
@@ -278,16 +235,11 @@
         private System.Windows.Forms.Panel topPanel;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
+        private Bunifu.Framework.UI.BunifuTextbox textSearch;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel BottomPanel;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataTests;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton addPatientBTN;
     }

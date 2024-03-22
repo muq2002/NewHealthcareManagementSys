@@ -82,5 +82,10 @@ namespace HealthcareManagement.UserControls.Pharmacy
                 - int.Parse(textPayOffPrice.Text)).ToString(); 
 
         }
+
+        private void paymentBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

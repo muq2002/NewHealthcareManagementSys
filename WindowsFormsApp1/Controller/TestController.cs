@@ -23,6 +23,16 @@ namespace HealthcareManagementSystem.Controller
                 " INNER JOIN TestsBank AS myt ON t.TestID = myt.ID" +
                 " WHERE t.DeleteStatus = '" + DeleteStatus + "'");
         }
+        public DataTable saerchPatientsTests(int limit, string patientName)
+        {
+            return databaseProvider.getTable("SELECT t.ID, t.PatientID, p.PatientName," +
+                " t.TestID, myt.TestName, t.TestValue, t.Comments, t.RegisterDate" +
+                " FROM (Lab AS t" +
+                " INNER JOIN Patients AS p ON t.PatientID = p.ID)" +
+                " INNER JOIN TestsBank AS myt ON t.TestID = myt.ID" +
+                " WHERE (p.PatientName LIKE '" + patientName + "%'" +
+                " AND t.DeleteStatus = '" + DeleteStatus + "')");
+        }
 
 
 

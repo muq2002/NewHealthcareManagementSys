@@ -33,6 +33,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabPatientsListControl));
             this.containerPanel = new System.Windows.Forms.Panel();
             this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleOfPageText = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchPatientText = new Bunifu.Framework.UI.BunifuTextbox();
@@ -41,17 +48,9 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.picData = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labPatientProfile1 = new HealthcareManagement.UserControls.Lab.LabPatientProfileControl();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
-            this.panel3.SuspendLayout();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picData)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +107,46 @@
             this.dataPatients.TabIndex = 3;
             this.dataPatients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPatients_CellDoubleClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 60;
+            // 
+            // _id
+            // 
+            this._id.HeaderText = "_id";
+            this._id.Name = "_id";
+            this._id.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Phone Number";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Order Date";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 260;
+            // 
             // titleOfPageText
             // 
             this.titleOfPageText.AutoSize = true;
@@ -120,7 +159,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.searchPatientText);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(649, 0);
             this.panel3.Name = "panel3";
@@ -134,12 +172,13 @@
             this.searchPatientText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchPatientText.ForeColor = System.Drawing.Color.Gainsboro;
             this.searchPatientText.Icon = ((System.Drawing.Image)(resources.GetObject("searchPatientText.Icon")));
-            this.searchPatientText.Location = new System.Drawing.Point(23, 25);
+            this.searchPatientText.Location = new System.Drawing.Point(678, 25);
             this.searchPatientText.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.searchPatientText.Name = "searchPatientText";
             this.searchPatientText.Size = new System.Drawing.Size(345, 48);
             this.searchPatientText.TabIndex = 0;
             this.searchPatientText.text = "Search";
+            this.searchPatientText.OnTextChange += new System.EventHandler(this.searchPatientText_OnTextChange);
             // 
             // leftPanel
             // 
@@ -188,46 +227,6 @@
             this.picData.Visible = false;
             this.picData.Click += new System.EventHandler(this.picData_Click);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // _id
-            // 
-            this._id.HeaderText = "_id";
-            this._id.Name = "_id";
-            this._id.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Age";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Gender";
-            this.Column4.Name = "Column4";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Phone Number";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Order Date";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 260;
-            // 
             // labPatientProfile1
             // 
             this.labPatientProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -245,6 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.searchPatientText);
             this.Controls.Add(this.containerPanel);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.rightPanel);
@@ -256,7 +256,6 @@
             this.Load += new System.EventHandler(this.LabPatientsListControl_Load);
             this.containerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picData)).EndInit();

@@ -84,6 +84,7 @@
     <Compile Include="Controller\TestController.cs" />
     <Compile Include="Controller\TestGroupController.cs" />
     <Compile Include="Controller\TestsBankController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="CurvedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -97,6 +98,7 @@
     <Compile Include="Model\TestGroupModel.cs" />
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Model\TestsBankModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="Screens\DoctorHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>

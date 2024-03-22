@@ -99,5 +99,11 @@ namespace HealthcareManagementSystem.UserControls
             picData.Visible = true;
 
         }
+
+        private void searchPatientText_OnTextChange(object sender, EventArgs e)
+        {
+            if (searchPatientText.text == "") fillPatientData(patientController.readPatients());
+            fillPatientData(patientController.searchPatients(searchPatientText.text));
+        }
     }
 }
