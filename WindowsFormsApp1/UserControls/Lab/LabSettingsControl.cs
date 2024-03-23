@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthcareManagementSystem.Controller;
 using HealthcareManagement.Controller;
+using HealthcareManagementSystem.Config;
 
 namespace HealthcareManagement.UserControls.Lab
 {
@@ -25,55 +26,97 @@ namespace HealthcareManagement.UserControls.Lab
 
         private void LabSettingsControl_Load(object sender, EventArgs e)
         {
-            loadAnalysisGroup(testGroupController.readTestGroups());
-            fillTestsData(testsBankController.readTestsBank());
+            loadAnalysisGroup();
+            //fillTestsData(testsBankController.readTestsBank());
             fillDevicesData(devicesController.readDevices());
         }
 
-        void fillTestsData(DataTable patientData)
+        void fillTestsDataFromAll(DataTable testData)
         {
             dataTests.Rows.Clear();
-            for (int index = 0; index < patientData.Rows.Count; index++)
+            for (int index = 0; index < testData.Rows.Count; index++)
             {
-                //int.TryParse(patientData.Rows[index][2].ToString(), out int parsedValue);
-
                 string[] data = new string[] {
-                    patientData.Rows[index][0].ToString(),
+                    testData.Rows[index][0].ToString(),
                     "",
-                    patientData.Rows[index][1].ToString(),
+                    testData.Rows[index][1].ToString(),
                 };
                 dataTests.Rows.Add(data);
                 dataTests.Rows[index].Cells[1].Value = false;
             }
         }
-        private void loadAnalysisGroup(DataTable groupAnalysis)
+        void fillTestsDataForTree(DataTable testData)
         {
-            listAnalysisGroup.ValueMember = "ID";
-            listAnalysisGroup.DisplayMember = "GroupName";
-            listAnalysisGroup.DataSource = groupAnalysis;
+            dataTests.Rows.Clear();
+            for (int index = 0; index < testData.Rows.Count; index++)
+            {
+                string[] data = new string[] {
+                    testData.Rows[index][2].ToString(),
+                    "",
+                    testData.Rows[index][4].ToString(),
+                };
+                dataTests.Rows.Add(data);
+                dataTests.Rows[index].Cells[1].Value = false;
+            }
+        }
+        private void loadAnalysisGroup()
+        {
+            treeView1.Nodes.Clear();
+            DataTable parentTable = testGroupController.getGroupNames(); 
+            
 
+            foreach (DataRow parentRow in parentTable.Rows)
+            {
+                TreeNode parentNode = new TreeNode(parentRow["GroupName"].ToString());
+                treeView1.Nodes.Add(parentNode);
+
+                DataTable bufferTableWithCounts = testGroupController
+                    .getSubGroupNames(int.Parse(parentRow["ID"].ToString()));
+
+                
+                foreach (DataRow childRow in bufferTableWithCounts.Rows)
+                {
+                    addNodeTree(parentNode, childRow);
+
+                }
+            }
+        }
+
+        private void addNodeTree(TreeNode parentNode, DataRow childRow)
+        {
+            DataTable dataSubGroupName = testGroupController
+                .getSingleSubGroupNames(int.Parse(childRow["SubGroupID"].ToString()));
+            parentNode.Nodes.Add(new TreeNode(dataSubGroupName.Rows[0]["SubGroupName"].ToString()
+                + " (" + childRow["Expr1"] + ")"));
         }
 
         private void picAddNewGruop_Click(object sender, EventArgs e)
         {
+            AddSubGroup addSubGroup = new AddSubGroup();
+            addSubGroup.ShowDialog();
+            int createdGroupId = getSubGroupId(addSubGroup.SubGroupName);
+
             for (int index = 0; index < dataTests.Rows.Count - 1; index++)
             {
                 if ((bool)dataTests.Rows[index].Cells[1].Value != true) continue;
-                //testGroupController.updataGroup();
+                testGroupController.addTestsToCustomSubGroup(createdGroupId, int.Parse(dataTests
+                    .Rows[index].Cells[0].Value.ToString()));
             }
+
+            loadAnalysisGroup();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            fillTestsData(testsBankController.readTestsBank());
+            fillTestsDataFromAll(testsBankController.readTestsBank());
         }
 
         private void listAnalysisGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedIndex = listAnalysisGroup.SelectedIndex;
+            //int selectedIndex = listAnalysisGroup.SelectedIndex;
 
-            if (selectedIndex == -1) return;
-            fillTestsData(testsBankController.getSingleTestGroups(selectedIndex.ToString()));
+            //if (selectedIndex == -1) return;
+            //fillTestsData(testsBankController.getSingleTestGroups(selectedIndex +1));
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +152,22 @@ namespace HealthcareManagement.UserControls.Lab
         private void refreshDataDevicesStripMenuItem_Click(object sender, EventArgs e)
         {
             fillDevicesData(devicesController.readDevices());
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (treeView1.SelectedNode == null) return;
+            fillTestsDataForTree(testsBankController
+               .getSingleTestsBySubGroups(getSubGroupId(treeView1.SelectedNode.Text)));
+        }
+
+        int getSubGroupId(string SubGroupName)
+        {
+            DataTable subGroupTests = testGroupController
+            .getSingleSubGroupNames(Utils.extractText(SubGroupName));
+            if (subGroupTests.Rows.Count == 0) return 0;
+            return int.Parse(subGroupTests.Rows[0]["ID"].ToString());
+
         }
     }
 }

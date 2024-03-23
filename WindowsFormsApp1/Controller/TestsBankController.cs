@@ -23,13 +23,26 @@ namespace HealthcareManagement.Controller
         }
 
 
-        public DataTable getSingleTestGroups(string relatedGroup)
+        public DataTable getSingleTestsByGroups(int groupId)
         {
-            return databaseProvider.getTable("SELECT * FROM TestsBank" +
-                " WHERE ([GroupRelated] = '" + relatedGroup + "' AND [DeleteStatus]='" + DeleteStatus + "') " +
-                "ORDER BY ID ASC");
+            return databaseProvider.getTable("SELECT cg.GroupID, cg.SubGroupID, cg.TestID," +
+                " tb.ID, tb.TestName, tb.ReferenceRange, tb.DeleteStatus" +
+                " FROM ConnectionGroup AS cg" +
+                " INNER JOIN TestsBank AS tb ON cg.TestID = tb.ID" +
+                " WHERE (cg.GroupID = " + groupId.ToString() +
+                " AND tb.DeleteStatus='" + DeleteStatus + "')" +
+                " ORDER BY tb.ID ASC");
         }
-
+        public DataTable getSingleTestsBySubGroups(int subGroupId)
+        {
+            return databaseProvider.getTable("SELECT cg.GroupID, cg.SubGroupID, cg.TestID," +
+                " tb.ID, tb.TestName, tb.ReferenceRange, tb.DeleteStatus" +
+                " FROM ConnectionGroup AS cg" +
+                " INNER JOIN TestsBank AS tb ON cg.TestID = tb.ID" +
+                " WHERE (cg.SubGroupID = " + subGroupId.ToString() +
+                " AND tb.DeleteStatus='" + DeleteStatus + "')" +
+                " ORDER BY tb.ID ASC");
+        }
 
         public void createPatient(TestsBankModel testsBankModel)
         {

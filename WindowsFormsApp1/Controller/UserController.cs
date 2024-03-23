@@ -1,4 +1,5 @@
-﻿using HealthcareManagementSystem.Config;
+﻿using HealthcareManagement.Model;
+using HealthcareManagementSystem.Config;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,81 +17,58 @@ namespace HealthcareManagement.Controller
 
 
         public UserController() { }
-        public DataTable readPatients()
+        public DataTable readUsers()
         {
-            return databaseProvider.getTable("SELECT * FROM Patients" +
+            return databaseProvider.getTable("SELECT * FROM Users" +
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY ID ASC");
         }
 
-
-        public DataTable getSinglePatient(int patientId)
+        public DataTable getSingleUser(int patientId)
         {
-            return databaseProvider.getTable("SELECT * FROM Patients" +
+            return databaseProvider.getTable("SELECT * FROM Users" +
                 " WHERE ([ID] = " + patientId + " AND [DeleteStatus]='" + DeleteStatus + "') " +
                 "ORDER BY ID ASC");
         }
-        public DataTable getPatientNames()
-        {
-            return databaseProvider.getTable("SELECT PatientID, Uuid, PatientName FROM Patients" +
-                " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY PatientID ASC");
-        }
-        public DataTable readPatients(int limit = 100)
-        {
-            return databaseProvider.getTable("SELECT TOP " + limit + " * FROM Patients" +
-                " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY PatientID ASC");
-        }
 
-        public DataTable searchPatients(string searchText)
+        public void createUser(UserModel user)
         {
-            return databaseProvider.getTable("SELECT * FROM Patients" +
-                " WHERE ([PatientName] LIKE '" + searchText + "%' " +
-                "AND [DeleteStatus]='" + DeleteStatus + "') ORDER BY ID ASC");
-        }
-        public void createPatient(PatientModel patient)
-        {
-            string command = "INSERT INTO Patients(" +
-                "Uuid," +
-                "PatientName," +
-                "PatientAge," +
-                "PatientGender," +
-                "PatientPhoneNumber, " +
+            string command = "INSERT INTO Users(" +
+                "Username," +
+                "Password," +
+                "Permission," +
                 "RegisterDate," +
                 "DeleteStatus" +
                 ") " +
                 "VALUES('" +
-                 patient.PatientUUID + "', '" +
-                 patient.PatientName + "', " +
-                 patient.PatientAge + ", " +
-                 patient.PatientGender + ",'" +
-                 patient.PatientPhoneNumber + "', '" +
+                 user.Username + "', '" +
+                 user.Password + "', '" +
+                 user.Permission + "', " +
                  DateTime.Now + "' , 'No'" +
                 ")";
             databaseProvider.runCommand(command);
         }
-        public void updatePatient(PatientModel patient)
+        public void updateUser(UserModel user)
         {
-            string command = "UPDATE Patients SET " +
-            "[Uuid] = '" + patient.PatientUUID + "', " +
-            "[PatientName] = '" + patient.PatientName + "', " +
-            "[PatientAge] = " + patient.PatientAge + ", " +
-            "[PatientGender] = " + patient.PatientGender + ", " +
-            "[PatientPhoneNumber] = '" + patient.PatientPhoneNumber + "' " +
-            "WHERE ID=" + patient.PatientID;
+            string command = "UPDATE Users SET " +
+            "[Username] = '" + user.Username + "', " +
+            "[Password] = '" + user.Password + "', " +
+            "[Permission] = '" + user.Permission + "', " +
+            "WHERE ID=" + user.ID;
 
             databaseProvider.runCommand(command);
         }
-        public void deletePatient(int patientId)
+        public void deleteUser(int userId)
         {
-            string command = "UPDATE Patients SET " +
-                "[DeleteStatus] = 'Yes' WHERE ID=" + patientId;
+            string command = "UPDATE Users SET " +
+                "[DeleteStatus] = 'Yes' WHERE ID=" + userId;
 
             databaseProvider.runCommand(command);
         }
 
-        public void restorePatient(int patientId)
+        public void restoreUser(int userId)
         {
-            string command = "UPDATE Patients SET " +
-                "[DeleteStatus] = 'No' WHERE ID=" + patientId;
+            string command = "UPDATE Users SET " +
+                "[DeleteStatus] = 'No' WHERE ID=" + userId;
 
             databaseProvider.runCommand(command);
         }

@@ -155,6 +155,12 @@
     <Compile Include="UserControls\Lab\AddDevice.Designer.cs">
       <DependentUpon>AddDevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Lab\AddSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Lab\AddSubGroup.Designer.cs">
+      <DependentUpon>AddSubGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Lab\LabPatientProfileControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Lab\AddDevice.resx">
       <DependentUpon>AddDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Lab\AddSubGroup.resx">
+      <DependentUpon>AddSubGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Lab\LabPatientProfileControl.resx">
       <DependentUpon>LabPatientProfileControl.cs</DependentUpon>

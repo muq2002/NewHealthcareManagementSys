@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -76,6 +77,20 @@ namespace HealthcareManagementSystem.Config
         }
     }
 
+        public static string extractText(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return string.Empty;
+            return Regex.Replace(input, "[^a-zA-Z\\s]", "");
+        }
 
-}
+        public static bool isString(string input )
+        {
+            if (string.IsNullOrEmpty(input))
+                return false;
+            return Regex.IsMatch(input, "[^a-zA-Z\\s]");
+        }
+
+
+    }
 }

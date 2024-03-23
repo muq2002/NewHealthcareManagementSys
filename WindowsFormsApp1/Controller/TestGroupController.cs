@@ -12,12 +12,31 @@ namespace HealthcareManagement.Controller
 
 
         public TestGroupController() { }
-        public DataTable readTestGroups()
+        public DataTable getGroupNames()
         {
             return databaseProvider.getTable("SELECT * FROM TestGroups" +
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY ID ASC");
         }
+        public DataTable getSubGroupNames(int groupId)
+        {
+            return databaseProvider.getTable("SELECT ConnectionGroup.SubGroupID, Count(*) AS Expr1" +
+                " FROM ConnectionGroup " +
+                " WHERE(((ConnectionGroup.[GroupID]) = " + groupId .ToString() + "))" +
+                " GROUP BY ConnectionGroup.SubGroupID; ");
+        }
+        public DataTable getSingleSubGroupNames(int subGroupId)
+        {
+            return databaseProvider.getTable("SELECT * FROM SubGroupTests" +
+                " WHERE ([ID] = " + subGroupId  + " AND [DeleteStatus]='" + DeleteStatus + "')" +
+                " ORDER BY ID ASC");
+        }
 
+        public DataTable getSingleSubGroupNames(string subGroupName)
+        {
+            return databaseProvider.getTable("SELECT * FROM SubGroupTests" +
+                " WHERE ([SubGroupName] = '" + subGroupName + "' AND [DeleteStatus]='" + DeleteStatus + "')" +
+                " ORDER BY ID ASC");
+        }
 
         public DataTable getSingleTestGroups(int groupId)
         {
@@ -27,30 +46,32 @@ namespace HealthcareManagement.Controller
         }
 
 
-        public void createPatient(TestGroupModel testGroupModel)
+        public void createSubGroup(string subGroupName)
         {
-            string command = "INSERT INTO TestGroups(" +
-                "GroupName," +
+            string command = "INSERT INTO SubGroupTests(" +
+                "SubGroupName," +
                 "DeleteStatus" +
                 ") " +
                 "VALUES('" +
-                 testGroupModel.GroupName + "', " +
+                 subGroupName + "', " +
                  "'No'" +
                 ")";
             databaseProvider.runCommand(command);
         }
-        //public void updatePatient(DrugModel patient)
-        //{
-        //    string command = "UPDATE Patients SET " +
-        //    "[Uuid] = " + patient.PatientUUID + ", " +
-        //    "[PatientName] = '" + patient.PatientName + "', " +
-        //    "[PatientAge] = " + patient.PatientAge + ", " +
-        //    "[PatientGender] = " + patient.PatientGender + ", " +
-        //    "[PatientPhoneNumber] = '" + patient.PatientPhoneNumber + "' " +
-        //    "WHERE ID=" + patient.PatientID;
 
-        //    databaseProvider.runCommand(command);
-        //}
+        public void addTestsToCustomSubGroup(int subGroupId, int testId)
+        {
+            string command = "INSERT INTO ConnectionGroup(" +
+                "GroupID," +
+                "SubGroupID," +
+                "TestID" +
+                ") " +
+                "VALUES(7," +
+                  subGroupId + ", " +
+                 testId +
+                ")";
+            databaseProvider.runCommand(command);
+        }
         public void deleteTestGroups(int groupId)
         {
             string command = "UPDATE TestGroups SET " +

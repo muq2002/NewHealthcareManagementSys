@@ -55,3 +55,4 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debug\zxing.presentation.dll
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debug\zxing.xml
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debug\zxing.presentation.xml
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.UserControls.Lab.AddSubGroup.resources

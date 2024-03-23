@@ -30,26 +30,26 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void PopulateTreeView()
         {
-            treeView1.Nodes.Clear();
+            //treeView1.Nodes.Clear();
 
-            DataTable parentTable = testGroupController.readTestGroups();
+            //DataTable parentTable = testGroupController.readTestGroups();
 
-            foreach (DataRow parentRow in parentTable.Rows)
-            {
-                TreeNode parentNode = new TreeNode(parentRow["GroupName"].ToString());
-                int parentID = Convert.ToInt32(parentRow["ID"]);
-                DataTable subgroupTable = testsBankController.getSingleTestGroups(parentID.ToString());
-                foreach (DataRow subgroupRow in subgroupTable.Rows)
-                {
-                    if (Convert.ToInt32(subgroupRow["GroupRelated"]) == parentID)
-                    {
-                        TreeNode subgroupNode = new TreeNode(subgroupRow["TestName"].ToString());
-                        parentNode.Nodes.Add(subgroupNode);
-                    }
-                }
+            //foreach (DataRow parentRow in parentTable.Rows)
+            //{
+            //    TreeNode parentNode = new TreeNode(parentRow["GroupName"].ToString());
+            //    int parentID = Convert.ToInt32(parentRow["ID"]);
+            //    DataTable subgroupTable = testsBankController.getSingleTestGroups(parentID);
+            //    foreach (DataRow subgroupRow in subgroupTable.Rows)
+            //    {
+            //        if (Convert.ToInt32(subgroupRow["GroupRelated"]) == parentID)
+            //        {
+            //            TreeNode subgroupNode = new TreeNode(subgroupRow["TestName"].ToString());
+            //            parentNode.Nodes.Add(subgroupNode);
+            //        }
+            //    }
 
-                treeView1.Nodes.Add(parentNode);
-            }
+            //    treeView1.Nodes.Add(parentNode);
+            //}
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -61,7 +61,8 @@ namespace HealthcareManagement.UserControls.Doctor
         {
             if (treeView1.SelectedNode != null)
             {
-                filldataTests(testsBankController.getSingleTestGroups(treeView1.SelectedNode.Text));
+                //filldataTests(testsBankController.getSingleTestGroups(int.Parse(treeView1
+                //    .SelectedNode.Text)));
             }
         }
 
