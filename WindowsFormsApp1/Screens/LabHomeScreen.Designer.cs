@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem
+﻿namespace HealthcareManagement.Screens
 {
     partial class LabHomeScreen
     {
@@ -47,7 +47,7 @@
             this.ordersBTN = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel4 = new System.Windows.Forms.Panel();
             this.logoPicture = new System.Windows.Forms.PictureBox();
-            this.homeControl1 = new HealthcareManagementSystem.Screens.LabHomeControl();
+            this.homeControl1 = new HealthcareManagement.Screens.Screens.LabHomeControl();
             this.container = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.panel7.SuspendLayout();

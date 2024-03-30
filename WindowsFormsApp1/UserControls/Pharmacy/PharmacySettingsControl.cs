@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HealthcareManagementSystem.UserControls.Pharmacy
+namespace HealthcareManagement.Screens.UserControls.Pharmacy
 {
     public partial class PharmacySettingsControl : UserControl
     {

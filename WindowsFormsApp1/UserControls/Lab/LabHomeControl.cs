@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.Controller;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Controller;
 
-namespace HealthcareManagementSystem.Screens
+namespace HealthcareManagement.Screens.Screens
 {
     public partial class LabHomeControl : UserControl
     {

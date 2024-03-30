@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.UserControls.Doctor;
 
-namespace HealthcareManagementSystem.UserControls.Doctor
+namespace HealthcareManagement.UserControls.Doctor
 {
     public partial class DoctorHomeControl : UserControl
     {
@@ -27,7 +28,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
 
         private void DoctorHomeControl_Load(object sender, EventArgs e)
         {
-            fillPatientData(patientController.readPatients());
+            //fillPatientData(patientController.readPatients());
 
             updateTheDate();
         }

@@ -1,4 +1,6 @@
-﻿namespace HealthcareManagementSystem.UserControls.Doctor
+﻿using HealthcareManagement.Screens;
+
+namespace HealthcareManagement.UserControls.Doctor
 {
     partial class DoctorHomeControl
     {
@@ -28,8 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorHomeControl));
             this.paddingPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
@@ -45,7 +47,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchPatientText = new Bunifu.Framework.UI.BunifuTextbox();
             this.widgetsPanel = new System.Windows.Forms.Panel();
-            this.widget3 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget3 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.totalRevenueLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -53,14 +55,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.widget2 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget2 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.totalNumberCompletePatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.widget1 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget1 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.totalNumberPatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -71,6 +73,7 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.connectStatusLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.panel3.SuspendLayout();
@@ -87,6 +90,7 @@
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BottomPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,19 +116,19 @@
             // 
             this.dataPatients.AllowUserToAddRows = false;
             this.dataPatients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.dataPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._id,
@@ -487,6 +491,7 @@
             // 
             // BottomPanel
             // 
+            this.BottomPanel.Controls.Add(this.connectStatusLabel);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.Location = new System.Drawing.Point(0, 705);
             this.BottomPanel.Name = "BottomPanel";
@@ -502,6 +507,17 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1043, 85);
             this.topPanel.TabIndex = 6;
+            // 
+            // connectStatusLabel
+            // 
+            this.connectStatusLabel.AutoSize = true;
+            this.connectStatusLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.connectStatusLabel.Font = new System.Drawing.Font("Nunito", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectStatusLabel.Location = new System.Drawing.Point(859, 0);
+            this.connectStatusLabel.Name = "connectStatusLabel";
+            this.connectStatusLabel.Size = new System.Drawing.Size(184, 28);
+            this.connectStatusLabel.TabIndex = 5;
+            this.connectStatusLabel.Text = "Connection Status: ";
             // 
             // DoctorHomeControl
             // 
@@ -540,6 +556,8 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.BottomPanel.ResumeLayout(false);
+            this.BottomPanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -559,7 +577,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Panel containerPanel;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
         private Bunifu.Framework.UI.BunifuCustomLabel totalNumberCompletePatientsLabel;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
@@ -587,5 +604,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
+        public Bunifu.Framework.UI.BunifuCustomLabel connectStatusLabel;
     }
 }

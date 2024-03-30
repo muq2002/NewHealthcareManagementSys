@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.Model;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Model;
 
-namespace HealthcareManagementSystem.Controller
+namespace HealthcareManagement.Screens.Controller
 {
     class DrugsController
     {

@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Screens.Config;
 using HealthcareManagement.UserControls.Pharmacy;
 
-namespace HealthcareManagementSystem.UserControls.Pharmacy
+namespace HealthcareManagement.Screens.UserControls.Pharmacy
 {
     public partial class PharmacyHomeControl : UserControl
     {

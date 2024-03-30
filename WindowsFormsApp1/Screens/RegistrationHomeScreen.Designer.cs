@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.Screens
+﻿namespace HealthcareManagement.Screens.Screens
 {
     partial class RegistrationHomeScreen
     {
@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationHomeScreen));
             this.container = new System.Windows.Forms.Panel();
-            this.registrationHomeControl2 = new HealthcareManagementSystem.UserControls.Registration.RegistrationHomeControl();
+            this.registrationHomeControl2 = new HealthcareManagement.Screens.UserControls.Registration.RegistrationHomeControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.logoPicture = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.Panel();

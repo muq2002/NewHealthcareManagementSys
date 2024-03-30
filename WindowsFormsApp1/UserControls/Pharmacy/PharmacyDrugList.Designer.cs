@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.UserControls.Pharmacy
+﻿namespace HealthcareManagement.Screens.UserControls.Pharmacy
 {
     partial class PharmacyDrugList
     {

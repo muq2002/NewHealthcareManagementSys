@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HealthcareManagementSystem.Config
+namespace HealthcareManagement.Screens.Config
 {
     public class Utils
     {
@@ -53,6 +53,11 @@ namespace HealthcareManagementSystem.Config
         {
             if (gender == "1") return "Male";
             return "Female";
+        }
+        public static int getGenderNumber(string gender)
+        {
+            if (gender == "Male") return 1;
+            return 0;
         }
 
         public static string crateUUID() {

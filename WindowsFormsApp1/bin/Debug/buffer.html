@@ -1,0 +1,82 @@
+
+        <html>
+        <head>
+            <title>Patient Tests Lab Report</title>
+            <style>
+                /* Add your CSS styles here */
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                header {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                footer {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                .patient-details:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                .patient-info {
+                    float: left;
+                    width: 70%; /* Adjust width as needed */
+                }
+                .qr-code {
+                    float: right;
+                    width: 30%; /* Adjust width as needed */
+                    text-align: right;
+                }
+                .qr-code img {
+                    max-height: 120px;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    border: 1px solid black;
+                    padding: 8px;
+                    text-align: left;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>Clinical Report</h1>
+            </header>
+            <div class='patient-details'>
+                <div class='patient-info'>
+                    <h2>Patient Details</h2>
+                    <p><strong>Name:</strong></p>
+                    <p><strong>Age:</strong> 0</p>
+                    <p><strong>Sex:</strong> Female</p>
+                    <p><strong>Phone:</strong> </p>
+                </div>
+                <div class='qr-code'>
+                    <img src='https://www.scandit.com/cdn-cgi/image/width=300,height=300,fit=crop,quality=80,gravity=auto,sharpen=1,metadata=none,format=auto,onerror=redirect/wp-content/uploads/2019/08/Symbology-QR-code.svg' alt='QR Code'>
+                </div>
+            </div>
+            <br />
+            <div class='tests-details'>
+                <h2>Tests Details</h2>
+                <table id='items'>
+                    <thead>
+                        <tr>
+                            <th>*</th>
+                            <th>Test Name</th>
+                            <th>Value</th>
+                            <th>Normal Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <footer>
+                <p>Thank you for your business!</p>
+            </footer>
+        </body>
+        </html>

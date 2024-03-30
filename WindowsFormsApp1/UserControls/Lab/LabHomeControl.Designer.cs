@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.Screens
+﻿namespace HealthcareManagement.Screens.Screens
 {
     partial class LabHomeControl
     {
@@ -39,7 +39,7 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.widgetsPanel = new System.Windows.Forms.Panel();
-            this.widget3 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget3 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.totalRevenueLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -47,7 +47,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.widget2 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget2 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.completePatientLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -55,7 +55,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.paddingPanel = new System.Windows.Forms.Panel();
-            this.widget1 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget1 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.totalNumberPatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();

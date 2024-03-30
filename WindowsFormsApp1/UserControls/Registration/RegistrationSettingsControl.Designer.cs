@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.UserControls.Registration
+﻿namespace HealthcareManagement.Screens.UserControls.Registration
 {
     partial class RegistrationSettingsControl
     {

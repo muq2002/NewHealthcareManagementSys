@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.UserControls.Registration;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.UserControls.Registration;
 
-namespace HealthcareManagementSystem.Screens
+namespace HealthcareManagement.Screens.Screens
 {
     public partial class RegistrationHomeScreen : Form
     {

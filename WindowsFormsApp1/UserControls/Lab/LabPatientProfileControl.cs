@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Config;
+using HealthcareManagement.Screens.Model;
 
 namespace HealthcareManagement.UserControls.Lab
 {
@@ -25,6 +27,7 @@ namespace HealthcareManagement.UserControls.Lab
         {
 
         }
+
 
 
     }

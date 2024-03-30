@@ -1,6 +1,6 @@
 ﻿using System;
 using HealthcareManagement.Model;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Config;
 using System.Data;
 
 

@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.UserControls.Registration
+﻿namespace HealthcareManagement.Screens.UserControls.Registration
 {
     partial class RegistrationPatientListControl
     {
@@ -54,7 +54,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchPatientText = new Bunifu.Framework.UI.BunifuTextbox();
             this.widgetsPanel = new System.Windows.Forms.Panel();
-            this.widget1 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget1 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.totalNumberPatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();

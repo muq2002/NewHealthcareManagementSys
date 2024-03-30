@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Screens;
+using HealthcareManagement.Screens.Doctor;
+using HealthcareManagement.Screens.Screens;
 
-namespace HealthcareManagementSystem
+namespace HealthcareManagement.Screens
 {
     public partial class LoginScreen : Form
     {

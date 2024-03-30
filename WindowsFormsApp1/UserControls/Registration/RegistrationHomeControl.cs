@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.UserControls.Doctor;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.UserControls.Doctor;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Config;
+using HealthcareManagement.Screens.Model;
 
-namespace HealthcareManagementSystem.UserControls.Registration
+namespace HealthcareManagement.Screens.UserControls.Registration
 {
     public partial class RegistrationHomeControl : UserControl
     {
@@ -86,6 +82,37 @@ namespace HealthcareManagementSystem.UserControls.Registration
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fillPatientData(patientController.readPatients());
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!isUserSelectedRow()) return;
+
+
+            MyPrinter myPrinter = new MyPrinter();
+
+            HTMLDocument.createHtmltoPdf(myPrinter
+                .createHTMLFileForRegistration(getPatientModel()));
+            myPrinter.openPDFfile();
+        }
+
+        private PatientModel getPatientModel()
+        {
+            PatientModel patientModel = new PatientModel();
+            patientModel.PatientUUID = dataPatients.SelectedRows[0]
+                .Cells[1].Value.ToString();
+            patientModel.PatientName = dataPatients.SelectedRows[0]
+                .Cells[2].Value.ToString();
+            patientModel.PatientAge = int.Parse(dataPatients.SelectedRows[0]
+                .Cells[3].Value.ToString());
+            patientModel.PatientGender = Utils.getGenderNumber(dataPatients.SelectedRows[0]
+                .Cells[4].Value.ToString());
+
+            patientModel.PatientPhoneNumber = dataPatients.SelectedRows[0]
+                .Cells[5].Value.ToString();
+            patientModel.RegisterDate = dataPatients.SelectedRows[0]
+                .Cells[6].Value.ToString();
+            return patientModel;
         }
     }
 }

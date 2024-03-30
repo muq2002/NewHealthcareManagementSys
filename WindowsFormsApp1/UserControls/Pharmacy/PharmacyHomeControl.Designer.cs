@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.UserControls.Pharmacy
+﻿namespace HealthcareManagement.Screens.UserControls.Pharmacy
 {
     partial class PharmacyHomeControl
     {
@@ -49,21 +49,21 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.widget3 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget3 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.totalRevenueLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.widget2 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget2 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.totalNumberCompletePatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.widget1 = new HealthcareManagementSystem.CurvedPanel();
+            this.widget1 = new HealthcareManagement.Screens.CurvedPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.totalNumberPatientsLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();

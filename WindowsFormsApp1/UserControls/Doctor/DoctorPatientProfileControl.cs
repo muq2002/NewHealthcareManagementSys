@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthcareManagement.UserControls.Doctor;
-using HealthcareManagementSystem.Controller;
+using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Model;
 using HealthcareManagement.Controller;
+using HealthcareManagement.Config;
+using HealthcareManagement.Screens.Model;
 
-namespace HealthcareManagementSystem.UserControls.Doctor
+namespace HealthcareManagement.UserControls.Doctor
 {
     public partial class PatientProfileControl : UserControl
     {
@@ -94,7 +96,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            for (int index=0; index < dataPrescriptions.Rows.Count - 1; index++)
+            for (int index = 0; index < dataPrescriptions.Rows.Count - 1; index++)
             {
                 if (dataPrescriptions
                     .Rows[index].Cells[0].Value != null) continue;
@@ -112,7 +114,7 @@ namespace HealthcareManagementSystem.UserControls.Doctor
                 SessionID = sessionId,
                 DrugID = int.Parse(dataPrescriptions
                 .Rows[index].Cells[1].Value.ToString()),
-                Instruction = dataPrescriptions .Rows[index].Cells[2].Value == null ?
+                Instruction = dataPrescriptions.Rows[index].Cells[2].Value == null ?
                 "" : dataPrescriptions.Rows[index].Cells[2].Value.ToString()
             };
         }
@@ -132,6 +134,21 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             diagnosisModel.AutoDiagnosis = textAutomatedDiagnosis.Text;
 
             diagnosisController.saveDiagnosis(diagnosisModel);
+        }
+
+        private void printPrescriptionBTN_Click(object sender, EventArgs e)
+        {
+            MyPrinter myPrinter = new MyPrinter();
+            HTMLDocument.createHtmltoPdf(myPrinter
+                .createHTMLFileForPrescription(new PatientModel(), new DiagnosisModel(
+                1,
+                1,
+                3,
+                richTextComments.Text,
+                textAutomatedDiagnosis.Text
+                )));
+
+            myPrinter.openPDFfile();
         }
     }
 }

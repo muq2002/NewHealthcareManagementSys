@@ -2,10 +2,10 @@
 using System.Data;
 using System.Windows.Forms;
 using HealthcareManagement.UserControls.Pharmacy;
-using HealthcareManagementSystem.Controller;
+using HealthcareManagement.Screens.Controller;
 
 
-namespace HealthcareManagementSystem.UserControls.Pharmacy
+namespace HealthcareManagement.Screens.UserControls.Pharmacy
 {
     public partial class PharmacyDrugList : UserControl
     {

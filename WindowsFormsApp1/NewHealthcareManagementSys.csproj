@@ -52,9 +52,16 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.2.1.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PdfGenerator.1.2.1\lib\net45\NReco.PdfGenerator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,6 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\DatabaseProvider.cs" />
+    <Compile Include="Config\HTMLDocument.cs" />
+    <Compile Include="Config\JSONParing.cs" />
+    <Compile Include="Config\MyPrinter.cs" />
+    <Compile Include="Config\SerialCOM.cs" />
     <Compile Include="Config\Utils.cs" />
     <Compile Include="Controller\DevicesController.cs" />
     <Compile Include="Controller\DiagnosisController.cs" />
@@ -99,10 +110,13 @@
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Model\TestsBankModel.cs" />
     <Compile Include="Model\UserModel.cs" />
-    <Compile Include="Screens\DoctorHomeScreen.cs">
+    <Compile Include="Screens\Doctor\DesignDoctorHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\DoctorHomeScreen.Designer.cs">
+    <Compile Include="Screens\Doctor\DoctorHomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Doctor\DoctorHomeScreen.Designer.cs">
       <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\LabHomeScreen.cs">
@@ -275,7 +289,7 @@
     <Compile Include="UserControls\Registration\RegistrationSettingsControl.Designer.cs">
       <DependentUpon>RegistrationSettingsControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Screens\DoctorHomeScreen.resx">
+    <EmbeddedResource Include="Screens\Doctor\DoctorHomeScreen.resx">
       <DependentUpon>DoctorHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\LabHomeScreen.resx">

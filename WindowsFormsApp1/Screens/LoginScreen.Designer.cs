@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem
+﻿namespace HealthcareManagement.Screens
 {
     partial class LoginScreen
     {

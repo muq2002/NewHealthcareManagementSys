@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.Screens
+﻿namespace HealthcareManagement.Screens.Screens
 {
     partial class PharmacyHomeScreen
     {
@@ -49,7 +49,7 @@
             this.PatientsBTN = new Bunifu.Framework.UI.BunifuThinButton2();
             this.item1 = new System.Windows.Forms.Panel();
             this.ordersBTN = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pharmacyHomeControl1 = new HealthcareManagementSystem.UserControls.Pharmacy.PharmacyHomeControl();
+            this.pharmacyHomeControl1 = new HealthcareManagement.Screens.UserControls.Pharmacy.PharmacyHomeControl();
             this.container.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();

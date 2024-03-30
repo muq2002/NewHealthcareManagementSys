@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.UserControls.Doctor
+﻿namespace HealthcareManagement.UserControls.Doctor
 {
     partial class PatientListControl
     {
@@ -35,7 +35,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.searchPatientText = new Bunifu.Framework.UI.BunifuTextbox();
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.patientProfileControl1 = new HealthcareManagementSystem.UserControls.Doctor.PatientProfileControl();
+            this.patientProfileControl1 = new HealthcareManagement.UserControls.Doctor.PatientProfileControl();
             this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();

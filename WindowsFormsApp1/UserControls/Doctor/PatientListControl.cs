@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Screens.Config;
 using HealthcareManagement.Controller;
 using HealthcareManagement.UserControls.Doctor;
 
-namespace HealthcareManagementSystem.UserControls.Doctor
+namespace HealthcareManagement.UserControls.Doctor
 {
     public partial class PatientListControl : UserControl
     {

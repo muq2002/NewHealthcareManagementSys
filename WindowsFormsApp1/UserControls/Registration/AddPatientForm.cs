@@ -8,13 +8,14 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.Model;
-using HealthcareManagementSystem.UserControls.Registration;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Screens.Model;
+using HealthcareManagement.Screens.UserControls.Registration;
+using Newtonsoft.Json.Linq;
 using ZXing;
 
-namespace HealthcareManagementSystem.UserControls.Doctor
+namespace HealthcareManagement.UserControls.Doctor
 {
     public partial class AddPatientForm : Form
     {
@@ -32,7 +33,8 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             {
                 if (patientId == 0)
                 {
-                    insertNewPatient();
+                    ///insertNewPatient();
+                    ///writeInSerial(patientModel);
                 }
                 else
                 {
@@ -44,6 +46,19 @@ namespace HealthcareManagementSystem.UserControls.Doctor
                 MessageBox.Show("There mistake, please solve it and try again.");
             }
 
+        }
+
+        void writeInSerial(PatientModel patientModel)
+        {
+            JObject jObj = new JObject();
+            jObj["id"] = patientModel.PatientID;
+            jObj["uuid"] = patientModel.PatientUUID;
+            jObj["name"] = patientModel.PatientName;
+            jObj["phoneNumber"] = patientModel.PatientPhoneNumber;
+            jObj["age"] = patientModel.PatientAge;
+            jObj["gender"] = patientModel.PatientGender;
+
+            MessageBox.Show(jObj.ToString());
         }
 
         private void updataPatient()
@@ -73,8 +88,10 @@ namespace HealthcareManagementSystem.UserControls.Doctor
             patientModel.PatientGender = getGender();
 
             patientController.createPatient(patientModel);
+            
+
             MessageBox.Show("Patient Has been added successfully!");
-            Close();
+            this.Close();
         }
 
         int getGender() {

@@ -1,4 +1,4 @@
-﻿using HealthcareManagementSystem.Controller;
+﻿using HealthcareManagement.Screens.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.UserControls.Pharmacy;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.UserControls.Pharmacy;
 
-namespace HealthcareManagementSystem.Screens
+namespace HealthcareManagement.Screens.Screens
 {
     public partial class PharmacyHomeScreen : Form
     {

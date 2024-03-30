@@ -86,7 +86,7 @@
             this.dataTests.RowHeadersWidth = 40;
             this.dataTests.RowTemplate.Height = 28;
             this.dataTests.Size = new System.Drawing.Size(1043, 764);
-            this.dataTests.TabIndex = 16;
+            this.dataTests.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn1
             // 

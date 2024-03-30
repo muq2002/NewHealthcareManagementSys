@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagementSystem.UserControls
+﻿namespace HealthcareManagement.Screens.UserControls
 {
     partial class TestsListControl
     {

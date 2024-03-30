@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.UserControls.Doctor;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.UserControls.Doctor;
 
-namespace HealthcareManagementSystem.UserControls.Registration
+namespace HealthcareManagement.Screens.UserControls.Registration
 {
     public partial class RegistrationPatientListControl : UserControl
     {

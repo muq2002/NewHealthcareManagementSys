@@ -1,5 +1,5 @@
 ﻿using HealthcareManagement.Model;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Config;
 using System;
 using System.Collections.Generic;
 using System.Data;

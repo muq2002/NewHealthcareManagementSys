@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
+using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Controller;
 
-namespace HealthcareManagementSystem.UserControls
+namespace HealthcareManagement.Screens.UserControls
 {
     public partial class TestsListControl : UserControl
     {

@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Controller;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Config;
+using HealthcareManagement.Screens.Model;
 
-namespace HealthcareManagementSystem.UserControls
+namespace HealthcareManagement.Screens.UserControls
 {
     public partial class LabPatientsListControl : UserControl
     {
@@ -104,6 +106,46 @@ namespace HealthcareManagementSystem.UserControls
         {
             if (searchPatientText.text == "") fillPatientData(patientController.readPatients());
             fillPatientData(patientController.searchPatients(searchPatientText.text));
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            //if (!isUserSelectedRow()) return;
+
+
+            MyPrinter myPrinter = new MyPrinter();
+
+            HTMLDocument.createHtmltoPdf(myPrinter
+                .createHTMLFileForLab(new PatientModel(), fillTests()));
+            myPrinter.openPDFfile();
+        }
+        DataTable fillTests()
+        {
+            DataTable result = new DataTable();
+
+            foreach (DataGridViewColumn column in labPatientProfile1.dataTests.Columns)
+            {
+                result.Columns.Add(column.Name, typeof(string));
+            }
+
+            foreach (DataGridViewRow row in labPatientProfile1.dataTests.Rows)
+            {
+                DataRow newRow = result.NewRow();
+
+                newRow[0] = row.Cells[0].Value.ToString();
+                newRow[1] = row.Cells[1].Value.ToString();
+                newRow[2] = row.Cells[2].Value.ToString();
+                newRow[3] = row.Cells[3].Value.ToString();
+
+                result.Rows.Add(newRow);
+            }
+            return result;
+        }
+
+        private bool isUserSelectedRow()
+        {
+            return labPatientProfile1.dataTests.SelectedRows.Count > 0;
         }
     }
 }

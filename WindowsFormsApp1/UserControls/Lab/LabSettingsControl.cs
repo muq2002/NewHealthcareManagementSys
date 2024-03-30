@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Controller;
+using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Controller;
-using HealthcareManagementSystem.Config;
+using HealthcareManagement.Screens.Config;
 
 namespace HealthcareManagement.UserControls.Lab
 {

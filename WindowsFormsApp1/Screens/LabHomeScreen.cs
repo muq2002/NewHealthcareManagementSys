@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagementSystem.Config;
-using HealthcareManagementSystem.Screens;
-using HealthcareManagementSystem.UserControls;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Screens;
+using HealthcareManagement.Screens.UserControls;
 using HealthcareManagement.UserControls.Lab;
 
-namespace HealthcareManagementSystem
+namespace HealthcareManagement.Screens
 {
     public partial class LabHomeScreen : Form
     {
