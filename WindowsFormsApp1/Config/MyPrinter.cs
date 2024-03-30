@@ -1,36 +1,51 @@
 ﻿using HealthcareManagement.Model;
 using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Screens.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZXing;
 
 namespace HealthcareManagement.Config
 {
     class MyPrinter
     {
+        public string getPatientDetails(int patientId) {
 
-        public string createHTMLFileForPharmacy(PatientModel patientModel, DataTable tests)
+            PatientController patientController = new PatientController();
+            DataTable myPatient = patientController.getSinglePatient(patientId);
+
+            QRCodeConfig.createQRPatientImage(myPatient.Rows[0][1].ToString());
+
+            return @"
+            <div class='patient-info'>
+                    <h2>Patient Details</h2>
+                    <p><strong>Name:</strong>" + myPatient.Rows[0][2].ToString() + @"</p>
+                    <p><strong>Age:</strong> " + myPatient.Rows[0][3].ToString() + @"</p>
+                    <p><strong>Sex:</strong> " + Utils.getGenderStr(myPatient.Rows[0][4].ToString()) + @"</p>
+                    <p><strong>Phone:</strong> " + myPatient.Rows[0][5].ToString() + @"</p>
+             </div>
+             <div class='qr-code'>
+                 <img src='qr_code.png' alt='QR Code'>
+             </div>
+            ";
+        }
+
+
+        public string createHTMLFileForPharmacy(int patientId, DataTable drugs)
         {
-            string testsTable = "";
-            foreach (DataRow test in tests.Rows)
-            {
-                testsTable += testsTable + @"<tr>
-                            <td>*</td>
-                            <td>" + test[0] + @"</td>
-                            <td>" + test[1] + @"</td>
-                            <td>" + test[2] + @"</td>
-                        </tr>";
-            }
             return @"
         <html>
         <head>
-            <title>Patient Tests Lab Report</title>
+            <title>Patient Invoice</title>
             <style>
                 /* Add your CSS styles here */
                 body {
@@ -74,34 +89,25 @@ namespace HealthcareManagement.Config
         </head>
         <body>
             <header>
-                <h1>Clinical Report</h1>
+                <h1>Drugs Invoice</h1>
             </header>
             <div class='patient-details'>
-                <div class='patient-info'>
-                    <h2>Patient Details</h2>
-                    <p><strong>Name:</strong>" + patientModel.PatientName + @"</p>
-                    <p><strong>Age:</strong> " + patientModel.PatientAge + @"</p>
-                    <p><strong>Sex:</strong> " + Utils.getGenderStr(patientModel
-                .PatientGender.ToString()) + @"</p>
-                    <p><strong>Phone:</strong> " + patientModel.PatientPhoneNumber + @"</p>
-                </div>
-                <div class='qr-code'>
-                    <img src='https://www.scandit.com/cdn-cgi/image/width=300,height=300,fit=crop,quality=80,gravity=auto,sharpen=1,metadata=none,format=auto,onerror=redirect/wp-content/uploads/2019/08/Symbology-QR-code.svg' alt='QR Code'>
-                </div>
+                " + getPatientDetails(patientId) + @"
             </div>
             <br />
             <div class='tests-details'>
-                <h2>Tests Details</h2>
+                <h2>Invoice Details</h2>
                 <table id='items'>
                     <thead>
                         <tr>
                             <th>*</th>
-                            <th>Test Name</th>
-                            <th>Value</th>
-                            <th>Normal Range</th>
+                            <th>Drug Name</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Instructions</th>
                         </tr>
                     </thead>
-                    <tbody>" + testsTable + @"
+                    <tbody>" + createDrugTable(drugs) + @"
                     </tbody>
                 </table>
             </div>
@@ -111,6 +117,24 @@ namespace HealthcareManagement.Config
         </body>
         </html>";
         }
+
+        private static string createDrugTable(DataTable drugs)
+        {
+            string drugsTable = "";
+            foreach (DataRow test in drugs.Rows)
+            {
+                drugsTable += @"<tr>
+                            <td></td>
+                            <td>" + test[0] + @"</td>
+                            <td>" + test[1] + @"</td>
+                            <td>" + test[2] + @"</td>
+                            <td>" + test[3] + @"</td>
+                        </tr>";
+            }
+
+            return drugsTable;
+        }
+
         public string createHTMLFileForLab(PatientModel patientModel, DataTable tests)
         {
             string testsTable = "";
@@ -383,7 +407,7 @@ namespace HealthcareManagement.Config
 
         public void openPDFfile()
         {
-            string filePath = Application.StartupPath + @"\export.pdf"; 
+            string filePath = Application.StartupPath + @"\data\export.pdf"; 
 
             try
             {

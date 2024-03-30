@@ -84,6 +84,7 @@
     <Compile Include="Config\HTMLDocument.cs" />
     <Compile Include="Config\JSONParing.cs" />
     <Compile Include="Config\MyPrinter.cs" />
+    <Compile Include="Config\QRCodeConfig.cs" />
     <Compile Include="Config\SerialCOM.cs" />
     <Compile Include="Config\Utils.cs" />
     <Compile Include="Controller\DevicesController.cs" />

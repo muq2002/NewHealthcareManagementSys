@@ -33,8 +33,8 @@ namespace HealthcareManagement.UserControls.Doctor
             {
                 if (patientId == 0)
                 {
-                    ///insertNewPatient();
-                    ///writeInSerial(patientModel);
+                    insertNewPatient();
+                    
                 }
                 else
                 {
@@ -87,8 +87,8 @@ namespace HealthcareManagement.UserControls.Doctor
             patientModel.PatientAge = int.Parse(textAge.Text);
             patientModel.PatientGender = getGender();
 
-            patientController.createPatient(patientModel);
-            
+            //patientController.createPatient(patientModel);
+            writeInSerial(patientModel);
 
             MessageBox.Show("Patient Has been added successfully!");
             this.Close();

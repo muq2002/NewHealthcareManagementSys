@@ -1,4 +1,6 @@
-﻿using HealthcareManagement.Controller;
+﻿using HealthcareManagement.Config;
+using HealthcareManagement.Controller;
+using HealthcareManagement.Screens.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,5 +89,39 @@ namespace HealthcareManagement.UserControls.Pharmacy
         {
 
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyPrinter myPrinter = new MyPrinter();
+
+            HTMLDocument.createHtmltoPdf(myPrinter
+                .createHTMLFileForPharmacy(patientId, fillDrugs()));
+            myPrinter.openPDFfile();
+        }
+
+        DataTable fillDrugs()
+        {
+            DataTable result = new DataTable();
+
+            foreach (DataGridViewColumn column in dataDrugs.Columns)
+            {
+                result.Columns.Add(column.Name, typeof(string));
+            }
+
+            foreach (DataGridViewRow row in dataDrugs.Rows)
+            {
+                DataRow newRow = result.NewRow();
+
+                newRow[0] = row.Cells[1].Value.ToString();
+                newRow[1] = row.Cells[3].Value.ToString();
+                newRow[2] = row.Cells[2].Value.ToString();
+                newRow[3] = row.Cells[4].Value.ToString();
+
+                result.Rows.Add(newRow);
+            }
+            return result;
+        }
+
+
     }
 }

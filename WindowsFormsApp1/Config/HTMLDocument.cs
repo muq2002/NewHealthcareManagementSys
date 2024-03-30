@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HealthcareManagement.Config
 {
@@ -11,14 +12,16 @@ namespace HealthcareManagement.Config
     {
         public static void createHtmltoPdf(string htmlDoc)
         {
-            if (File.Exists("buffer.html")) File.Delete("buffer.html");
+            string HTMLFile = Application.StartupPath + @"\data\buffer.html";
+            string PDFfile = Application.StartupPath + @"\data\export.pdf";
+            if (File.Exists(HTMLFile)) File.Delete(HTMLFile);
 
-            File.WriteAllText("buffer.html", htmlDoc);
+            File.WriteAllText(HTMLFile, htmlDoc);
 
             var htmlToPdf = new NReco.PdfGenerator.HtmlToPdfConverter();
-            if (File.Exists("export.pdf")) File.Delete("export.pdf");
+            if (File.Exists(PDFfile)) File.Delete(PDFfile);
 
-            htmlToPdf.GeneratePdfFromFile("buffer.html", null, "export.pdf");
+            htmlToPdf.GeneratePdfFromFile(HTMLFile, null, PDFfile);
         }
     }
 }
