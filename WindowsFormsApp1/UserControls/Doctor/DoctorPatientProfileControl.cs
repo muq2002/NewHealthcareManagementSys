@@ -13,6 +13,7 @@ using HealthcareManagement.Model;
 using HealthcareManagement.Controller;
 using HealthcareManagement.Config;
 using HealthcareManagement.Screens.Model;
+using HealthcareManagement.External;
 
 namespace HealthcareManagement.UserControls.Doctor
 {
@@ -23,6 +24,7 @@ namespace HealthcareManagement.UserControls.Doctor
             InitializeComponent();
         }
         public int patientId { get; set; }
+        public int patientAge { get; set; }
         public int sessionId { get; set; }
 
         TestController testController = new TestController();
@@ -31,6 +33,7 @@ namespace HealthcareManagement.UserControls.Doctor
         PrescriptionController prescriptionController = new PrescriptionController();
         DiagnosisController diagnosisController = new DiagnosisController();
 
+        DLModel DLModelConfig = new DLModel();
 
         private void PatientProfileControl_Load(object sender, EventArgs e)
         {
@@ -140,15 +143,59 @@ namespace HealthcareManagement.UserControls.Doctor
         {
             MyPrinter myPrinter = new MyPrinter();
             HTMLDocument.createHtmltoPdf(myPrinter
-                .createHTMLFileForPrescription(new PatientModel(), new DiagnosisModel(
+                .createHTMLFileForPrescription(patientId, new DiagnosisModel(
                 1,
                 1,
                 3,
                 richTextComments.Text,
                 textAutomatedDiagnosis.Text
-                )));
+                ), fillPrescription() ));
 
             myPrinter.openPDFfile();
+        }
+
+        DataTable fillPrescription()
+        {
+            DataTable result = new DataTable();
+
+            foreach (DataGridViewColumn column in dataPrescriptions.Columns)
+            {
+                result.Columns.Add(column.Name, typeof(string));
+            }
+
+            foreach (DataGridViewRow row in dataPrescriptions.Rows)
+            {
+                DataRow newRow = result.NewRow();
+
+                newRow[0] = row.Cells[1].Value.ToString();
+                newRow[1] = row.Cells[2].Value.ToString();
+
+                result.Rows.Add(newRow);
+            }
+            return result;
+        }
+
+        private void runCADBTN_Click(object sender, EventArgs e)
+        {
+            TestsBankController testsBankController = new TestsBankController();
+            string inputValue = convertString(testsBankController
+                .getMachinelearningParameters(9, patientId));
+
+            string prompt = patientAge.ToString() + inputValue + " 0";
+            MessageBox.Show(prompt);
+            MessageBox.Show(DLModelConfig
+                .sendPredictionForKidneyModel(prompt));
+        }
+
+        string convertString(DataTable machineValues) {
+            string buffer = "";
+
+            for (int index = 0; index < machineValues.Rows.Count -1; index ++)
+            {
+                buffer += " " + machineValues.Rows[index][5].ToString();
+            }
+
+            return buffer;
         }
     }
 }

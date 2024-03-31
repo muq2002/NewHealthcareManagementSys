@@ -3,14 +3,8 @@ using HealthcareManagement.Screens.Config;
 using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Screens.Model;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
 
@@ -299,8 +293,8 @@ namespace HealthcareManagement.Config
         </html>";
 
         }
-        public string createHTMLFileForPrescription(PatientModel patientModel,
-            DiagnosisModel diagnosisModel)
+        public string createHTMLFileForPrescription(int patientId,
+            DiagnosisModel diagnosisModel, DataTable prescriptionData)
         {
             return @"
         <html>
@@ -352,17 +346,8 @@ namespace HealthcareManagement.Config
                 <h1>Clinical Report</h1>
             </header>
             <div class='patient-details'>
-                <div class='patient-info'>
-                    <h2>Patient Details</h2>
-                    <p><strong>Name:</strong>" + patientModel.PatientName + @"</p>
-                    <p><strong>Age:</strong> " + patientModel.PatientAge + @"</p>
-                    <p><strong>Sex:</strong> " + Utils.getGenderStr(patientModel
-                    .PatientGender.ToString()) + @"</p>
-                    <p><strong>Phone:</strong> " + patientModel.PatientPhoneNumber + @"</p>
-                </div>
-                <div class='qr-code'>
-                    <img src='https://www.scandit.com/cdn-cgi/image/width=300,height=300,fit=crop,quality=80,gravity=auto,sharpen=1,metadata=none,format=auto,onerror=redirect/wp-content/uploads/2019/08/Symbology-QR-code.svg' alt='QR Code'>
-                </div>
+                " + getPatientDetails(patientId) + @"
+            </div>
             </div>
             <div id='diagonsis-details'>
                 <h2>Diagnosis Details</h2>
@@ -381,19 +366,7 @@ namespace HealthcareManagement.Config
                             <th>Instructions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Amoxicillin</td>
-                            <td>500mg</td>
-                            <td>After night</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Azithromycin</td>
-                            <td>500mg</td>
-                            <td>After morning</td>
-                        </tr>
+                    <tbody>" + createPrescriptionTabel(prescriptionData) + @"
                     </tbody>
                 </table>
             </div>
@@ -403,6 +376,20 @@ namespace HealthcareManagement.Config
         </body>
         </html>";
 
+        }
+
+        string createPrescriptionTabel(DataTable prescriptionData) {
+            string prescriptionTable = "";
+            foreach (DataRow test in prescriptionData.Rows)
+            {
+                prescriptionTable += @"<tr>
+                            <td></td>
+                            <td>" + test[0] + @"</td>
+                            <td>" + test[1] + @"</td>
+                        </tr>";
+            }
+
+            return prescriptionTable;
         }
 
         public void openPDFfile()

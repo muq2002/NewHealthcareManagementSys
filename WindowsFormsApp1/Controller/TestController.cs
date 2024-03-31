@@ -89,16 +89,16 @@ namespace HealthcareManagement.Screens.Controller
         }
         public void updateTest(TestModel test)
         {
-            string command = "UPDATE Tests SET " +
+            string command = "UPDATE Lab SET " +
             "[TestValue] = '" + test.TestValue + "', " +
-            "[Comment] = '" + test.Comment + "' " +
-           " WHERE ID=" + test.ID;
+            "[Comments] = '" + test.Comment + "' " +
+           " WHERE (ID=" + test.ID + " AND PatientID=" + test.PatientID + ")";
 
             databaseProvider.runCommand(command);
         }
         public void deleteTest(int regTestId)
         {
-            string command = "UPDATE Tests SET " +
+            string command = "UPDATE Lab SET " +
                 "[DeleteStatus] = 'Yes' WHERE ID=" + regTestId;
 
             databaseProvider.runCommand(command);
@@ -106,7 +106,7 @@ namespace HealthcareManagement.Screens.Controller
 
         public void restoreTest(int regTestId)
         {
-            string command = "UPDATE Tests SET " +
+            string command = "UPDATE Lab SET " +
                 "[DeleteStatus] = 'No' WHERE ID =" + regTestId;
 
             databaseProvider.runCommand(command);

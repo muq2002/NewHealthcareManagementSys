@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using ZXing;
 
 namespace HealthcareManagement.Config
@@ -25,7 +21,7 @@ namespace HealthcareManagement.Config
             Bitmap qrCodeImage = writer.Write(text);
 
 
-            string imagePath = "qr_code.png";
+            string imagePath = Application.StartupPath + @"\data\qr_code.png";
             if (File.Exists(imagePath))File.Delete(imagePath);
             qrCodeImage.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png);
         }

@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthcareManagement.Screens.Controller;
-using HealthcareManagement.Config;
 using HealthcareManagement.Screens.Model;
 
 namespace HealthcareManagement.UserControls.Lab
@@ -30,5 +22,23 @@ namespace HealthcareManagement.UserControls.Lab
 
 
 
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int index =0; index  < dataTests.Rows.Count -1; index++)
+            {
+                testController.updateTest(createTestModel(index));
+            }
+        }
+
+        private TestModel createTestModel(int index)
+        {
+            TestModel testModel = new TestModel();
+            testModel.ID = int.Parse(dataTests.Rows[index]
+                .Cells[0].Value.ToString());
+            testModel.TestValue = dataTests.Rows[index].Cells[2].Value.ToString();
+            testModel.Comment = dataTests.Rows[index].Cells[4].Value.ToString();
+            testModel.PatientID = patientId;
+            return testModel;
+        }
     }
 }

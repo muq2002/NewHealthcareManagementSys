@@ -7,33 +7,40 @@ namespace HealthcareManagement.External
     class DLModel
     {
 
-        public string sendPredictionForKidneyModel(string[] data) { return ""; }
-        public string sendPredictionForLiverModel(string[] data) { return ""; }
-        string sendPrediction(string imagePath = "")
+        public string sendPredictionForKidneyModel(string prompt)
         {
-            string script = Application.StartupPath + "\\config\\runTask.bat";
+            buildRunTask("kidney_model_runner.py", prompt);
+            return sendPrediction();
+        }
+        public string sendPredictionForLiverModel(string prompt)
+        {
+            buildRunTask("liver_model_runner.py", prompt);
+            return sendPrediction();
+        }
+        string sendPrediction()
+        {
 
             Process p = new Process();
             p.StartInfo.FileName = "C:\\Windows\\system32\\cmd.exe";
-            p.StartInfo.Arguments = "/C " + script;
+            p.StartInfo.Arguments = "/C " + Application.StartupPath + "\\ml\\run_task.bat";
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.CreateNoWindow = false;
             p.StartInfo.UseShellExecute = false;
             p.Start();
 
+            string d = p.StandardOutput.ReadToEnd();
+            
             p.WaitForExit();
-            string output = p.StandardOutput.ReadToEnd();
-            return output;
+            return d;
         }
 
-        void buildRunTask(string imagePath)
+        void buildRunTask(string model, string prompt)
         {
-            string fullPath = Application.StartupPath + "\\config\\runTask.bat";
+            string fullPath = Application.StartupPath + "\\ml\\run_task.bat";
             using (StreamWriter writer = new StreamWriter(fullPath))
             {
                 writer.WriteLine("echo off");
-                writer.WriteLine("cd " + Application.StartupPath + "\\config\\");
-                writer.WriteLine("python detection_model.py " + imagePath);
+                writer.WriteLine(@"python .\" + model + " " + prompt);
                 writer.WriteLine("timeout 3");
             }
         }

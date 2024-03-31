@@ -58,6 +58,18 @@ namespace HealthcareManagement.Controller
                 ")";
             databaseProvider.runCommand(command);
         }
+
+        public DataTable getMachinelearningParameters(int machineGroup, int patientId)
+        {
+            return databaseProvider.getTable("SELECT cg.SubGroupID, cg.TestID," +
+                " lb.ID, lb.PatientID, lb.TestID, lb.TestValue, lb.DeleteStatus" +
+                " FROM ConnectionGroup AS cg" +
+                " INNER JOIN Lab AS lb ON cg.TestID = lb.TestID" +
+                " WHERE (cg.SubGroupID = " + machineGroup.ToString() +
+                " AND lb.DeleteStatus='" + DeleteStatus + "' AND lb.PatientID =" + patientId.ToString()
+                + ")" +
+                " ORDER BY lb.ID ASC");
+        }
         //public void updatePatient(DrugModel patient)
         //{
         //    string command = "UPDATE Patients SET " +

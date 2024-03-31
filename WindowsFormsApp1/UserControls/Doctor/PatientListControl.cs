@@ -57,7 +57,8 @@ namespace HealthcareManagement.UserControls.Doctor
         {
             loadPatientProfileControl();
             titleOfPageText.Text = dataPatients.CurrentRow.Cells[2].Value.ToString();
-
+            patientProfileControl1.patientAge = int.Parse(dataPatients
+                .CurrentRow.Cells[3].Value.ToString());
             patientProfileControl1.patientId = int.Parse(dataPatients
                 .CurrentRow.Cells[0].Value.ToString());
 

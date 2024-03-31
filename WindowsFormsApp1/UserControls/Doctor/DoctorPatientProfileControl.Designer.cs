@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientProfileControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientProfileControl));
             this.containerPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -43,6 +43,7 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.printPrescriptionBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.savePatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textAutomatedDiagnosis = new System.Windows.Forms.TextBox();
@@ -60,7 +61,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.openMedicalTests = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.printPrescriptionBTN = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.runCADBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.containerPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -176,6 +177,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.runCADBTN);
             this.panel2.Controls.Add(this.printPrescriptionBTN);
             this.panel2.Controls.Add(this.savePatientBTN);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -183,6 +185,44 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1023, 50);
             this.panel2.TabIndex = 5;
+            // 
+            // printPrescriptionBTN
+            // 
+            this.printPrescriptionBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.printPrescriptionBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.printPrescriptionBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.printPrescriptionBTN.BorderRadius = 0;
+            this.printPrescriptionBTN.ButtonText = "Print";
+            this.printPrescriptionBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.printPrescriptionBTN.DisabledColor = System.Drawing.Color.Gray;
+            this.printPrescriptionBTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.printPrescriptionBTN.Font = new System.Drawing.Font("Nunito", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printPrescriptionBTN.Iconcolor = System.Drawing.Color.Transparent;
+            this.printPrescriptionBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("printPrescriptionBTN.Iconimage")));
+            this.printPrescriptionBTN.Iconimage_right = null;
+            this.printPrescriptionBTN.Iconimage_right_Selected = null;
+            this.printPrescriptionBTN.Iconimage_Selected = null;
+            this.printPrescriptionBTN.IconMarginLeft = 0;
+            this.printPrescriptionBTN.IconMarginRight = 0;
+            this.printPrescriptionBTN.IconRightVisible = false;
+            this.printPrescriptionBTN.IconRightZoom = 0D;
+            this.printPrescriptionBTN.IconVisible = false;
+            this.printPrescriptionBTN.IconZoom = 90D;
+            this.printPrescriptionBTN.IsTab = false;
+            this.printPrescriptionBTN.Location = new System.Drawing.Point(800, 0);
+            this.printPrescriptionBTN.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.printPrescriptionBTN.Name = "printPrescriptionBTN";
+            this.printPrescriptionBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.printPrescriptionBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.printPrescriptionBTN.OnHoverTextColor = System.Drawing.Color.White;
+            this.printPrescriptionBTN.selected = false;
+            this.printPrescriptionBTN.Size = new System.Drawing.Size(99, 50);
+            this.printPrescriptionBTN.TabIndex = 12;
+            this.printPrescriptionBTN.Text = "Print";
+            this.printPrescriptionBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.printPrescriptionBTN.Textcolor = System.Drawing.Color.White;
+            this.printPrescriptionBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printPrescriptionBTN.Click += new System.EventHandler(this.printPrescriptionBTN_Click);
             // 
             // savePatientBTN
             // 
@@ -207,14 +247,14 @@
             this.savePatientBTN.IconVisible = false;
             this.savePatientBTN.IconZoom = 90D;
             this.savePatientBTN.IsTab = false;
-            this.savePatientBTN.Location = new System.Drawing.Point(814, 0);
+            this.savePatientBTN.Location = new System.Drawing.Point(899, 0);
             this.savePatientBTN.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.savePatientBTN.Name = "savePatientBTN";
             this.savePatientBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
             this.savePatientBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
             this.savePatientBTN.OnHoverTextColor = System.Drawing.Color.White;
             this.savePatientBTN.selected = false;
-            this.savePatientBTN.Size = new System.Drawing.Size(209, 50);
+            this.savePatientBTN.Size = new System.Drawing.Size(124, 50);
             this.savePatientBTN.TabIndex = 11;
             this.savePatientBTN.Text = "Send";
             this.savePatientBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -406,43 +446,43 @@
             this.openMedicalTests.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openMedicalTests.Click += new System.EventHandler(this.openMedicalTests_Click);
             // 
-            // printPrescriptionBTN
+            // runCADBTN
             // 
-            this.printPrescriptionBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.printPrescriptionBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.printPrescriptionBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.printPrescriptionBTN.BorderRadius = 0;
-            this.printPrescriptionBTN.ButtonText = "Print";
-            this.printPrescriptionBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.printPrescriptionBTN.DisabledColor = System.Drawing.Color.Gray;
-            this.printPrescriptionBTN.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printPrescriptionBTN.Font = new System.Drawing.Font("Nunito", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printPrescriptionBTN.Iconcolor = System.Drawing.Color.Transparent;
-            this.printPrescriptionBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("printPrescriptionBTN.Iconimage")));
-            this.printPrescriptionBTN.Iconimage_right = null;
-            this.printPrescriptionBTN.Iconimage_right_Selected = null;
-            this.printPrescriptionBTN.Iconimage_Selected = null;
-            this.printPrescriptionBTN.IconMarginLeft = 0;
-            this.printPrescriptionBTN.IconMarginRight = 0;
-            this.printPrescriptionBTN.IconRightVisible = false;
-            this.printPrescriptionBTN.IconRightZoom = 0D;
-            this.printPrescriptionBTN.IconVisible = false;
-            this.printPrescriptionBTN.IconZoom = 90D;
-            this.printPrescriptionBTN.IsTab = false;
-            this.printPrescriptionBTN.Location = new System.Drawing.Point(605, 0);
-            this.printPrescriptionBTN.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.printPrescriptionBTN.Name = "printPrescriptionBTN";
-            this.printPrescriptionBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.printPrescriptionBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.printPrescriptionBTN.OnHoverTextColor = System.Drawing.Color.White;
-            this.printPrescriptionBTN.selected = false;
-            this.printPrescriptionBTN.Size = new System.Drawing.Size(209, 50);
-            this.printPrescriptionBTN.TabIndex = 12;
-            this.printPrescriptionBTN.Text = "Print";
-            this.printPrescriptionBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.printPrescriptionBTN.Textcolor = System.Drawing.Color.White;
-            this.printPrescriptionBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printPrescriptionBTN.Click += new System.EventHandler(this.printPrescriptionBTN_Click);
+            this.runCADBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.runCADBTN.BorderRadius = 0;
+            this.runCADBTN.ButtonText = "Run CAD";
+            this.runCADBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.runCADBTN.DisabledColor = System.Drawing.Color.Gray;
+            this.runCADBTN.Dock = System.Windows.Forms.DockStyle.Left;
+            this.runCADBTN.Font = new System.Drawing.Font("Nunito", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.runCADBTN.Iconcolor = System.Drawing.Color.Transparent;
+            this.runCADBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("runCADBTN.Iconimage")));
+            this.runCADBTN.Iconimage_right = null;
+            this.runCADBTN.Iconimage_right_Selected = null;
+            this.runCADBTN.Iconimage_Selected = null;
+            this.runCADBTN.IconMarginLeft = 0;
+            this.runCADBTN.IconMarginRight = 0;
+            this.runCADBTN.IconRightVisible = false;
+            this.runCADBTN.IconRightZoom = 0D;
+            this.runCADBTN.IconVisible = false;
+            this.runCADBTN.IconZoom = 90D;
+            this.runCADBTN.IsTab = false;
+            this.runCADBTN.Location = new System.Drawing.Point(0, 0);
+            this.runCADBTN.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.runCADBTN.Name = "runCADBTN";
+            this.runCADBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.OnHoverTextColor = System.Drawing.Color.White;
+            this.runCADBTN.selected = false;
+            this.runCADBTN.Size = new System.Drawing.Size(137, 50);
+            this.runCADBTN.TabIndex = 13;
+            this.runCADBTN.Text = "Run CAD";
+            this.runCADBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.runCADBTN.Textcolor = System.Drawing.Color.White;
+            this.runCADBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.runCADBTN.Click += new System.EventHandler(this.runCADBTN_Click);
             // 
             // PatientProfileControl
             // 
@@ -498,5 +538,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private Bunifu.Framework.UI.BunifuFlatButton printPrescriptionBTN;
+        private Bunifu.Framework.UI.BunifuFlatButton runCADBTN;
     }
 }

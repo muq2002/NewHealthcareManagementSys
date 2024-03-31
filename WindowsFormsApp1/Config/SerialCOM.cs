@@ -11,5 +11,26 @@ namespace HealthcareManagement.Config
 
     class SerialCOM
     {
+        public static void writeIntoSerial(string text)
+        {
+            string portName = "COM4";
+            int baudRate = 9600;
+            SerialPort serialPort = new SerialPort(portName, baudRate);
+
+            try
+            {
+                // Open the serial port
+                serialPort.Open();
+                serialPort.Write(text);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                serialPort.Close();
+            }
+        }
     }
 }

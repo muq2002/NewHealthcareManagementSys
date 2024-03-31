@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HealthcareManagement.Config;
 using HealthcareManagement.Screens.Config;
 using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Screens.Model;
@@ -58,7 +59,7 @@ namespace HealthcareManagement.UserControls.Doctor
             jObj["age"] = patientModel.PatientAge;
             jObj["gender"] = patientModel.PatientGender;
 
-            MessageBox.Show(jObj.ToString());
+            SerialCOM.writeIntoSerial(jObj.ToString());
         }
 
         private void updataPatient()
