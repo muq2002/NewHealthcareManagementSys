@@ -1,35 +1,25 @@
-﻿using Bunifu.Framework.UI;
+﻿using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.UserControls;
+using HealthcareManagement.UserControls.Lab;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HealthcareManagement.Screens.Config;
-using HealthcareManagement.Screens.Screens;
-using HealthcareManagement.Screens.UserControls;
-using HealthcareManagement.UserControls.Lab;
 
-namespace HealthcareManagement.Screens
+namespace HealthcareManagement.Screens.Lab
 {
-    public partial class LabHomeScreen : Form
+    partial class LabHomeScreen: Form
     {
-        public LabHomeScreen()
-        {
-            InitializeComponent();
-        }
 
-        private void logoutBTN_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+                
         TestsListControl testsListControl = new TestsListControl();
         LabPatientsListControl patientsListControl = new LabPatientsListControl();
         LabSettingsControl labSettingsControl = new LabSettingsControl();
-        private void HomeScreen_Load(object sender, EventArgs e)
+
+        private void createMenuSide()
         {
             testsListControl.Dock = DockStyle.Fill;
             container.Controls.Add(testsListControl);
@@ -41,6 +31,7 @@ namespace HealthcareManagement.Screens
             container.Controls.Add(labSettingsControl);
         }
 
+        #region Controls
         private void testsListBTN_Click(object sender, EventArgs e)
         {
             convertColor(); hiddenForms();
@@ -54,7 +45,7 @@ namespace HealthcareManagement.Screens
         private void ordersBTN_Click(object sender, EventArgs e)
         {
             convertColor(); hiddenForms();
-            homeControl1.Visible = true;
+            labHomeControl1.Visible = true;
 
             ordersBTN.IdleFillColor = Color.White;
             ordersBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
@@ -70,9 +61,26 @@ namespace HealthcareManagement.Screens
             patientBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
         }
 
+        private void settingsBTN_Click(object sender, EventArgs e)
+        {
+            convertColor(); hiddenForms();
+            labSettingsControl.Visible = true;
 
-        void hiddenForms() {
-            homeControl1.Visible = false;
+            settingsBTN.IdleFillColor = Color.White;
+            settingsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+        }
+
+        private void logoutBTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        #endregion
+
+        void hiddenForms()
+        {
+            labHomeControl1.Visible = false;
             testsListControl.Visible = false;
             patientsListControl.Visible = false;
             labSettingsControl.Visible = false;
@@ -85,15 +93,6 @@ namespace HealthcareManagement.Screens
                 Utils.changeColor(index, sidebar);
             }
 
-        }
-
-        private void settingsBTN_Click(object sender, EventArgs e)
-        {
-            convertColor(); hiddenForms();
-            labSettingsControl.Visible = true;
-
-            settingsBTN.IdleFillColor = Color.White;
-            settingsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
         }
     }
 }

@@ -11,8 +11,14 @@ namespace HealthcareManagement.Config
     {
         public static JObject convertStringToJson(string jsonString)
         {
-
-            return JObject.Parse(jsonString);
+            try
+            {
+                return JObject.Parse(jsonString);
+            }catch(Exception ex)
+            {
+                return JObject.Parse("");
+            }
+            
         }
         public static string convertJsonToString(JObject json)
         {

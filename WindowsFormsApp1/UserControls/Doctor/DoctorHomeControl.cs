@@ -20,11 +20,6 @@ namespace HealthcareManagement.UserControls.Doctor
             InitializeComponent();
         }
         PatientController patientController = new PatientController();
-        private void addPatientBTN_Click(object sender, EventArgs e)
-        {
-            AddPatientForm addPatientForm = new AddPatientForm();
-            addPatientForm.ShowDialog();
-        }
 
         private void DoctorHomeControl_Load(object sender, EventArgs e)
         {

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PharmacySettingsControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,12 +46,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.leftPanel = new System.Windows.Forms.Panel();
-            this.rightPanel = new System.Windows.Forms.Panel();
-            this.BottomPanel = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.topPanel = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -62,19 +56,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBaudRate = new System.Windows.Forms.ComboBox();
+            this.comboPortName = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textYourDeviceIP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textLabIP = new System.Windows.Forms.Label();
+            this.containerPanel = new System.Windows.Forms.Panel();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.rightPanel = new System.Windows.Forms.Panel();
+            this.BottomPanel = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.topPanel = new System.Windows.Forms.Panel();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugData)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.containerPanel.SuspendLayout();
-            this.topPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.containerPanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -113,19 +117,19 @@
             // 
             // drugData
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.drugData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.drugData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.drugData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.drugData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.drugData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.drugData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.drugData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.drugData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.drugData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -209,58 +213,6 @@
             this.tabPage1.Text = "Management";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // containerPanel
-            // 
-            this.containerPanel.Controls.Add(this.tabControl1);
-            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerPanel.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containerPanel.Location = new System.Drawing.Point(30, 85);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(1013, 620);
-            this.containerPanel.TabIndex = 33;
-            // 
-            // leftPanel
-            // 
-            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 85);
-            this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(30, 620);
-            this.leftPanel.TabIndex = 32;
-            // 
-            // rightPanel
-            // 
-            this.rightPanel.Location = new System.Drawing.Point(1013, 62);
-            this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(30, 693);
-            this.rightPanel.TabIndex = 31;
-            // 
-            // BottomPanel
-            // 
-            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 705);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(1043, 27);
-            this.BottomPanel.TabIndex = 30;
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(36, 29);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(365, 38);
-            this.bunifuCustomLabel10.TabIndex = 4;
-            this.bunifuCustomLabel10.Text = "Settings And Managements";
-            // 
-            // topPanel
-            // 
-            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1043, 85);
-            this.topPanel.TabIndex = 29;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label5);
@@ -272,9 +224,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 215);
+            this.groupBox2.Location = new System.Drawing.Point(3, 254);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(999, 351);
+            this.groupBox2.Size = new System.Drawing.Size(999, 312);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Change Accounts Info";
@@ -350,6 +302,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBaudRate);
+            this.groupBox1.Controls.Add(this.comboPortName);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textYourDeviceIP);
             this.groupBox1.Controls.Add(this.label3);
@@ -357,14 +313,69 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(999, 212);
+            this.groupBox1.Size = new System.Drawing.Size(999, 251);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connections and Network";
             // 
+            // comboBaudRate
+            // 
+            this.comboBaudRate.FormattingEnabled = true;
+            this.comboBaudRate.Items.AddRange(new object[] {
+            "9600 ",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200"});
+            this.comboBaudRate.Location = new System.Drawing.Point(306, 95);
+            this.comboBaudRate.Name = "comboBaudRate";
+            this.comboBaudRate.Size = new System.Drawing.Size(421, 46);
+            this.comboBaudRate.TabIndex = 13;
+            this.comboBaudRate.Text = "9600 ";
+            this.comboBaudRate.SelectedIndexChanged += new System.EventHandler(this.comboBaudRate_SelectedIndexChanged);
+            // 
+            // comboPortName
+            // 
+            this.comboPortName.FormattingEnabled = true;
+            this.comboPortName.Items.AddRange(new object[] {
+            "COM1",
+            "COM2",
+            "COM3",
+            "COM4",
+            "COM5",
+            "COM6",
+            "COM7",
+            "COM8"});
+            this.comboPortName.Location = new System.Drawing.Point(306, 43);
+            this.comboPortName.Name = "comboPortName";
+            this.comboPortName.Size = new System.Drawing.Size(421, 46);
+            this.comboPortName.TabIndex = 12;
+            this.comboPortName.Text = "COM4";
+            this.comboPortName.SelectedIndexChanged += new System.EventHandler(this.comboPortName_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(159, 38);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Port Name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(33, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 38);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Baud Rate:";
+            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(317, 97);
+            this.textBox2.Location = new System.Drawing.Point(306, 195);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(421, 46);
             this.textBox2.TabIndex = 4;
@@ -372,7 +383,7 @@
             // 
             // textYourDeviceIP
             // 
-            this.textYourDeviceIP.Location = new System.Drawing.Point(317, 45);
+            this.textYourDeviceIP.Location = new System.Drawing.Point(306, 148);
             this.textYourDeviceIP.Name = "textYourDeviceIP";
             this.textYourDeviceIP.Size = new System.Drawing.Size(421, 46);
             this.textYourDeviceIP.TabIndex = 3;
@@ -381,7 +392,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 53);
+            this.label3.Location = new System.Drawing.Point(28, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 38);
             this.label3.TabIndex = 2;
@@ -390,11 +401,63 @@
             // textLabIP
             // 
             this.textLabIP.AutoSize = true;
-            this.textLabIP.Location = new System.Drawing.Point(28, 105);
+            this.textLabIP.Location = new System.Drawing.Point(28, 203);
             this.textLabIP.Name = "textLabIP";
             this.textLabIP.Size = new System.Drawing.Size(174, 38);
             this.textLabIP.TabIndex = 0;
             this.textLabIP.Text = "Send Doctor";
+            // 
+            // containerPanel
+            // 
+            this.containerPanel.Controls.Add(this.tabControl1);
+            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.containerPanel.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containerPanel.Location = new System.Drawing.Point(30, 85);
+            this.containerPanel.Name = "containerPanel";
+            this.containerPanel.Size = new System.Drawing.Size(1013, 620);
+            this.containerPanel.TabIndex = 33;
+            // 
+            // leftPanel
+            // 
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 85);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(30, 620);
+            this.leftPanel.TabIndex = 32;
+            // 
+            // rightPanel
+            // 
+            this.rightPanel.Location = new System.Drawing.Point(1013, 62);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(30, 693);
+            this.rightPanel.TabIndex = 31;
+            // 
+            // BottomPanel
+            // 
+            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomPanel.Location = new System.Drawing.Point(0, 705);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(1043, 27);
+            this.BottomPanel.TabIndex = 30;
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(36, 29);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(365, 38);
+            this.bunifuCustomLabel10.TabIndex = 4;
+            this.bunifuCustomLabel10.Text = "Settings And Managements";
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1043, 85);
+            this.topPanel.TabIndex = 29;
             // 
             // PharmacySettingsControl
             // 
@@ -409,18 +472,19 @@
             this.Font = new System.Drawing.Font("Nunito", 8F);
             this.Name = "PharmacySettingsControl";
             this.Size = new System.Drawing.Size(1043, 732);
+            this.Load += new System.EventHandler(this.PharmacySettingsControl_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.drugData)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.containerPanel.ResumeLayout(false);
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.containerPanel.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -460,5 +524,9 @@
         private System.Windows.Forms.TextBox textYourDeviceIP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label textLabIP;
+        private System.Windows.Forms.ComboBox comboBaudRate;
+        private System.Windows.Forms.ComboBox comboPortName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

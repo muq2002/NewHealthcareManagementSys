@@ -69,7 +69,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.topPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.widgetsPanel.SuspendLayout();
@@ -489,9 +489,11 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Order Date";
+            this.Column5.HeaderText = "Status";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 300;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column5.Width = 200;
             // 
             // LabHomeControl
             // 
@@ -544,7 +546,6 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel widgetsPanel;
         private System.Windows.Forms.Panel containerPanel;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
         private CurvedPanel widget3;
         private System.Windows.Forms.Panel panel1;
         private CurvedPanel widget2;
@@ -571,11 +572,12 @@
         private System.Windows.Forms.Panel panel5;
         private Bunifu.Framework.UI.BunifuCustomLabel totalRevenueLabel;
         private Bunifu.Framework.UI.BunifuCustomLabel dateLabel3;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid dataPatients;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn _id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
     }
 }

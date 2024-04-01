@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagement.Screens.Screens
+﻿namespace HealthcareManagement.Screens.Phamracy
 {
     partial class PharmacyHomeScreen
     {
@@ -358,7 +358,6 @@
             this.PatientsBTN.Size = new System.Drawing.Size(300, 70);
             this.PatientsBTN.TabIndex = 1;
             this.PatientsBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.PatientsBTN.Click += new System.EventHandler(this.PatientsBTN_Click);
             // 
             // item1
             // 

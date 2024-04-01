@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationSettingsControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,15 +43,6 @@
             this.containerPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -62,19 +53,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBaudRate = new System.Windows.Forms.ComboBox();
+            this.comboPortName = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textYourDeviceIP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textLabIP = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataPatients = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.containerPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -177,98 +181,6 @@
             this.tabPage1.Text = "Accounts And Network";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataPatients);
-            this.tabPage2.Location = new System.Drawing.Point(4, 47);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1005, 642);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Recycle Bin";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataPatients
-            // 
-            this.dataPatients.AllowUserToAddRows = false;
-            this.dataPatients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.dataPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this._id,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column7,
-            this.Column5});
-            this.dataPatients.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataPatients.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataPatients.DoubleBuffered = true;
-            this.dataPatients.EnableHeadersVisualStyles = false;
-            this.dataPatients.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.dataPatients.HeaderForeColor = System.Drawing.Color.White;
-            this.dataPatients.Location = new System.Drawing.Point(3, 3);
-            this.dataPatients.Name = "dataPatients";
-            this.dataPatients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataPatients.RowHeadersWidth = 40;
-            this.dataPatients.RowTemplate.Height = 28;
-            this.dataPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataPatients.Size = new System.Drawing.Size(999, 636);
-            this.dataPatients.TabIndex = 4;
-            // 
-            // _id
-            // 
-            this._id.HeaderText = "Column8";
-            this._id.Name = "_id";
-            this._id.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Age";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Gender";
-            this.Column4.Name = "Column4";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Phone Number";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 180;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Date";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 220;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label5);
@@ -280,9 +192,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 215);
+            this.groupBox2.Location = new System.Drawing.Point(3, 278);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(999, 424);
+            this.groupBox2.Size = new System.Drawing.Size(999, 361);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Change Accounts Info";
@@ -358,6 +270,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBaudRate);
+            this.groupBox1.Controls.Add(this.comboPortName);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textYourDeviceIP);
             this.groupBox1.Controls.Add(this.label3);
@@ -365,14 +281,69 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(999, 212);
+            this.groupBox1.Size = new System.Drawing.Size(999, 275);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connections and Network";
             // 
+            // comboBaudRate
+            // 
+            this.comboBaudRate.FormattingEnabled = true;
+            this.comboBaudRate.Items.AddRange(new object[] {
+            "9600 ",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200"});
+            this.comboBaudRate.Location = new System.Drawing.Point(302, 99);
+            this.comboBaudRate.Name = "comboBaudRate";
+            this.comboBaudRate.Size = new System.Drawing.Size(421, 46);
+            this.comboBaudRate.TabIndex = 9;
+            this.comboBaudRate.Text = "9600 ";
+            this.comboBaudRate.SelectedIndexChanged += new System.EventHandler(this.comboBaudRate_SelectedIndexChanged);
+            // 
+            // comboPortName
+            // 
+            this.comboPortName.FormattingEnabled = true;
+            this.comboPortName.Items.AddRange(new object[] {
+            "COM1",
+            "COM2",
+            "COM3",
+            "COM4",
+            "COM5",
+            "COM6",
+            "COM7",
+            "COM8"});
+            this.comboPortName.Location = new System.Drawing.Point(302, 47);
+            this.comboPortName.Name = "comboPortName";
+            this.comboPortName.Size = new System.Drawing.Size(421, 46);
+            this.comboPortName.TabIndex = 8;
+            this.comboPortName.Text = "COM4";
+            this.comboPortName.SelectedIndexChanged += new System.EventHandler(this.comboPortName_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(159, 38);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Port Name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 107);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 38);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Baud Rate:";
+            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(317, 97);
+            this.textBox2.Location = new System.Drawing.Point(302, 221);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(421, 46);
             this.textBox2.TabIndex = 4;
@@ -380,7 +351,7 @@
             // 
             // textYourDeviceIP
             // 
-            this.textYourDeviceIP.Location = new System.Drawing.Point(317, 45);
+            this.textYourDeviceIP.Location = new System.Drawing.Point(302, 169);
             this.textYourDeviceIP.Name = "textYourDeviceIP";
             this.textYourDeviceIP.Size = new System.Drawing.Size(421, 46);
             this.textYourDeviceIP.TabIndex = 3;
@@ -389,7 +360,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 53);
+            this.label3.Location = new System.Drawing.Point(38, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 38);
             this.label3.TabIndex = 2;
@@ -398,11 +369,103 @@
             // textLabIP
             // 
             this.textLabIP.AutoSize = true;
-            this.textLabIP.Location = new System.Drawing.Point(28, 105);
+            this.textLabIP.Location = new System.Drawing.Point(37, 229);
             this.textLabIP.Name = "textLabIP";
             this.textLabIP.Size = new System.Drawing.Size(206, 38);
             this.textLabIP.TabIndex = 0;
             this.textLabIP.Text = "Send Doctor IP";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dataPatients);
+            this.tabPage2.Location = new System.Drawing.Point(4, 47);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1005, 642);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Recycle Bin";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataPatients
+            // 
+            this.dataPatients.AllowUserToAddRows = false;
+            this.dataPatients.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dataPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._id,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column7,
+            this.Column5});
+            this.dataPatients.ContextMenuStrip = this.contextMenuStrip1;
+            this.dataPatients.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataPatients.DoubleBuffered = true;
+            this.dataPatients.EnableHeadersVisualStyles = false;
+            this.dataPatients.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.dataPatients.HeaderForeColor = System.Drawing.Color.White;
+            this.dataPatients.Location = new System.Drawing.Point(3, 3);
+            this.dataPatients.Name = "dataPatients";
+            this.dataPatients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataPatients.RowHeadersWidth = 40;
+            this.dataPatients.RowTemplate.Height = 28;
+            this.dataPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataPatients.Size = new System.Drawing.Size(999, 636);
+            this.dataPatients.TabIndex = 4;
+            // 
+            // _id
+            // 
+            this._id.HeaderText = "Column8";
+            this._id.Name = "_id";
+            this._id.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Phone Number";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 180;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Date";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 220;
             // 
             // RegistrationSettingsControl
             // 
@@ -424,12 +487,12 @@
             this.containerPanel.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -470,5 +533,9 @@
         private System.Windows.Forms.TextBox textYourDeviceIP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label textLabIP;
+        private System.Windows.Forms.ComboBox comboBaudRate;
+        private System.Windows.Forms.ComboBox comboPortName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

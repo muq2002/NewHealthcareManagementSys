@@ -30,8 +30,8 @@ namespace HealthcareManagement.UserControls.Doctor
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorHomeControl));
             this.paddingPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
@@ -72,8 +72,8 @@ namespace HealthcareManagement.UserControls.Doctor
             this.leftPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
             this.connectStatusLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.topPanel = new System.Windows.Forms.Panel();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.panel3.SuspendLayout();
@@ -116,19 +116,19 @@ namespace HealthcareManagement.UserControls.Doctor
             // 
             this.dataPatients.AllowUserToAddRows = false;
             this.dataPatients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataPatients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.dataPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._id,
@@ -498,16 +498,6 @@ namespace HealthcareManagement.UserControls.Doctor
             this.BottomPanel.Size = new System.Drawing.Size(1043, 27);
             this.BottomPanel.TabIndex = 7;
             // 
-            // topPanel
-            // 
-            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
-            this.topPanel.Controls.Add(this.panel3);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1043, 85);
-            this.topPanel.TabIndex = 6;
-            // 
             // connectStatusLabel
             // 
             this.connectStatusLabel.AutoSize = true;
@@ -518,6 +508,16 @@ namespace HealthcareManagement.UserControls.Doctor
             this.connectStatusLabel.Size = new System.Drawing.Size(184, 28);
             this.connectStatusLabel.TabIndex = 5;
             this.connectStatusLabel.Text = "Connection Status: ";
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.bunifuCustomLabel10);
+            this.topPanel.Controls.Add(this.panel3);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1043, 85);
+            this.topPanel.TabIndex = 6;
             // 
             // DoctorHomeControl
             // 

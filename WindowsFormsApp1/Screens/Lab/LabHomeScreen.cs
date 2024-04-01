@@ -1,24 +1,30 @@
-﻿using System;
-using System.Windows.Forms;
-using HealthcareManagement.UserControls.Doctor;
+﻿using Bunifu.Framework.UI;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Screens.Screens;
+using HealthcareManagement.Screens.UserControls;
+using HealthcareManagement.UserControls.Lab;
 using System.IO.Ports;
 using Newtonsoft.Json.Linq;
-using System.Threading;
-using System.Text;
 using HealthcareManagement.Config;
-using HealthcareManagement.Screens.Config;
 using HealthcareManagement.Properties;
 
-namespace HealthcareManagement.Screens.Doctor
+namespace HealthcareManagement.Screens.Lab
 {
-    public partial class DoctorHomeScreen : Form
+    public partial class LabHomeScreen : Form
     {
-
         private BackgroundWorker _backgroundWorker;
         static SerialPort mySerial = new SerialPort();
         public string errorMessage = "";
-        public DoctorHomeScreen()
+        public LabHomeScreen()
         {
             InitializeComponent();
             _backgroundWorker = new BackgroundWorker();
@@ -28,34 +34,22 @@ namespace HealthcareManagement.Screens.Doctor
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
+            createMenuSide();
             readDataFromSerial();
-            patientsListControl.Dock = DockStyle.Fill;
-            container.Controls.Add(patientsListControl);
-
-            doctorSettingsControl.Dock = DockStyle.Fill;
-            container.Controls.Add(doctorSettingsControl);
         }
 
-        void statusOfConnectivity(string connect) { }
         void fillPatientDataTable(string data)
         {
             JObject patient = JSONParing.convertStringToJson(data);
             object[] row =
             {
                 patient["id"].ToString(),
-                patient["uuid"].ToString(), 
+                patient["uuid"].ToString(),
                 patient["name"].ToString(),
                 patient["age"].ToString(),
                 Utils.getGenderStr(patient["gender"].ToString()),
-                patient["phoneNumber"].ToString()
             };
-            doctorHomeControl1.dataPatients.Rows.Add(row);
-        }
-        private void DoctorHomeScreen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (_backgroundWorker.IsBusy)
-                _backgroundWorker.CancelAsync();
-            mySerial.Close();
+            labHomeControl1.dataPatients.Rows.Add(row);
         }
 
         #region Connectivity 
@@ -64,7 +58,7 @@ namespace HealthcareManagement.Screens.Doctor
             try
             {
                 _backgroundWorker.RunWorkerAsync();
-               
+
             }
             catch (Exception ex)
             {
@@ -80,7 +74,7 @@ namespace HealthcareManagement.Screens.Doctor
                 mySerial.Encoding = Encoding.UTF8;
                 mySerial.Open();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 errorMessage = ex.Message;
             }
@@ -100,7 +94,7 @@ namespace HealthcareManagement.Screens.Doctor
                 catch (Exception ex)
                 {
                     errorMessage = ex.Message;
-                    
+
                     return;
                 }
 
@@ -116,7 +110,6 @@ namespace HealthcareManagement.Screens.Doctor
             }
             fillPatientDataTable(data);
         }
-
         #endregion
     }
 }

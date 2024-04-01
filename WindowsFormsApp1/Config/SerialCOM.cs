@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthcareManagement.Properties;
+using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
@@ -13,8 +14,8 @@ namespace HealthcareManagement.Config
     {
         public static void writeIntoSerial(string text)
         {
-            string portName = "COM4";
-            int baudRate = 9600;
+            string portName = Settings.Default.PortName;
+            int baudRate = int.Parse(Settings.Default.BaudRate);
             SerialPort serialPort = new SerialPort(portName, baudRate);
 
             try

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Properties;
 
 namespace HealthcareManagement.Screens.UserControls.Registration
 {
@@ -21,8 +22,16 @@ namespace HealthcareManagement.Screens.UserControls.Registration
         PatientController patientController = new PatientController();
         private void RegistrationSettingsControl_Load(object sender, EventArgs e)
         {
+            laodSettings();
+
             patientController.DeleteStatus = "Yes";
             loadDeletedPtients(patientController.readPatients());
+        }
+
+        private void laodSettings()
+        {
+            comboPortName.Text = Settings.Default.PortName;
+            comboBaudRate.Text = Settings.Default.BaudRate;
         }
 
         private void loadDeletedPtients(DataTable patientData)
@@ -64,6 +73,18 @@ namespace HealthcareManagement.Screens.UserControls.Registration
         private bool isUserSelectedRow()
         {
             return dataPatients.SelectedRows.Count > 0;
+        }
+
+        private void comboPortName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Settings.Default.PortName = comboPortName.Text;
+            Settings.Default.Save();
+        }
+
+        private void comboBaudRate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Settings.Default.BaudRate = comboBaudRate.Text;
+            Settings.Default.Save();
         }
     }
 }

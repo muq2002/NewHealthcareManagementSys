@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HealthcareManagement.Screens.Doctor;
+using HealthcareManagement.Screens.Lab;
+using HealthcareManagement.Screens.Phamracy;
 using HealthcareManagement.Screens.Screens;
 
 namespace HealthcareManagement.Screens

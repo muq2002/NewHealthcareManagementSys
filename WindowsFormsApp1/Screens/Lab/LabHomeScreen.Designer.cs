@@ -1,4 +1,4 @@
-﻿namespace HealthcareManagement.Screens
+﻿namespace HealthcareManagement.Screens.Lab
 {
     partial class LabHomeScreen
     {
@@ -47,7 +47,7 @@
             this.ordersBTN = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel4 = new System.Windows.Forms.Panel();
             this.logoPicture = new System.Windows.Forms.PictureBox();
-            this.homeControl1 = new HealthcareManagement.Screens.Screens.LabHomeControl();
+            this.labHomeControl1 = new HealthcareManagement.Screens.Screens.LabHomeControl();
             this.container = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -376,19 +376,19 @@
             this.logoPicture.TabIndex = 0;
             this.logoPicture.TabStop = false;
             // 
-            // homeControl1
+            // labHomeControl1
             // 
-            this.homeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.homeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeControl1.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeControl1.Location = new System.Drawing.Point(0, 0);
-            this.homeControl1.Name = "homeControl1";
-            this.homeControl1.Size = new System.Drawing.Size(898, 704);
-            this.homeControl1.TabIndex = 0;
+            this.labHomeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.labHomeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labHomeControl1.Font = new System.Drawing.Font("Nunito", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labHomeControl1.Location = new System.Drawing.Point(0, 0);
+            this.labHomeControl1.Name = "labHomeControl1";
+            this.labHomeControl1.Size = new System.Drawing.Size(898, 704);
+            this.labHomeControl1.TabIndex = 0;
             // 
             // container
             // 
-            this.container.Controls.Add(this.homeControl1);
+            this.container.Controls.Add(this.labHomeControl1);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(300, 0);
             this.container.Name = "container";
@@ -432,7 +432,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 ordersBTN;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox logoPicture;
-        private Screens.LabHomeControl homeControl1;
+        private Screens.LabHomeControl labHomeControl1;
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuThinButton2 logoutBTN;

@@ -27,7 +27,7 @@ namespace HealthcareManagement.Screens.Screens
             CenterItemsInPanel(panel4);
             CenterItemsInPanel(panel5);
 
-            fillPatientData(patientController.readPatients());
+            //fillPatientData(patientController.readPatients());
             updateTheDate();
         }
         private void updateTheDate()

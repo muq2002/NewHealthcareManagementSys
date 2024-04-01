@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Controller;
 using HealthcareManagement.Screens.Config;
+using HealthcareManagement.Properties;
 
 namespace HealthcareManagement.UserControls.Lab
 {
@@ -29,6 +30,13 @@ namespace HealthcareManagement.UserControls.Lab
             loadAnalysisGroup();
             //fillTestsData(testsBankController.readTestsBank());
             fillDevicesData(devicesController.readDevices());
+            laodSettings();
+        }
+
+        private void laodSettings()
+        {
+            comboPortName.Text = Settings.Default.PortName;
+            comboBaudRate.Text = Settings.Default.BaudRate;
         }
 
         void fillTestsDataFromAll(DataTable testData)
@@ -168,6 +176,18 @@ namespace HealthcareManagement.UserControls.Lab
             if (subGroupTests.Rows.Count == 0) return 0;
             return int.Parse(subGroupTests.Rows[0]["ID"].ToString());
 
+        }
+
+        private void comboPortName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Settings.Default.PortName = comboPortName.Text;
+            Settings.Default.Save();
+        }
+
+        private void comboBaudRate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Settings.Default.BaudRate = comboBaudRate.Text;
+            Settings.Default.Save();
         }
     }
 }
