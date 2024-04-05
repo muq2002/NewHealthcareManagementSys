@@ -104,5 +104,7 @@ namespace HealthcareManagement.Screens.Phamracy
             fillPatientDataTable(data);
         }
         #endregion
+
+
     }
 }

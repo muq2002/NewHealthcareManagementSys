@@ -20,6 +20,7 @@ namespace HealthcareManagement.Screens.UserControls.Registration
         {
             AddPatientForm addPatientForm = new AddPatientForm();
             addPatientForm.ShowDialog();
+            // Refresh to patient table.
             fillPatientData(patientController.readPatients());
         }
 

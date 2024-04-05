@@ -37,6 +37,14 @@ namespace HealthcareManagement.Screens.Phamracy
             ordersBTN.IdleFillColor = Color.White;
             ordersBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
         }
+        private void PatientsBTN_Click(object sender, EventArgs e)
+        {
+            convertColor(); hiddenForms();
+            pharmacyPatientsList.Visible = true;
+
+            PatientsBTN.IdleFillColor = Color.White;
+            PatientsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
+        }
         private void DrugsBTN_Click(object sender, EventArgs e)
         {
             convertColor(); hiddenForms();

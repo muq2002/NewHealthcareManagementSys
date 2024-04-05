@@ -1,7 +1,7 @@
 
         <html>
         <head>
-            <title>Patient Invoice</title>
+            <title>Patient Info</title>
             <style>
                 /* Add your CSS styles here */
                 body {
@@ -22,74 +22,37 @@
                 }
                 .patient-info {
                     float: left;
-                    width: 70%; /* Adjust width as needed */
+                    width: 60%; /* Adjust width as needed */
                 }
                 .qr-code {
                     float: right;
-                    width: 30%; /* Adjust width as needed */
+                    width: 40%; /* Adjust width as needed */
                     text-align: right;
                 }
                 .qr-code img {
                     max-height: 120px;
                 }
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                }
-                th, td {
-                    border: 1px solid black;
-                    padding: 8px;
-                    text-align: left;
-                }
             </style>
         </head>
         <body>
             <header>
-                <h1>Drugs Invoice</h1>
+                <h1>Patient Info Report</h1>
             </header>
             <div class='patient-details'>
-                
-            <div class='patient-info'>
+                <div class='patient-info'>
                     <h2>Patient Details</h2>
-                    <p><strong>Name:</strong>Muqtada Jabbar</p>
-                    <p><strong>Age:</strong> 23</p>
+                    <p><strong>UUID:</strong> 9B3DFAE8</p>
+                    <p><strong>Name:</strong>Test Lora</p>
+                    <p><strong>Age:</strong> 29</p>
                     <p><strong>Sex:</strong> Male</p>
-                    <p><strong>Phone:</strong> 07700469988</p>
-             </div>
-             <div class='qr-code'>
-                 <img src='qr_code.png' alt='QR Code'>
-             </div>
-            
+                    <p><strong>Phone:</strong> 9560784583</p>
+                    <p><strong>Register Date:</strong> 4/3/2024 11:04:49 AM</p>
+                </div>
+                <div class='qr-code'>
+                    <img src='https://www.scandit.com/cdn-cgi/image/width=300,height=300,fit=crop,quality=80,gravity=auto,sharpen=1,metadata=none,format=auto,onerror=redirect/wp-content/uploads/2019/08/Symbology-QR-code.svg' alt='QR Code'>
+                </div>
             </div>
             <br />
-            <div class='tests-details'>
-                <h2>Invoice Details</h2>
-                <table id='items'>
-                    <thead>
-                        <tr>
-                            <th>*</th>
-                            <th>Drug Name</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                            <th>Instructions</th>
-                        </tr>
-                    </thead>
-                    <tbody><tr>
-                            <td></td>
-                            <td>Niaspan</td>
-                            <td>1</td>
-                            <td>5000</td>
-                            <td>After lunch</td>
-                        </tr><tr>
-                            <td></td>
-                            <td>Vitrasert Implant</td>
-                            <td>1</td>
-                            <td>20000</td>
-                            <td>Before breakfast</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
             <footer>
                 <p>Thank you for your business!</p>
             </footer>

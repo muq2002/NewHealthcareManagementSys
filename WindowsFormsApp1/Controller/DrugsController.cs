@@ -23,7 +23,12 @@ namespace HealthcareManagement.Screens.Controller
             return databaseProvider.getTable("SELECT ID, DrugName FROM Drugs" +
                 " WHERE [DeleteStatus]='" + DeleteStatus + "' ORDER BY ID ASC");
         }
-
+        public DataTable getDrugName(int drugId)
+        {
+            return databaseProvider.getTable("SELECT DrugName FROM Drugs" +
+                " WHERE ([ID] = " + drugId + " AND " +
+                "[DeleteStatus]='" + DeleteStatus + "')");
+        }
         public DataTable getSingleDrug(int drugID)
         {
             return databaseProvider.getTable("SELECT * FROM Drugs" +

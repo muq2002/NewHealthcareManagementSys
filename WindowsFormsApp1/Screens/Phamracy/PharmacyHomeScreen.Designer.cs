@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PharmacyHomeScreen));
             this.container = new System.Windows.Forms.Panel();
+            this.pharmacyHomeControl1 = new HealthcareManagement.Screens.UserControls.Pharmacy.PharmacyHomeControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.logoPicture = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.PatientsBTN = new Bunifu.Framework.UI.BunifuThinButton2();
             this.item1 = new System.Windows.Forms.Panel();
             this.ordersBTN = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pharmacyHomeControl1 = new HealthcareManagement.Screens.UserControls.Pharmacy.PharmacyHomeControl();
             this.container.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();
@@ -72,6 +72,16 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(876, 716);
             this.container.TabIndex = 3;
+            // 
+            // pharmacyHomeControl1
+            // 
+            this.pharmacyHomeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.pharmacyHomeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pharmacyHomeControl1.Font = new System.Drawing.Font("Nunito", 8F);
+            this.pharmacyHomeControl1.Location = new System.Drawing.Point(0, 0);
+            this.pharmacyHomeControl1.Name = "pharmacyHomeControl1";
+            this.pharmacyHomeControl1.Size = new System.Drawing.Size(876, 716);
+            this.pharmacyHomeControl1.TabIndex = 0;
             // 
             // panel4
             // 
@@ -358,6 +368,7 @@
             this.PatientsBTN.Size = new System.Drawing.Size(300, 70);
             this.PatientsBTN.TabIndex = 1;
             this.PatientsBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PatientsBTN.Click += new System.EventHandler(this.PatientsBTN_Click);
             // 
             // item1
             // 
@@ -394,16 +405,6 @@
             this.ordersBTN.TabIndex = 1;
             this.ordersBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ordersBTN.Click += new System.EventHandler(this.ordersBTN_Click);
-            // 
-            // pharmacyHomeControl1
-            // 
-            this.pharmacyHomeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.pharmacyHomeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pharmacyHomeControl1.Font = new System.Drawing.Font("Nunito", 8F);
-            this.pharmacyHomeControl1.Location = new System.Drawing.Point(0, 0);
-            this.pharmacyHomeControl1.Name = "pharmacyHomeControl1";
-            this.pharmacyHomeControl1.Size = new System.Drawing.Size(876, 716);
-            this.pharmacyHomeControl1.TabIndex = 0;
             // 
             // PharmacyHomeScreen
             // 

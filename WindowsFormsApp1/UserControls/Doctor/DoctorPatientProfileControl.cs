@@ -165,12 +165,16 @@ namespace HealthcareManagement.UserControls.Doctor
 
             foreach (DataGridViewRow row in dataPrescriptions.Rows)
             {
-                DataRow newRow = result.NewRow();
+                if (row.Cells[1].Value != null && row.Cells[2].Value != null)
+                {
+                    DataRow newRow = result.NewRow();
 
-                newRow[0] = row.Cells[1].Value.ToString();
-                newRow[1] = row.Cells[2].Value.ToString();
+                    newRow[0] = drugsController.getDrugName(int.Parse(row
+                        .Cells[1].Value.ToString())).Rows[0][0].ToString();
+                    newRow[1] = row.Cells[2].Value.ToString();
 
-                result.Rows.Add(newRow);
+                    result.Rows.Add(newRow);
+                }
             }
             return result;
         }

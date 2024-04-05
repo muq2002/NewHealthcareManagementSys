@@ -41,6 +41,8 @@ namespace HealthcareManagement.UserControls.Doctor
                 {
                     updataPatient();
                 }
+
+
             }
             catch(Exception ex)
             {

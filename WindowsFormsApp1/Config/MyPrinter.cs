@@ -385,6 +385,7 @@ namespace HealthcareManagement.Config
                 prescriptionTable += @"<tr>
                             <td></td>
                             <td>" + test[0] + @"</td>
+                            <td></td>
                             <td>" + test[1] + @"</td>
                         </tr>";
             }
