@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientProfileControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientProfileControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.containerPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -43,6 +43,7 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.runCADBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.printPrescriptionBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.savePatientBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -61,7 +62,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.openMedicalTests = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.runCADBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.containerPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -122,19 +122,19 @@
             // 
             // dataPrescriptions
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataPrescriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataPrescriptions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataPrescriptions.BackgroundColor = System.Drawing.Color.White;
             this.dataPrescriptions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataPrescriptions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPrescriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataPrescriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataPrescriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPrescriptions.ContextMenuStrip = this.contextMenuStrip1;
             this.dataPrescriptions.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -149,6 +149,7 @@
             this.dataPrescriptions.RowTemplate.Height = 28;
             this.dataPrescriptions.Size = new System.Drawing.Size(1023, 400);
             this.dataPrescriptions.TabIndex = 6;
+            this.dataPrescriptions.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataPrescriptions_RowsAdded);
             // 
             // contextMenuStrip1
             // 
@@ -185,6 +186,44 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1023, 50);
             this.panel2.TabIndex = 5;
+            // 
+            // runCADBTN
+            // 
+            this.runCADBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.runCADBTN.BorderRadius = 0;
+            this.runCADBTN.ButtonText = "Run CAD";
+            this.runCADBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.runCADBTN.DisabledColor = System.Drawing.Color.Gray;
+            this.runCADBTN.Dock = System.Windows.Forms.DockStyle.Left;
+            this.runCADBTN.Font = new System.Drawing.Font("Nunito", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.runCADBTN.Iconcolor = System.Drawing.Color.Transparent;
+            this.runCADBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("runCADBTN.Iconimage")));
+            this.runCADBTN.Iconimage_right = null;
+            this.runCADBTN.Iconimage_right_Selected = null;
+            this.runCADBTN.Iconimage_Selected = null;
+            this.runCADBTN.IconMarginLeft = 0;
+            this.runCADBTN.IconMarginRight = 0;
+            this.runCADBTN.IconRightVisible = false;
+            this.runCADBTN.IconRightZoom = 0D;
+            this.runCADBTN.IconVisible = false;
+            this.runCADBTN.IconZoom = 90D;
+            this.runCADBTN.IsTab = false;
+            this.runCADBTN.Location = new System.Drawing.Point(0, 0);
+            this.runCADBTN.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.runCADBTN.Name = "runCADBTN";
+            this.runCADBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.runCADBTN.OnHoverTextColor = System.Drawing.Color.White;
+            this.runCADBTN.selected = false;
+            this.runCADBTN.Size = new System.Drawing.Size(137, 50);
+            this.runCADBTN.TabIndex = 13;
+            this.runCADBTN.Text = "Run CAD";
+            this.runCADBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.runCADBTN.Textcolor = System.Drawing.Color.White;
+            this.runCADBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.runCADBTN.Click += new System.EventHandler(this.runCADBTN_Click);
             // 
             // printPrescriptionBTN
             // 
@@ -324,19 +363,19 @@
             // 
             // dataTests
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataTests.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataTests.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataTests.BackgroundColor = System.Drawing.Color.White;
             this.dataTests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataTests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nunito", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -445,44 +484,6 @@
             this.openMedicalTests.Textcolor = System.Drawing.Color.White;
             this.openMedicalTests.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openMedicalTests.Click += new System.EventHandler(this.openMedicalTests_Click);
-            // 
-            // runCADBTN
-            // 
-            this.runCADBTN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.runCADBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.runCADBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.runCADBTN.BorderRadius = 0;
-            this.runCADBTN.ButtonText = "Run CAD";
-            this.runCADBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.runCADBTN.DisabledColor = System.Drawing.Color.Gray;
-            this.runCADBTN.Dock = System.Windows.Forms.DockStyle.Left;
-            this.runCADBTN.Font = new System.Drawing.Font("Nunito", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.runCADBTN.Iconcolor = System.Drawing.Color.Transparent;
-            this.runCADBTN.Iconimage = ((System.Drawing.Image)(resources.GetObject("runCADBTN.Iconimage")));
-            this.runCADBTN.Iconimage_right = null;
-            this.runCADBTN.Iconimage_right_Selected = null;
-            this.runCADBTN.Iconimage_Selected = null;
-            this.runCADBTN.IconMarginLeft = 0;
-            this.runCADBTN.IconMarginRight = 0;
-            this.runCADBTN.IconRightVisible = false;
-            this.runCADBTN.IconRightZoom = 0D;
-            this.runCADBTN.IconVisible = false;
-            this.runCADBTN.IconZoom = 90D;
-            this.runCADBTN.IsTab = false;
-            this.runCADBTN.Location = new System.Drawing.Point(0, 0);
-            this.runCADBTN.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.runCADBTN.Name = "runCADBTN";
-            this.runCADBTN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.runCADBTN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.runCADBTN.OnHoverTextColor = System.Drawing.Color.White;
-            this.runCADBTN.selected = false;
-            this.runCADBTN.Size = new System.Drawing.Size(137, 50);
-            this.runCADBTN.TabIndex = 13;
-            this.runCADBTN.Text = "Run CAD";
-            this.runCADBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.runCADBTN.Textcolor = System.Drawing.Color.White;
-            this.runCADBTN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.runCADBTN.Click += new System.EventHandler(this.runCADBTN_Click);
             // 
             // PatientProfileControl
             // 

@@ -16,6 +16,7 @@ namespace HealthcareManagement.Screens.Doctor
     {
 
         private BackgroundWorker _backgroundWorker;
+        SerialCOM serialCOM = new SerialCOM();
         static SerialPort mySerial = new SerialPort();
         public string errorMessage = "";
         public DoctorHomeScreen()
@@ -28,7 +29,7 @@ namespace HealthcareManagement.Screens.Doctor
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
-            readDataFromSerial();
+            //readDataFromSerial();
             patientsListControl.Dock = DockStyle.Fill;
             container.Controls.Add(patientsListControl);
 
@@ -39,7 +40,7 @@ namespace HealthcareManagement.Screens.Doctor
         void statusOfConnectivity(string connect) { }
         void fillPatientDataTable(string data)
         {
-            JObject patient = JSONParing.convertStringToJson(data);
+            JObject patient = serialCOM.managerToSerialInput(data);
             object[] row =
             {
                 patient["id"].ToString(),

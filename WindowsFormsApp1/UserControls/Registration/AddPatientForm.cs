@@ -26,6 +26,7 @@ namespace HealthcareManagement.UserControls.Doctor
         }
 
         PatientController patientController = new PatientController();
+        SerialCOM serialCOM = new SerialCOM();
         public int patientId = 0;
         #region Controls
         private void addPatientBTN_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace HealthcareManagement.UserControls.Doctor
             jObj["age"] = patientModel.PatientAge;
             jObj["gender"] = patientModel.PatientGender;
 
-            SerialCOM.writeIntoSerial(jObj.ToString());
+            serialCOM.writeIntoSerial(jObj.ToString());
         }
 
         private void updataPatient()

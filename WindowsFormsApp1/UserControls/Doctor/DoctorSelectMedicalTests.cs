@@ -18,14 +18,14 @@ namespace HealthcareManagement.UserControls.Doctor
         TestGroupController testGroupController = new TestGroupController();
         TestsBankController testsBankController = new TestsBankController();
         TestController testController = new TestController();
+        SessionController sessionController = new SessionController();
         List<int> selectedTests = new List<int>();
 
-        public int patientID { get; set; }
-        public int sessionID { get; set; }
+        public int patientId { get; set; }
+        public int sessionId { get; set; }
         private void DoctorSelectMedicalTests_Load(object sender, EventArgs e)
         {
             loadAnalysisGroup();
-            MessageBox.Show(sessionID.ToString());
         }
 
 
@@ -115,26 +115,52 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void sendTestsBTN_Click(object sender, EventArgs e)
         {
-            foreach (var item in selectedTests)
-            {
-                createTestModel(item);
-            }
+            //foreach (var item in selectedTests)
+            //{
+            //    createTestModel(item);
+            //}
+            // Send through serial
+            string message = @"{""from"": ""doc"", ""to"": ""lab"", ""patientId"": " + patientId.ToString()
+            + @", ""sessionId"": " + sessionId.ToString() + @", ""sessionName"": """ +
+            sessionController.getSingleSessionName(sessionId) + @""",""data"":[" + testsToJsonText() + "]}";
 
+            MessageBox.Show(message);
             this.Close();
         }
+        string testsToJsonText()
+        {
+            string buffer = ""; int counter = 0;
+            foreach (var item in selectedTests)
+            {
+                string temp = @"{ ""testId"": " + item
+                            + @", ""value"": """"},";
+                if (counter == selectedTests.Count - 1)
+                {
+                    temp = @"{ ""testId"": " + item
+                           + @", ""value"": """"}";
+                }
 
+
+                buffer += temp;
+                counter++;
+            }
+            return buffer;
+
+        }
         private void createTestModel(int item)
         {
             TestModel testModel = new TestModel();
 
-            testModel.PatientID = patientID;
-            testModel.SessionID = sessionID;
+            testModel.PatientID = patientId;
+            testModel.SessionID = sessionId;
             testModel.TestID = item;
 
             testModel.TestValue = "";
             testModel.Comment = "";
 
             testController.createTest(testModel);
+
+
         }
 
         private void dataTests_CellEndEdit(object sender, DataGridViewCellEventArgs e)

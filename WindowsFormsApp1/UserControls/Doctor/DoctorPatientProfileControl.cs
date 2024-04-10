@@ -27,11 +27,15 @@ namespace HealthcareManagement.UserControls.Doctor
         public int patientAge { get; set; }
         public int sessionId { get; set; }
 
+        bool saveDrugIntoDatabase = false;
+
         TestController testController = new TestController();
         DrugsController drugsController = new DrugsController();
+        SessionController sessionController = new SessionController();
 
         PrescriptionController prescriptionController = new PrescriptionController();
         DiagnosisController diagnosisController = new DiagnosisController();
+        SerialCOM serialCOM = new SerialCOM();
 
         DLModel DLModelConfig = new DLModel();
 
@@ -70,9 +74,14 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void openMedicalTests_Click(object sender, EventArgs e)
         {
+            if(sessionId == 0)
+            {
+                MessageBox.Show("Please select the session.");
+                return;
+            }
             DoctorSelectMedicalTests doctorSelectMedicalTests = new DoctorSelectMedicalTests();
-            doctorSelectMedicalTests.patientID = patientId;
-            doctorSelectMedicalTests.sessionID = sessionId;
+            doctorSelectMedicalTests.patientId = patientId;
+            doctorSelectMedicalTests.sessionId = sessionId;
 
             doctorSelectMedicalTests.ShowDialog();
             fillSessionData(testController.readTestsBySesssionID(sessionId));
@@ -98,6 +107,12 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            saveTheDrugIntoDatabase();
+            saveDrugIntoDatabase = true;
+        }
+
+        private void saveTheDrugIntoDatabase()
+        {
 
             for (int index = 0; index < dataPrescriptions.Rows.Count - 1; index++)
             {
@@ -105,8 +120,6 @@ namespace HealthcareManagement.UserControls.Doctor
                     .Rows[index].Cells[0].Value != null) continue;
                 prescriptionController.createPrescription(createPrescriptionModel(index));
             }
-
-
         }
 
         PrescriptionModel createPrescriptionModel(int index)
@@ -129,16 +142,43 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void savePatientBTN_Click(object sender, EventArgs e)
         {
-            DiagnosisModel diagnosisModel = new DiagnosisModel();
+            //DiagnosisModel diagnosisModel = new DiagnosisModel();
 
-            diagnosisModel.PatientID = patientId;
-            diagnosisModel.SessionID = sessionId;
-            diagnosisModel.Comments = richTextComments.Text;
-            diagnosisModel.AutoDiagnosis = textAutomatedDiagnosis.Text;
+            //diagnosisModel.PatientID = patientId;
+            //diagnosisModel.SessionID = sessionId;
+            //diagnosisModel.Comments = richTextComments.Text;
+            //diagnosisModel.AutoDiagnosis = textAutomatedDiagnosis.Text;
 
-            diagnosisController.saveDiagnosis(diagnosisModel);
+            //diagnosisController.saveDiagnosis(diagnosisModel);
+
+            // Send Through Serial
+            string message = @"{""from"": ""doc"", ""to"": ""pha"", ""patientId"": "+ patientId.ToString()
+                + @", ""sessionId"": " + sessionId.ToString() + @", ""sessionName"": """ +
+                sessionController.getSingleSessionName(sessionId) + @""",""data"":[" + drugsToJsonText() + "]}";
+            MessageBox.Show(message);
+            serialCOM.registerDrugIntoDatabase(JSONParing.convertStringToJson(message));
+            //serialCOM.writeIntoSerial(message);
         }
+        string drugsToJsonText() {
+            string buffer = "";
+            for(int index = 0; index < dataPrescriptions.Rows.Count - 1; index++)
+            {
+                string temp = @"{ ""drugId"": " + dataPrescriptions.Rows[index]
+                .Cells[1].Value.ToString()
+                + @", ""instruction"": """ + dataPrescriptions.Rows[index]
+                .Cells[2].Value.ToString() + @"""},";
+                if (index == dataPrescriptions.Rows.Count - 2)
+                {
+                     temp = @"{ ""drugId"": " + dataPrescriptions.Rows[index]
+                        .Cells[1].Value.ToString()
+                        + @", ""instruction"": """ + dataPrescriptions.Rows[index]
+                        .Cells[2].Value.ToString() + @"""}";
+                }
 
+                buffer += temp;
+            }
+            return buffer;
+        }
         private void printPrescriptionBTN_Click(object sender, EventArgs e)
         {
             MyPrinter myPrinter = new MyPrinter();
@@ -186,9 +226,9 @@ namespace HealthcareManagement.UserControls.Doctor
                 .getMachinelearningParameters(9, patientId));
 
             string prompt = patientAge.ToString() + inputValue + " 0";
-            MessageBox.Show(prompt);
-            MessageBox.Show(DLModelConfig
-                .sendPredictionForKidneyModel(prompt));
+            //MessageBox.Show(prompt);
+            textAutomatedDiagnosis.Text =  DLModelConfig
+                .sendPredictionForKidneyModel(prompt);
         }
 
         string convertString(DataTable machineValues) {
@@ -200,6 +240,11 @@ namespace HealthcareManagement.UserControls.Doctor
             }
 
             return buffer;
+        }
+
+        private void dataPrescriptions_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            saveDrugIntoDatabase = false;
         }
     }
 }

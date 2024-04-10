@@ -30,7 +30,12 @@ namespace HealthcareManagement.Controller
                 " WHERE ([PatientID] = " + patientId + " AND [DeleteStatus]='" + DeleteStatus + "') " +
                 "ORDER BY ID ASC");
         }
-
+        public string getSingleSessionName(int sessionId)
+        {
+            return databaseProvider.getTable("SELECT SessionName FROM Sessions" +
+                " WHERE ([ID] = " + sessionId + " AND [DeleteStatus]='" + DeleteStatus + "') " +
+                "ORDER BY ID ASC").Rows[0][0].ToString();
+        }
         public void createSession(SessionModel session)
         {
             string command = "INSERT INTO Sessions(" +

@@ -17,6 +17,7 @@ namespace HealthcareManagement.Screens.Phamracy
         static SerialPort mySerial = new SerialPort();
         public string errorMessage = "";
 
+        SerialCOM serialCOM = new SerialCOM();
         public PharmacyHomeScreen()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace HealthcareManagement.Screens.Phamracy
 
         void fillPatientDataTable(string data)
         {
-            JObject patient = JSONParing.convertStringToJson(data);
+            JObject patient = serialCOM.managerToSerialInput(data);
             object[] row =
             {
                 patient["id"].ToString(),

@@ -24,6 +24,8 @@ namespace HealthcareManagement.Screens.Lab
         private BackgroundWorker _backgroundWorker;
         static SerialPort mySerial = new SerialPort();
         public string errorMessage = "";
+
+        SerialCOM serialCOM = new SerialCOM();
         public LabHomeScreen()
         {
             InitializeComponent();
@@ -40,7 +42,7 @@ namespace HealthcareManagement.Screens.Lab
 
         void fillPatientDataTable(string data)
         {
-            JObject patient = JSONParing.convertStringToJson(data);
+            JObject patient = serialCOM.managerToSerialInput(data);
             object[] row =
             {
                 patient["id"].ToString(),

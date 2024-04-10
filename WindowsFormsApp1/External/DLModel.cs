@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,12 +11,13 @@ namespace HealthcareManagement.External
         public string sendPredictionForKidneyModel(string prompt)
         {
             buildRunTask("kidney_model_runner.py", prompt);
-            return sendPrediction();
+            return getClassOfPrediction(sendPrediction());
+
         }
         public string sendPredictionForLiverModel(string prompt)
         {
             buildRunTask("liver_model_runner.py", prompt);
-            return sendPrediction();
+            return getClassOfPrediction(sendPrediction());
         }
         string sendPrediction()
         {
@@ -28,20 +30,32 @@ namespace HealthcareManagement.External
             p.StartInfo.UseShellExecute = false;
             p.Start();
 
-            string d = p.StandardOutput.ReadToEnd();
-            
             p.WaitForExit();
-            return d;
+            string output = p.StandardOutput.ReadToEnd();
+            return output;
         }
 
+        static string getClassOfPrediction(string inputText)
+        {
+            int index = inputText.IndexOf("step");
+            if (index != -1)
+            {
+                return inputText.Substring(index + 4);
+            }
+            else
+            {
+                return ""; // "/step" not found
+            }
+        }
         void buildRunTask(string model, string prompt)
         {
             string fullPath = Application.StartupPath + "\\ml\\run_task.bat";
             using (StreamWriter writer = new StreamWriter(fullPath))
             {
                 writer.WriteLine("echo off");
-                writer.WriteLine(@"python .\" + model + " " + prompt);
-                writer.WriteLine("timeout 3");
+                writer.WriteLine("cd " + Application.StartupPath + "\\ml\\");
+                writer.WriteLine(@"python " + model + " " + prompt);
+               //writer.WriteLine("timeout 3");
             }
         }
     }
