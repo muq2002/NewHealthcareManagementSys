@@ -55,14 +55,19 @@ namespace HealthcareManagement.UserControls.Doctor
         void writeInSerial(PatientModel patientModel)
         {
             JObject jObj = new JObject();
-            jObj["id"] = patientModel.PatientID;
-            jObj["uuid"] = patientModel.PatientUUID;
-            jObj["name"] = patientModel.PatientName;
-            jObj["phoneNumber"] = patientModel.PatientPhoneNumber;
+
             jObj["age"] = patientModel.PatientAge;
             jObj["gender"] = patientModel.PatientGender;
 
-            serialCOM.writeIntoSerial(jObj.ToString());
+            string message = @" ""to"":""all"", ""from"":""reg"", ""id"":" + patientId.ToString()
+                + @", ""uuid"":""" + patientModel.PatientUUID.ToString()
+                + @""", ""name"":""" + patientModel.PatientName
+                + @""", ""phoneNumber"":""" + patientModel.PatientPhoneNumber
+                + @""", ""age"":" + patientModel.PatientAge
+                + @", ""gender"":" + patientModel.PatientGender + ",data:[]";
+            Clipboard.SetText(message);
+            MessageBox.Show(message);
+            serialCOM.writeIntoSerial(message);
         }
 
         private void updataPatient()
@@ -91,7 +96,7 @@ namespace HealthcareManagement.UserControls.Doctor
             patientModel.PatientAge = int.Parse(textAge.Text);
             patientModel.PatientGender = getGender();
 
-            patientController.createPatient(patientModel);
+            //patientController.createPatient(patientModel);
             writeInSerial(patientModel);
 
             MessageBox.Show("Patient Has been added successfully!");

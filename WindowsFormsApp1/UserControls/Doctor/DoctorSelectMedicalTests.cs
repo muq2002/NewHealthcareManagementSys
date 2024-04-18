@@ -1,4 +1,5 @@
-﻿using HealthcareManagement.Controller;
+﻿using HealthcareManagement.Config;
+using HealthcareManagement.Controller;
 using HealthcareManagement.Screens.Config;
 using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Screens.Model;
@@ -19,6 +20,8 @@ namespace HealthcareManagement.UserControls.Doctor
         TestsBankController testsBankController = new TestsBankController();
         TestController testController = new TestController();
         SessionController sessionController = new SessionController();
+
+        SerialCOM serialCOM = new SerialCOM();
         List<int> selectedTests = new List<int>();
 
         public int patientId { get; set; }
@@ -115,18 +118,26 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void sendTestsBTN_Click(object sender, EventArgs e)
         {
-            //foreach (var item in selectedTests)
-            //{
-            //    createTestModel(item);
-            //}
-            // Send through serial
-            string message = @"{""from"": ""doc"", ""to"": ""lab"", ""patientId"": " + patientId.ToString()
-            + @", ""sessionId"": " + sessionId.ToString() + @", ""sessionName"": """ +
-            sessionController.getSingleSessionName(sessionId) + @""",""data"":[" + testsToJsonText() + "]}";
-
-            MessageBox.Show(message);
+            foreach (var item in selectedTests)
+            {
+                createTestModel(item);
+            }
+            sendTestsDataToSerialCOM();
             this.Close();
         }
+
+        private void sendTestsDataToSerialCOM()
+        {
+            // Send through serial
+            string message = @"""from"": ""doc"", ""to"": ""lab"", ""patientId"": " + patientId.ToString()
+            + @", ""sessionId"": " + sessionId.ToString() + @", ""sessionName"": """ +
+            sessionController.getSingleSessionName(sessionId) + @""",""data"":[" + testsToJsonText() + "]";
+
+            
+            MessageBox.Show(message);
+            serialCOM.writeIntoSerial(message);
+        }
+
         string testsToJsonText()
         {
             string buffer = ""; int counter = 0;

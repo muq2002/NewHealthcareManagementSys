@@ -13,7 +13,7 @@ namespace HealthcareManagement.Config
         {
             try
             {
-                return JObject.Parse(jsonString);
+                return JObject.Parse("{"+ jsonString.Trim(' ')+ "}");
             }catch(Exception ex)
             {
                 return JObject.Parse("");

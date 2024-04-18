@@ -16,6 +16,7 @@ using System.IO.Ports;
 using Newtonsoft.Json.Linq;
 using HealthcareManagement.Config;
 using HealthcareManagement.Properties;
+using HealthcareManagement.Screens.Controller;
 
 namespace HealthcareManagement.Screens.Lab
 {
@@ -26,6 +27,7 @@ namespace HealthcareManagement.Screens.Lab
         public string errorMessage = "";
 
         SerialCOM serialCOM = new SerialCOM();
+        PatientController patientController = new PatientController();
         public LabHomeScreen()
         {
             InitializeComponent();
@@ -43,13 +45,16 @@ namespace HealthcareManagement.Screens.Lab
         void fillPatientDataTable(string data)
         {
             JObject patient = serialCOM.managerToSerialInput(data);
+
+            DataTable queryPatient = patientController
+                .getSinglePatient(int.Parse(patient["patientId"].ToString()));
             object[] row =
             {
-                patient["id"].ToString(),
-                patient["uuid"].ToString(),
-                patient["name"].ToString(),
-                patient["age"].ToString(),
-                Utils.getGenderStr(patient["gender"].ToString()),
+               queryPatient.Rows[0][0],
+               queryPatient.Rows[0][1],
+               queryPatient.Rows[0][2],
+               queryPatient.Rows[0][3],
+               Utils.getGenderStr(queryPatient.Rows[0][4].ToString()),
             };
             labHomeControl1.dataPatients.Rows.Add(row);
         }

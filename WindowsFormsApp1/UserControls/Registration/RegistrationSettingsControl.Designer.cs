@@ -315,7 +315,10 @@
             "COM5",
             "COM6",
             "COM7",
-            "COM8"});
+            "COM8",
+            "COM9",
+            "COM10",
+            "COM11"});
             this.comboPortName.Location = new System.Drawing.Point(302, 47);
             this.comboPortName.Name = "comboPortName";
             this.comboPortName.Size = new System.Drawing.Size(421, 46);

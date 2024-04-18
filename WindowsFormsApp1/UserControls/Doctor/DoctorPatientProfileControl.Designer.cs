@@ -149,6 +149,7 @@
             this.dataPrescriptions.RowTemplate.Height = 28;
             this.dataPrescriptions.Size = new System.Drawing.Size(1023, 400);
             this.dataPrescriptions.TabIndex = 6;
+            this.dataPrescriptions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPrescriptions_CellContentClick);
             this.dataPrescriptions.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataPrescriptions_RowsAdded);
             // 
             // contextMenuStrip1

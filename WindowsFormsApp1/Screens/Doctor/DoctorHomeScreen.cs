@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using HealthcareManagement.UserControls.Doctor;
 using System.ComponentModel;
 using System.IO.Ports;
 using Newtonsoft.Json.Linq;
-using System.Threading;
 using System.Text;
 using HealthcareManagement.Config;
 using HealthcareManagement.Screens.Config;
@@ -29,7 +27,7 @@ namespace HealthcareManagement.Screens.Doctor
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
-            //readDataFromSerial();
+            readDataFromSerial();
             patientsListControl.Dock = DockStyle.Fill;
             container.Controls.Add(patientsListControl);
 

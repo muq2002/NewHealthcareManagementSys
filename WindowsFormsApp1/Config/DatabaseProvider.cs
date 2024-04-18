@@ -13,7 +13,7 @@ namespace HealthcareManagement.Screens.Config
         public static string getDatabasePath()
         {
             string appDataFolder = Application.StartupPath;
-            appDataFolder = @"C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debug";
+           
 
             return "provider=microsoft.ace.oledb.12.0;" +
                         " data source=" + appDataFolder + @"\config\HealthcareManagementSystem.accdb;";

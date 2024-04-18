@@ -142,23 +142,28 @@ namespace HealthcareManagement.UserControls.Doctor
 
         private void savePatientBTN_Click(object sender, EventArgs e)
         {
-            //DiagnosisModel diagnosisModel = new DiagnosisModel();
+            DiagnosisModel diagnosisModel = new DiagnosisModel();
 
-            //diagnosisModel.PatientID = patientId;
-            //diagnosisModel.SessionID = sessionId;
-            //diagnosisModel.Comments = richTextComments.Text;
-            //diagnosisModel.AutoDiagnosis = textAutomatedDiagnosis.Text;
+            diagnosisModel.PatientID = patientId;
+            diagnosisModel.SessionID = sessionId;
+            diagnosisModel.Comments = richTextComments.Text;
+            diagnosisModel.AutoDiagnosis = textAutomatedDiagnosis.Text;
 
-            //diagnosisController.saveDiagnosis(diagnosisModel);
+            diagnosisController.saveDiagnosis(diagnosisModel);
 
-            // Send Through Serial
-            string message = @"{""from"": ""doc"", ""to"": ""pha"", ""patientId"": "+ patientId.ToString()
-                + @", ""sessionId"": " + sessionId.ToString() + @", ""sessionName"": """ +
-                sessionController.getSingleSessionName(sessionId) + @""",""data"":[" + drugsToJsonText() + "]}";
-            MessageBox.Show(message);
-            serialCOM.registerDrugIntoDatabase(JSONParing.convertStringToJson(message));
-            //serialCOM.writeIntoSerial(message);
+            sendDataOfPharmacyOnSerialCOM();
         }
+
+        private void sendDataOfPharmacyOnSerialCOM()
+        {
+            // Send Through Serial
+            string message = @"""from"": ""doc"", ""to"": ""pha"", ""patientId"": " + patientId.ToString()
+                + @", ""sessionId"": " + sessionId.ToString() + @", ""sessionName"": """ +
+                sessionController.getSingleSessionName(sessionId) + @""",""data"":[" + drugsToJsonText() + "]";
+            MessageBox.Show(message);
+            serialCOM.writeIntoSerial(message);
+        }
+
         string drugsToJsonText() {
             string buffer = "";
             for(int index = 0; index < dataPrescriptions.Rows.Count - 1; index++)
@@ -245,6 +250,11 @@ namespace HealthcareManagement.UserControls.Doctor
         private void dataPrescriptions_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             saveDrugIntoDatabase = false;
+        }
+
+        private void dataPrescriptions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

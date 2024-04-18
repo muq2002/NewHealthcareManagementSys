@@ -57,6 +57,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.saveDevicesBTN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBaudRate = new System.Windows.Forms.ComboBox();
+            this.comboPortName = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textYourDeviceIP = new System.Windows.Forms.TextBox();
@@ -70,10 +74,6 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.comboBaudRate = new System.Windows.Forms.ComboBox();
-            this.comboPortName = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataPatients)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -369,6 +369,64 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connections and Network";
             // 
+            // comboBaudRate
+            // 
+            this.comboBaudRate.FormattingEnabled = true;
+            this.comboBaudRate.Items.AddRange(new object[] {
+            "9600 ",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200"});
+            this.comboBaudRate.Location = new System.Drawing.Point(312, 95);
+            this.comboBaudRate.Name = "comboBaudRate";
+            this.comboBaudRate.Size = new System.Drawing.Size(426, 46);
+            this.comboBaudRate.TabIndex = 17;
+            this.comboBaudRate.Text = "9600 ";
+            this.comboBaudRate.SelectedIndexChanged += new System.EventHandler(this.comboBaudRate_SelectedIndexChanged);
+            // 
+            // comboPortName
+            // 
+            this.comboPortName.FormattingEnabled = true;
+            this.comboPortName.Items.AddRange(new object[] {
+            "COM1",
+            "COM2",
+            "COM3",
+            "COM4",
+            "COM5",
+            "COM6",
+            "COM7",
+            "COM8",
+            "COM9",
+            "COM10",
+            "COM11"});
+            this.comboPortName.Location = new System.Drawing.Point(312, 43);
+            this.comboPortName.Name = "comboPortName";
+            this.comboPortName.Size = new System.Drawing.Size(426, 46);
+            this.comboPortName.TabIndex = 16;
+            this.comboPortName.Text = "COM4";
+            this.comboPortName.SelectedIndexChanged += new System.EventHandler(this.comboPortName_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(35, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(159, 38);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Port Name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(39, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 38);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Baud Rate:";
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(317, 257);
@@ -482,61 +540,6 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1043, 85);
             this.topPanel.TabIndex = 29;
-            // 
-            // comboBaudRate
-            // 
-            this.comboBaudRate.FormattingEnabled = true;
-            this.comboBaudRate.Items.AddRange(new object[] {
-            "9600 ",
-            "14400",
-            "19200",
-            "28800",
-            "38400",
-            "57600",
-            "115200"});
-            this.comboBaudRate.Location = new System.Drawing.Point(312, 95);
-            this.comboBaudRate.Name = "comboBaudRate";
-            this.comboBaudRate.Size = new System.Drawing.Size(426, 46);
-            this.comboBaudRate.TabIndex = 17;
-            this.comboBaudRate.Text = "9600 ";
-            this.comboBaudRate.SelectedIndexChanged += new System.EventHandler(this.comboBaudRate_SelectedIndexChanged);
-            // 
-            // comboPortName
-            // 
-            this.comboPortName.FormattingEnabled = true;
-            this.comboPortName.Items.AddRange(new object[] {
-            "COM1",
-            "COM2",
-            "COM3",
-            "COM4",
-            "COM5",
-            "COM6",
-            "COM7",
-            "COM8"});
-            this.comboPortName.Location = new System.Drawing.Point(312, 43);
-            this.comboPortName.Name = "comboPortName";
-            this.comboPortName.Size = new System.Drawing.Size(426, 46);
-            this.comboPortName.TabIndex = 16;
-            this.comboPortName.Text = "COM4";
-            this.comboPortName.SelectedIndexChanged += new System.EventHandler(this.comboPortName_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 51);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 38);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Port Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 38);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Baud Rate:";
             // 
             // DoctorSettingsControl
             // 

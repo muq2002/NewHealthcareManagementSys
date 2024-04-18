@@ -72,7 +72,7 @@ namespace HealthcareManagement.Config
                 createSession(message);
             }
             registerTestsIntoDatabase(message);
-            return new JObject();
+            return message;
         }
 
 
@@ -96,7 +96,8 @@ namespace HealthcareManagement.Config
         }
         JObject manageLabToDocMessages(JObject message)
         {
-            return new JObject();
+            registerTestsIntoDatabase(message);
+            return message;
         }
 
 
