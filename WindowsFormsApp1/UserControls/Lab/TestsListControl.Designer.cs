@@ -137,6 +137,7 @@
             this.addPatientBTN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addPatientBTN.Textcolor = System.Drawing.Color.White;
             this.addPatientBTN.TextFont = new System.Drawing.Font("Nunito", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPatientBTN.Click += new System.EventHandler(this.addPatientBTN_Click);
             // 
             // topPanel
             // 

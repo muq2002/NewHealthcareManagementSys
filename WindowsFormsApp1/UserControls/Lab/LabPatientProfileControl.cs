@@ -24,7 +24,7 @@ namespace HealthcareManagement.UserControls.Lab
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int index =0; index  < dataTests.Rows.Count -1; index++)
+            for (int index =0; index  < dataTests.Rows.Count; index++)
             {
                 testController.updateTest(createTestModel(index));
             }

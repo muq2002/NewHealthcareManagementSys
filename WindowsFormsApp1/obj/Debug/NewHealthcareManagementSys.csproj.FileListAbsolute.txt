@@ -60,3 +60,5 @@ C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\bin\Debu
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.Screens.Phamracy.PharmacyHomeScreen.resources
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\NewHealthcareManagementSys.csprojAssemblyReference.cache
 C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.Screens.Lab.LabHomeScreen.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.Screens.OperationsLab.OperationsLabScreen.resources
+C:\Users\mktad\source\repos\NewHealthcareManagementSys\WindowsFormsApp1\obj\Debug\HealthcareManagement.Screens.OperationsLab.OpenCSVFile.resources

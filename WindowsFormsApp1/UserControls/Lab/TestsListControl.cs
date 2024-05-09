@@ -25,8 +25,6 @@ namespace HealthcareManagement.Screens.UserControls
         {
             createListTests();
             getIncompleteTests(testController.readTests(100));
-           
-
         }
 
         void createListTests() {
@@ -79,5 +77,36 @@ namespace HealthcareManagement.Screens.UserControls
             if(textSearch.text == "") getIncompleteTests(testController.readTests(100));
             getIncompleteTests(testController.saerchPatientsTests(100, textSearch.text));
         }
+
+        private void addPatientBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int index = 0; index < dataTests.Rows.Count; index++)
+                {
+                    if (dataTests.Rows[index].Cells[3].Value.ToString() == "1")
+                    {
+                        sendCBCMessage(index);
+                    }
+                    sendBiochemistry(index);
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Fill data errors!");
+            }
+
+        }
+
+        void sendCBCMessage(int index)
+        {
+            string patientId = dataTests.Rows[index].Cells[0].Value.ToString();
+            string testName = dataTests.Rows[index].Cells[2].Value.ToString();
+
+            string Message = "{PatientID: " + patientId + ", TestName: '" + testName + "'}";
+            MessageBox.Show(Message);
+        }
+        void sendBiochemistry(int index) { }
     }
 }

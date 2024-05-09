@@ -11,6 +11,7 @@ using HealthcareManagement.Screens.Doctor;
 using HealthcareManagement.Screens.Lab;
 using HealthcareManagement.Screens.Phamracy;
 using HealthcareManagement.Screens.Screens;
+using HealthcareManagement.Screens.OperationsLab;
 
 namespace HealthcareManagement.Screens
 {
@@ -49,6 +50,11 @@ namespace HealthcareManagement.Screens
             {
                 PharmacyHomeScreen pharmacyHomeScreen = new PharmacyHomeScreen();
                 pharmacyHomeScreen.ShowDialog();
+            }
+            if (textUsername.Text == "op")
+            {
+                OperationsLabScreen operationsLabScreen = new OperationsLabScreen();
+                operationsLabScreen.ShowDialog();
             }
         }
 
