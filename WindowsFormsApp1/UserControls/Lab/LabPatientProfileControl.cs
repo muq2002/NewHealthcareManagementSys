@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
+using HealthcareManagement.Config;
 using HealthcareManagement.Screens.Controller;
 using HealthcareManagement.Screens.Model;
 
@@ -40,5 +42,39 @@ namespace HealthcareManagement.UserControls.Lab
             testModel.PatientID = patientId;
             return testModel;
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MyPrinter myPrinter = new MyPrinter();
+
+            HTMLDocument.createHtmltoPdf(myPrinter
+                .createHTMLFileForLab(new PatientModel(), fillTests()));
+            myPrinter.openPDFfile();
+        }
+
+        DataTable fillTests()
+        {
+            DataTable result = new DataTable();
+
+            foreach (DataGridViewColumn column in dataTests.Columns)
+            {
+                result.Columns.Add(column.Name, typeof(string));
+            }
+
+            foreach (DataGridViewRow row in dataTests.Rows)
+            {
+                DataRow newRow = result.NewRow();
+
+                newRow[0] = row.Cells[0].Value.ToString();
+                newRow[1] = row.Cells[1].Value.ToString();
+                newRow[2] = row.Cells[2].Value.ToString();
+                newRow[3] = row.Cells[3].Value.ToString();
+
+                result.Rows.Add(newRow);
+            }
+            return result;
+        }
+
     }
 }

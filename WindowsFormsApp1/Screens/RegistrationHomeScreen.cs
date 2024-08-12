@@ -82,6 +82,11 @@ namespace HealthcareManagement.Screens.Screens
             settingsBTN.IdleFillColor = Color.White;
             settingsBTN.IdleForecolor = Color.FromArgb(1, 56, 182, 255);
         }
+
+        private void registrationHomeControl2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
